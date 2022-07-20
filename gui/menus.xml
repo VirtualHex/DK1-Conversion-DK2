@@ -120,27 +120,7 @@
 
 
 	<!-- Fluffy's Mod Credits Button -->
-	<Button name="Mod Send Feedback" align="l" origin="820 -670" tooltip="Be gentle">
-		<RenderObject2D texture="data/textures/gui/menu_feedback_normal.dds"/>
-		<OnHover>
-			<RenderObject2D texture="data/textures/gui/menu_feedback_hover.dds"/>
-		</OnHover>
-		<OnClick>
-			<RenderObject2D texture="data/textures/gui/menu_feedback_hover.dds" scaleX="0.95" scaleY="0.95"/>
-			<Action type="Show" target="FF_Credits_Controller"/>
-		</OnClick>
-	</Button>
-
-	<Button name="Credits Button" align="l" origin="820 -570" tooltip="Be gentle">
-		<RenderObject2D texture="data/textures/gui/menu_feedback_normal.dds"/>
-		<OnHover>
-			<RenderObject2D texture="data/textures/gui/menu_feedback_hover.dds"/>
-		</OnHover>
-		<OnClick>
-			<RenderObject2D texture="data/textures/gui/menu_feedback_hover.dds" scaleX="0.95" scaleY="0.95"/>
-			<Action type="Show" target="FF_Credits_Controller"/>
-		</OnClick>
-	</Button>
+	<StaticText text="MOD VERSION: indev" font="header_3" origin="1050-670" align="c" textColor="9caec6"/>
 
 	<!--
 	<StaticImage name="Fluffy Options Background" origin="800 -670">
@@ -299,12 +279,12 @@
 		</Button>
 
 		<Button name="Options" origin="0 0" sizeX="90" sizeY="90" tooltip="@menu_m_optionsgame_ttip">
-			<RenderObject2D texture="data/textures/gui/menu_options_normal.dds" sizeX="80" sizeY="80" blendMode="none"/>
+			<RenderObject2D texture="data/textures/gui/menu_options_normal.tga" sizeX="150" sizeY="150" blendMode="none"/>
 			<OnHover>
-				<RenderObject2D texture="data/textures/gui/menu_options_hover.dds" sizeX="80" sizeY="80" blendMode="none"/>
+				<RenderObject2D texture="data/textures/gui/menu_options_hover.tga" sizeX="150" sizeY="150" blendMode="none"/>
 			</OnHover>
 			<OnClick>
-				<RenderObject2D texture="data/textures/gui/menu_options_hover.dds" scaleX="0.99" scaleY="0.99" blendMode="none"/>
+				<RenderObject2D texture="data/textures/gui/menu_options_hover.tga" scaleX="0.99" scaleY="0.99" blendMode="none"/>
 				<Action type="Show" target="Menu_Options_Main"/>
 			</OnClick>
 		</Button>
@@ -337,7 +317,7 @@
             <StaticImage origin="0 -30">
                     <StaticText name="#TextLine" origin="0 104" text="Attention this is a Heavy Work In Progress Build." font="paragraph_1" textColor="7D9FBB"/>
                     <StaticText name="#TextLine" origin="0 44" text="There is likely to be bugs, crashes and plenty of Unfinished Content." font="paragraph_1" textColor="7D9FBB"/>
-                    <StaticText name="#TextLine" origin="0 -24" text="MOD VERSION:INDEV" font="paragraph_1" textColor="7D9FBB"/>
+                    <StaticText name="#TextLine" origin="0 -24" text="" font="paragraph_1" textColor="7D9FBB"/>
                     <StaticText name="#TextLine" origin="0 -84" text="" font="paragraph_1" textColor="7D9FBB"/>
             </StaticImage>
         </StaticImage>

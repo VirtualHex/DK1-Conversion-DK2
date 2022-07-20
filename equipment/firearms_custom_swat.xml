@@ -317,7 +317,7 @@
 	<Firearm name="SWAT_G36C" inventoryBinding="PrimaryWeapon" category="rifle" unlockCost="0"
 			tooltip="G36C Rifle"
 			description="@SWAT_firearm_g36c_assault_rifle_desc"
-			img="data/models/weapons/G36C_ui.dds"
+			img="data/models/weapons/m4_ui.dds"
 
 			animationSet="rifle"
 		>
@@ -374,7 +374,7 @@
 			<Unequip name="rifle_neqp"/>
 			<Reload name="rifle_reld"/>
 			<ReloadEmpty name="rifle_reldempt"/>
-			<Fire name="mk18_fire"/>
+			<Fire name="556sup_fire"/>
 			<ShellDrop name="rifle_shell_drop"/>
 			<Empty name="gen_empty"/>
 		</Sounds>

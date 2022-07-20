@@ -1,11 +1,11 @@
-<ActionWaypoints>
+<ActionWaypoints>	
 	<wp
 		type="THROW_GRENADE"
-		equipment="SWAT_Chem Light"
+		equipment="Chem Light"
 		ui_prefix="data/textures/gui_ingame/waypoints/frag"
 		ttip="Throw a chemlight"
 		ttip_disabled="@menu_generic_cannot_use"
-		ttip_empty="@menu_game_fg_none_ttip"/>
+		ttip_empty="@menu_game_fg_none_ttip"/> 
 		
 		<wp
 		type="THROW_GRENADE"
@@ -13,7 +13,7 @@
 		ui_prefix="data/textures/gui_ingame/waypoints/stinger"
 		ttip="Throw a chemlight"
 		ttip_disabled="@menu_generic_cannot_use"
-		ttip_empty="@menu_game_fg_none_ttip"/>
+		ttip_empty="@menu_game_fg_none_ttip"/> 
 
 		<wp
 		type="THROW_GRENADE"
@@ -124,7 +124,7 @@
 		equipment="SWAT Dynamic Hammer"
 		ui_prefix="data/textures/gui_ingame/waypoints/hammer"
 		ttip="@menu_game_hammerbreach_ttip"
-		ttip_disabled="@menu_game_tool_disabled_ttip"/>
+		ttip_disabled="@menu_game_tool_disabled_ttip"/>		
 
 	<wp
 		type="TEC_TORCH"
