@@ -1,0 +1,1110 @@
+
+<!--Dont remove this, it removes the lines on top of the doors and windows,etc 
+
+anthony :P -->
+
+<Entities>
+	
+	<Entity name="door_wood_01" type="Door" fogOfWarVisibility="hiddenState" hideInEditor="true" tooltip="@entity_door_flimsy_tooltip" editorAutoHeight="false" >
+		<PhysicalParams blocksVision="true"/>
+		<Breakable breakOnDamage="grenade" template="Breakable_Door_Wood"/>
+		<RenderObject3D model="data/models/environment/various/door_wood.khm" diffuseTex="data/models/environment/various/door_wood_01.dds" emissive="1" />
+	
+
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+
+		<!-- door open time represents the time when opened by hand. The open-by-kick time is 35% faster than that -->
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			sfxOpen="door_open"
+			sfxClose="door_close"
+			sfxKick="door_kick"
+			sfxCrowbar="crowbar_use"
+			sfxBreakHammer="door_ram">
+		</Door>
+	</Entity>
+
+	<Entity name="door_wood_half" type="Door" fogOfWarVisibility="hiddenState" hideInEditor="true" tooltip="@entity_door_flimsy_tooltip" editorAutoHeight="false" >
+		<PhysicalParams blocksVision="true"/>
+		<Breakable breakOnDamage="grenade" template="Breakable_Door_Wood"/>
+		<RenderObject3D model="data/models/environment/various/door_wood_half.khm" diffuseTex="data/models/environment/various/door_wood_01.dds" emissive="1"/>
+
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			sfxOpen="door_open"
+			sfxClose="door_close"
+			sfxKick="door_kick"
+			sfxCrowbar="crowbar_use"
+			sfxBreakHammer="door_ram">
+		</Door>
+	</Entity>
+
+	<Entity name="door_flat_01" type="Door" fogOfWarVisibility="hiddenState" hideInEditor="true" tooltip="@entity_door_strong_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="true"/>
+		<Breakable template="Breakable_Door_Flat_Wood"/>
+		<RenderObject3D model="data/models/environment/various/door_flat_01.khm" diffuseTex="data/models/environment/various/door_flat_01.dds" emissive="1"/>
+		
+
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			sfxOpen="door_open"
+			sfxClose="door_close"
+			sfxKick="door_kick"
+			sfxCrowbar="crowbar_use"
+			sfxBreakHammer="door_ram">
+		</Door>
+	</Entity>
+
+	<Entity name="door_glass" type="Door" fogOfWarVisibility="hiddenState" hideInEditor="true" tooltip="@entity_door_glass_tooltip" editorAutoHeight="false" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/various/door_glass.khm" diffuseTex="data/models/environment/various/door_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true" />
+		<RenderObject3D model="data/models/environment/various/door_glass_edge.khm" diffuseTex="data/models/environment/various/door_glass.dds" skipGOSSAO="true" skipSSAO="true" />
+		<RenderObject3D model="data/models/environment/various/door_glass_handle.khm" diffuseTex="data/models/environment/various/door_glass.dds" skipGOSSAO="true" skipSSAO="true" disableLighting="true"/>
+		<!-- <RenderObject3D model="data/models/environment/various/door_glass_unlocked_symbol.khm" diffuseColor="e6d4c0" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/> -->
+
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			sfxOpen="door_open"
+			sfxClose="door_close"
+			sfxKick="glass_break"
+			sfxCrowbar="crowbar_use"
+			sfxBreakHammer="glass_break">
+		</Door>
+	</Entity>
+
+	<Entity name="door_glass_metal" type="Door" fogOfWarVisibility="hiddenState" hideInEditor="true" tooltip="@entity_door_glass_tooltip" editorAutoHeight="false" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/various/door_glass.khm" diffuseTex="data/models/environment/various/door_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true" />
+		<RenderObject3D model="data/models/environment/various/door_glass_edge.khm" diffuseTex="data/models/environment/various/door_glass_metal.dds" skipGOSSAO="true" skipSSAO="true" />
+		<RenderObject3D model="data/models/environment/various/door_glass_handle.khm" diffuseTex="data/models/environment/various/door_glass_metal.dds" skipGOSSAO="true" skipSSAO="true" disableLighting="true"/>
+		<!-- <RenderObject3D model="data/models/environment/various/door_glass_unlocked_symbol.khm" diffuseColor="e6d4c0" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/> -->
+
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			sfxOpen="door_open"
+			sfxClose="door_close"
+			sfxKick="glass_break"
+			sfxCrowbar="crowbar_use"
+			sfxBreakHammer="glass_break">
+		</Door>
+	</Entity>
+
+	<Entity name="door_glass_narrow" type="Door" fogOfWarVisibility="hiddenState" hideInEditor="true" tooltip="@entity_door_glass_tooltip" editorAutoHeight="false" >
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/various/door_glass_narrow.khm" diffuseTex="data/models/environment/various/door_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true" />
+		<RenderObject3D model="data/models/environment/various/door_glass_edge_narrow.khm" diffuseTex="data/models/environment/various/door_glass.dds" skipGOSSAO="true" skipSSAO="true" />
+		<RenderObject3D model="data/models/environment/various/door_glass_handle_narrow.khm" diffuseTex="data/models/environment/various/door_glass.dds" skipGOSSAO="true" skipSSAO="true" disableLighting="true"/>
+		<!-- <RenderObject3D model="data/models/environment/various/door_wood_unlocked_symbol.khm" diffuseColor="e6d4c0" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true"/> -->
+
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			sfxOpen="door_open"
+			sfxClose="door_close"
+			sfxKick="glass_break"
+			sfxCrowbar="crowbar_use"
+			sfxBreakHammer="glass_break">
+		</Door>
+	</Entity>
+
+	<Entity name="door_wood_imobile" type="BasicEntity" editorAutoHeight="false">
+		<PhysicalParams blocksVision="true"/>
+		<Breakable template="Breakable_Door_Wood"/>
+		<RenderObject3D model="data/models/environment/various/door_wood.khm" diffuseTex="data/models/environment/various/door_wood_01.dds" emissive="1"/>
+	</Entity>
+
+	<Entity name="door_wood_01_locked" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_flimsy_locked_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="true"/>
+		<Breakable breakOnDamage="grenade" template="Breakable_Door_Wood"/>
+		<RenderObject3D model="data/models/environment/various/door_wood.khm" diffuseTex="data/models/environment/various/door_wood_01.dds" emissive="1"/>
+
+		<!-- "allow" can be 0/1/2, where 0=always allow (default), 1=when unlocked, 2=when locked -->
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade" allow="1"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+
+		<CanUseEquipment name="Lockpick" allow="2"/>
+		<CanUseEquipment name="Lockpick Machine" allow="2"/>
+		<CanUseEquipment name="Crowbar" allow="2"/>
+		<CanUseEquipment name="Dynamic Hammer" allow="2"/>
+		<CanUseEquipment name="Breacher Shotgun" allow="2"/>
+		<!--<CanUseEquipment name="BreachingKit" allow="2"/> -->
+		<!--<CanUseEquipment name="Bolt Cutter" allow="2"/>-->
+
+		<Door
+			type="normal"
+
+			locked="true"
+			unlockedSymbolMesh="data/models/environment/various/door_wood_unlocked_symbol.khm"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			lockPickTimeMsec="10000"
+			breachTimeMsec="2000"
+			hammerHitsNeeded="1"
+
+			sfxOpen="door_open"
+			sfxClose="door_close"
+			sfxKick="door_kick"
+			sfxCrowbar="crowbar_use"
+			sfxBreakHammer="door_ram">
+		</Door>
+	</Entity>
+
+	<Entity name="door_flat_01_locked" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_strong_locked_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="true"/>
+		<Breakable template="Breakable_Door_Flat_Wood"/>
+		<RenderObject3D model="data/models/environment/various/door_flat_01.khm" diffuseTex="data/models/environment/various/door_flat_01.dds" emissive="1"/>
+
+		<!-- "allow" can be 0/1/2, where 0=always allow (default), 1=when unlocked, 2=when locked -->
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade" allow="1"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+
+		<CanUseEquipment name="Lockpick" allow="2"/>
+		<CanUseEquipment name="Lockpick Machine" allow="2"/>
+		<CanUseEquipment name="Crowbar" allow="2"/>
+		<CanUseEquipment name="Dynamic Hammer" allow="2"/>
+		<CanUseEquipment name="Breacher Shotgun" allow="2"/>
+		<!--<CanUseEquipment name="BreachingKit" allow="2"/> -->
+		<!--<CanUseEquipment name="Bolt Cutter" allow="2"/>-->
+
+		<Door
+			type="normal"
+
+			locked="true"
+			unlockedSymbolMesh="data/models/environment/various/door_flat_01_symbol.khm"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			lockPickTimeMsec="10000"
+			breachTimeMsec="4000"
+			hammerHitsNeeded="1"
+
+			sfxOpen="door_open"
+			sfxClose="door_close"
+			sfxKick="door_kick"
+			sfxCrowbar="crowbar_use"
+			sfxBreakHammer="door_ram">
+		</Door>
+	</Entity>
+
+	<Entity name="gate_poor_01" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_gate_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="true"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/various/gate_poor_01.khm" diffuseTex="data/models/environment/various/gate_poor.dds" />
+
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="1400"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick"
+			sfxCrowbar="crowbar_use"
+			sfxBreakHammer="door_grate_ram">
+		</Door>
+	</Entity>
+
+	<Entity name="gate_poor_01_locked" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_gate_locked_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="true"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/various/gate_poor_01.khm" diffuseTex="data/models/environment/various/gate_poor.dds" />
+
+		<!-- "allow" can be 0/1/2, where 0=always allow (default), 1=when unlocked, 2=when locked -->
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade" allow="1"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+
+		<CanUseEquipment name="Lockpick" allow="2"/>
+		<CanUseEquipment name="Lockpick Machine" allow="2"/>
+		<CanUseEquipment name="Crowbar" allow="2"/>
+		<CanUseEquipment name="Dynamic Hammer" allow="2"/>
+		<CanUseEquipment name="Breacher Shotgun" allow="2"/>
+		<!--<CanUseEquipment name="BreachingKit" allow="2"/> -->
+		<!--<CanUseEquipment name="Bolt Cutter" allow="2"/>-->
+
+		<Door
+			type="normal"
+
+			locked="true"
+			unlockedSymbolMesh="data/models/environment/various/gate_poor_01_symbol.khm"
+			openAngle="170"
+			openCloseTimeMsec="1400"
+
+			lockPickTimeMsec="10000"
+			breachTimeMsec="4000"
+			hammerHitsNeeded="1"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick"
+			sfxCrowbar="crowbar_use_metal"
+			sfxBreakHammer="door_grate_ram">
+		</Door>
+	</Entity>
+
+	<Entity name="door_grate_01" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_grating_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Door_Grate"/>
+		<RenderObject3D model="data/models/environment/various/door_grate.khm" diffuseTex="data/models/environment/various/door_grate_01.dds" emissive="1" />
+
+		<CanUseEquipment name="Grenade"/>
+		<!--<CanUseEquipment name="Breaching Charge"/> -->
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick">
+		</Door>
+	</Entity>
+
+	<Entity name="door_grate_02" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_grating_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Door_Grate"/>
+		<RenderObject3D model="data/models/environment/various/door_grate_02.khm" diffuseTex="data/models/environment/various/door_grate_02.dds" emissive="1" />
+
+		<CanUseEquipment name="Grenade"/>
+		<!--<CanUseEquipment name="Breaching Charge"/> -->
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick">
+		</Door>
+	</Entity>
+
+	<Entity name="gate_metal_short" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_shortgate_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Metal"/>
+		<RenderObject3D model="data/models/environment/various/gate_metal_short.khm" diffuseTex="data/models/environment/exterior/fence_metal_short.dds" emissive="1" />
+
+		<CanUseEquipment name="Grenade"/>
+		<!--<CanUseEquipment name="Breaching Charge"/> -->
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick">
+		</Door>
+	</Entity>
+
+	<Entity name="gate_metal_sheet" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_gate_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="true" solid="true"/>
+		<Breakable template="Breakable_Door_Grate"/>
+		<RenderObject3D model="data/models/environment/various/gate_metal_sheet.khm" diffuseTex="data/models/environment/various/gate_metal_sheet.dds" emissive="1" />
+
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/> <!-- includes SlapCharge/SlapChargeKit/BreachingCharge -->
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="1000"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick">
+		</Door>
+	</Entity>
+
+
+	<Entity name="door_grate_01_locked" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_grating_locked_tooltip"  editorAutoHeight="false">
+		<PhysicalParams blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Door_Grate"/>
+		<RenderObject3D model="data/models/environment/various/door_grate.khm" diffuseTex="data/models/environment/various/door_grate_01.dds" emissive="1"/>
+
+		<!-- "allow" can be 0/1/2, where 0=always allow (default), 1=when unlocked, 2=when locked -->
+		<CanUseEquipment name="Grenade" allow="1"/>
+		<CanUseEquipment name="TEC Torch"/>
+		<CanUseEquipment name="Slap Charge"/>
+		<CanUseEquipment name="Slap Charge Kit"/>
+		<!--<CanUseEquipment name="Breaching Charge"/> -->
+
+		<CanUseEquipment name="Lockpick" allow="2"/>
+		<CanUseEquipment name="Lockpick Machine" allow="2"/>
+		<CanUseEquipment name="Crowbar" allow="2"/>
+		<!--<CanUseEquipment name="Dynamic Hammer" allow="2"/> -->
+		<!--<CanUseEquipment name="BreachingKit" allow="2"/> -->
+		<!--<CanUseEquipment name="Bolt Cutter" allow="2"/>-->
+
+		<Door
+			type="normal"
+
+			locked="true"
+			unlockedSymbolMesh="data/models/environment/various/door_grate_unlocked_symbol.khm"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			lockPickTimeMsec="10000"
+			breachTimeMsec="9000"
+			hammerHitsNeeded="1"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick"
+			sfxCrowbar="crowbar_use_metal"
+			sfxBreakHammer="door_grate_ram">
+		</Door>
+	</Entity>
+	
+	<Entity name="door_metal_sheet" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_gate_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="true" solid="true"/>
+		<Breakable template="Breakable_Door_Grate"/>
+		<RenderObject3D model="data/models/environment/various/door_metal_sheet.khm" diffuseTex="data/models/environment/various/gate_metal_sheet.dds" emissive="1" />
+
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/> <!-- includes SlapCharge/SlapChargeKit/BreachingCharge -->
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="1000"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick">
+		</Door>
+	</Entity>
+	
+	<Entity name="door_metal_sheet_locked" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_gate_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="true" solid="true"/>
+		<Breakable template="Breakable_Door_Grate"/>
+		<RenderObject3D model="data/models/environment/various/door_metal_sheet.khm" diffuseTex="data/models/environment/various/gate_metal_sheet.dds" emissive="1" />
+
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/> <!-- includes SlapCharge/SlapChargeKit/BreachingCharge -->
+
+		<Door
+			type="normal"
+
+			locked="false"
+			openAngle="170"
+			openCloseTimeMsec="1000"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick">
+		</Door>
+	</Entity>
+
+	<Entity name="door_grate_02_locked" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_grating_locked_tooltip"  editorAutoHeight="false">
+		<PhysicalParams blocksVision="false" solid="false"/>
+		<Breakable template="Breakable_Door_Grate"/>
+		<RenderObject3D model="data/models/environment/various/door_grate_02.khm" diffuseTex="data/models/environment/various/door_grate_02.dds" emissive="1"/>
+
+		<!-- "allow" can be 0/1/2, where 0=always allow (default), 1=when unlocked, 2=when locked -->
+		<CanUseEquipment name="Grenade" allow="1"/>
+		<CanUseEquipment name="TEC Torch"/>
+		<CanUseEquipment name="Slap Charge"/>
+		<CanUseEquipment name="Slap Charge Kit"/>
+		<!--<CanUseEquipment name="Breaching Charge"/> -->
+
+		<CanUseEquipment name="Lockpick" allow="2"/>
+		<CanUseEquipment name="Lockpick Machine" allow="2"/>
+		<CanUseEquipment name="Crowbar" allow="2"/>
+		<!--<CanUseEquipment name="Dynamic Hammer" allow="2"/> -->
+		<!--<CanUseEquipment name="BreachingKit" allow="2"/> -->
+		<!--<CanUseEquipment name="Bolt Cutter" allow="2"/>-->
+
+		<Door
+			type="normal"
+
+			locked="true"
+			unlockedSymbolMesh="data/models/environment/various/door_grate_unlocked_symbol.khm"
+			openAngle="170"
+			openCloseTimeMsec="900"
+
+			lockPickTimeMsec="10000"
+			breachTimeMsec="9000"
+			hammerHitsNeeded="1"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick"
+			sfxCrowbar="crowbar_use_metal"
+			sfxBreakHammer="door_grate_ram">
+		</Door>
+	</Entity>
+
+	<Entity name="gate_metal_sheet_locked" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_gate_locked_tooltip"  editorAutoHeight="false">
+		<PhysicalParams blocksVision="true" solid="true"/>
+		<Breakable template="Breakable_Door_Grate"/>
+		<RenderObject3D model="data/models/environment/various/gate_metal_sheet.khm" diffuseTex="data/models/environment/various/gate_metal_sheet.dds" emissive="1"/>
+
+		<!-- "allow" can be 0/1/2, where 0=always allow (default), 1=when unlocked, 2=when locked -->
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="TEC Torch"/>
+		<CanUseEquipment name="Grenade" allow="1"/>
+		<CanUseEquipment name="ExplosiveCharge"/> <!-- includes slaps/slap kit/breaching charge -->
+
+		<CanUseEquipment name="Lockpick" allow="2"/>
+		<CanUseEquipment name="Lockpick Machine" allow="2"/>
+		<CanUseEquipment name="Crowbar" allow="2"/>
+		<CanUseEquipment name="Dynamic Hammer" allow="2"/>
+		<CanUseEquipment name="Breacher Shotgun" allow="2"/>
+		<!--<CanUseEquipment name="BreachingKit" allow="2"/> -->
+		<!--<CanUseEquipment name="Bolt Cutter" allow="2"/>-->
+
+		<Door
+			type="normal"
+
+			locked="true"
+			unlockedSymbolMesh="data/models/environment/various/gate_metal_sheet_symbol.khm"
+			openAngle="170"
+			openCloseTimeMsec="1000"
+
+			lockPickTimeMsec="10000"
+			breachTimeMsec="10000"
+			hammerHitsNeeded="2"
+
+			sfxOpen="door_grate_open"
+			sfxClose="door_grate_close"
+			sfxKick="door_grate_kick"
+			sfxCrowbar="crowbar_use_metal"
+			sfxBreakHammer="door_grate_ram">
+		</Door>
+	</Entity>
+
+	<Entity name="door_glass_sliding_01" type="Door" hideInEditor="true" fogOfWarVisibility="hiddenState" tooltip="@entity_door_sliding_tooltip2" editorAutoHeight="false">
+		<PhysicalParams blocksVision="flase" solid="false"/>
+		<Breakable template="Breakable_Glass" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/various/door_glass_narrow.khm" diffuseTex="data/models/environment/various/door_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true" />
+		<RenderObject3D model="data/models/environment/various/door_glass_edge_narrow.khm" diffuseTex="data/models/environment/various/door_glass.dds" skipGOSSAO="true" skipSSAO="true" />
+		<!-- <RenderObject3D model="data/models/environment/various/door_01_symbol_sliding.khm" diffuseColor="e6d4c0" skipSSAO="true" skipGOSSAO="true" skipCastShadows="true" disableLighting="true" /> -->
+
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+
+		<Door
+			type="sliding"
+
+			locked="0"
+			openCloseTimeMsec="1200"
+
+			lockPickTimeMsec="10000"
+			breachTimeMsec="4000"
+			hammerHitsNeeded="1"
+
+			sfxOpen="doorsl_open"
+			sfxClose="doorsl_close"
+			sfxKick="glass_break"
+			sfxCrowbar="crowbar_use"
+			sfxBreakHammer="glass_break">
+		</Door>
+	</Entity>
+	
+	
+	<Entity name="gate_large_double_sliding" hideInEditor="false" type="Door" fogOfWarVisibility="hiddenState" tooltip="@entity_door_gate_large_tooltip" editorAutoHeight="false">
+		<PhysicalParams blocksVision="false" solid="false" />
+		<Breakable template="Breakable_Door_Grate"/>
+		<RenderObject3D model="data/models/environment/various/gate_large_double.khm" diffuseTex="data/models/environment/various/gate_large.dds" gossaoCastHeight="4">
+		<Specular shininess="4" intensity="3" mask="data/models/environment/various/gate_large_spec.dds"/>
+		</RenderObject3D>
+
+		<CanUseEquipment name="Spy Camera"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+
+		<Door
+			type="sliding"
+
+			locked="0"
+			openCloseTimeMsec="1200"
+
+			lockPickTimeMsec="10000"
+			breachTimeMsec="4000"
+			hammerHitsNeeded="1"
+
+			sfxOpen="doorsl_open"
+			sfxClose="doorsl_close"
+			sfxKick="glass_break"
+			sfxCrowbar="crowbar_use"
+			sfxBreakHammer="glass_break">
+		</Door>
+	</Entity>
+
+	<Entity name="door_frame_wood_01" hideInEditor="true" type="BasicEntity" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable/>
+		<RenderObject3D model="data/models/environment/various/door_frame_wood.khm" diffuseTex="data/models/environment/various/door_wood_01.dds" />
+	</Entity>
+
+	<Entity name="door_frame_wood_half" hideInEditor="true" type="BasicEntity" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable/>
+		<RenderObject3D model="data/models/environment/various/door_frame_wood_half.khm" diffuseTex="data/models/environment/various/door_wood_01.dds" />
+	</Entity>
+
+	<Entity name="door_frame_wood_test" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable/>
+		<RenderObject3D model="data/models/environment/various/door_frame_wood.khm" diffuseTex="data/models/environment/various/door_wood_01.dds"/>
+	</Entity>
+
+	<Entity name="door_frame_grate_01" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable/>
+		<RenderObject3D model="data/models/environment/various/door_frame_grate.khm" diffuseTex="data/models/environment/various/door_grate_01.dds" />
+	</Entity>
+
+	<Entity name="gate_frame_poor_01" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable/>
+		<RenderObject3D model="data/models/environment/various/gate_frame_poor_01.khm" diffuseTex="data/models/environment/various/gate_poor.dds" />
+	</Entity>
+
+
+	<Entity name="door_frame_flat_01" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable/>
+		<RenderObject3D model="data/models/environment/various/door_frame_wood.khm" diffuseTex="data/models/environment/various/door_flat_01.dds" />
+	</Entity>
+
+	<Entity name="gate_large_double_frame" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<Breakable/>
+		<RenderObject3D model="data/models/environment/various/gate_large_double_frame.khm" diffuseTex="data/models/environment/various/gate_large.dds" />
+	</Entity>
+
+	<Entity name="door_frame_glass" hideInEditor="true" type="BasicEntity" editorAutoHeight="false">
+		<PhysicalParams blocksVision="false" solid="false"/>
+		<Breakable/>
+		<RenderObject3D model="data/models/environment/various/door_frame_glass_narrow.khm" diffuseTex="data/models/environment/various/door_wood_01.dds" />
+	</Entity>
+
+	<Entity name="door_frame_grate_02" hideInEditor="false" type="BasicEntity" editorAutoHeight="true">
+		<PhysicalParams blocksVision="false" solid="false"/>
+		<Breakable/>
+		<RenderObject3D model="data/models/environment/various/door_frame_grate_02.khm" diffuseTex="data/models/environment/various/door_grate_02.dds" />
+	</Entity>
+
+	<Entity name="door_threshold_wood_01" type="BasicEntity" hideInEditor="true" >
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/door_threshold_wood.khm" diffuseTex="data/models/environment/various/door_wood_01.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="door_threshold_wood_half" type="BasicEntity" hideInEditor="true" >
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/door_threshold_wood_half.khm" diffuseTex="data/models/environment/various/door_wood_01.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="door_threshold_grate_01" type="BasicEntity" hideInEditor="true" >
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/door_threshold_grate.khm" diffuseTex="data/models/environment/various/door_grate_01.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="door_threshold_grate_02" type="BasicEntity" hideInEditor="true" >
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/door_threshold_grate_02.khm" diffuseTex="data/models/environment/various/door_grate_02.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="door_threshold_flat_01" type="BasicEntity" hideInEditor="true" >
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/door_threshold_wood.khm" diffuseTex="data/models/environment/various/door_flat_01.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="door_threshold_glass" type="BasicEntity" hideInEditor="true" >
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/door_threshold_glass.khm" diffuseTex="data/models/environment/various/door_wood_01.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<Entity name="door_threshold_glass_metal" type="BasicEntity" hideInEditor="true" >
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/door_threshold_glass.khm" diffuseTex="data/models/environment/various/door_flat_01.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+
+
+	<!--
+		windows
+	-->
+
+	<Entity name="window_glass" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/window_single_02_glass.khm" diffuseTex="data/models/environment/various/window_single_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" />
+		</RenderObject3D>
+		<Breakable breakOnDamage="bullet" sfx="glass_break">
+			<Piece entityName="window_single_02_glass_break_01"/>
+			<Piece entityName="window_single_02_glass_break_02"/>
+			<Piece entityName="window_single_02_glass_break_03"/>
+			<Piece entityName="window_single_02_glass_break_04"/>
+			<Piece entityName="window_single_02_glass_break_05"/>
+			<Piece entityName="window_single_02_glass_break_06"/>
+			<Piece entityName="window_single_02_glass_break_07"/>
+			<Piece entityName="window_single_02_glass_break_08"/>
+			<Piece entityName="window_single_02_glass_break_09"/>
+			<Piece entityName="window_single_02_glass_break_10"/>
+			<Piece entityName="window_single_02_glass_break_11"/>
+			<Piece entityName="window_single_02_glass_break_12"/>
+			<Piece entityName="window_single_02_glass_break_13"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="window_glass_broken" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/window_single_02_glass.khm" diffuseTex="data/models/environment/various/window_single_02_glass_broken.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" />
+		</RenderObject3D>
+		<Breakable breakOnDamage="bullet" sfx="glass_break">
+			<Piece entityName="window_single_02_glass_break_01"/>
+			<Piece entityName="window_single_02_glass_break_02"/>
+			<Piece entityName="window_single_02_glass_break_03"/>
+			<Piece entityName="window_single_02_glass_break_04"/>
+			<Piece entityName="window_single_02_glass_break_05"/>
+			<Piece entityName="window_single_02_glass_break_06"/>
+			<Piece entityName="window_single_02_glass_break_07"/>
+			<Piece entityName="window_single_02_glass_break_08"/>
+			<Piece entityName="window_single_02_glass_break_09"/>
+			<Piece entityName="window_single_02_glass_break_10"/>
+			<Piece entityName="window_single_02_glass_break_11"/>
+			<Piece entityName="window_single_02_glass_break_12"/>
+			<Piece entityName="window_single_02_glass_break_13"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="window_frame" type="Window" hideInEditor="true" tooltip="@entity_window" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="true" usableCover="true"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+		<Breakable>
+
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/various/window_single_02.khm" diffuseTex="data/models/environment/various/window_single_02.dds"/>
+	</Entity>
+
+	<Entity name="window_frame_02" type="Window" hideInEditor="true" tooltip="@entity_window" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="true" usableCover="true"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+		<Breakable>
+
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/various/window_single_02.khm" diffuseTex="data/models/environment/various/window_single_white.dds"/>
+	</Entity>
+
+	<Entity name="window_frame_03" type="Window" hideInEditor="true" tooltip="@entity_window" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="true" usableCover="true"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+		<Breakable>
+
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/various/window_single_02.khm" diffuseTex="data/models/environment/various/window_single_brick.dds"/>
+	</Entity>
+
+	<Entity name="window_glass_double" type="BasicEntity" hideInEditor="true" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="false" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/window_double_02_glass.khm" diffuseTex="data/models/environment/various/window_single_02_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" />
+		</RenderObject3D>
+		<Breakable breakOnDamage="bullet" sfx="glass_break">
+			<Piece entityName="window_single_02_glass_break_01"/>
+			<Piece entityName="window_single_02_glass_break_02"/>
+			<Piece entityName="window_single_02_glass_break_03"/>
+			<Piece entityName="window_single_02_glass_break_04"/>
+			<Piece entityName="window_single_02_glass_break_05"/>
+			<Piece entityName="window_single_02_glass_break_06"/>
+			<Piece entityName="window_single_02_glass_break_07"/>
+			<Piece entityName="window_single_02_glass_break_08"/>
+			<Piece entityName="window_single_02_glass_break_09"/>
+			<Piece entityName="window_single_02_glass_break_10"/>
+			<Piece entityName="window_single_02_glass_break_11"/>
+			<Piece entityName="window_single_02_glass_break_12"/>
+			<Piece entityName="window_single_02_glass_break_13"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="window_frame_double" type="Window" hideInEditor="true" tooltip="@entity_window" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="true" usableCover="true"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+		<Breakable>
+			<Piece entityName="window_single_02_break_01"/>
+			<Piece entityName="window_single_02_break_02"/>
+			<Piece entityName="window_single_02_break_03"/>
+			<Piece entityName="window_single_02_break_04"/>
+			<Piece entityName="window_single_02_break_05"/>
+			<Piece entityName="window_single_02_break_06"/>
+			<Piece entityName="window_single_02_break_07"/>
+			<Piece entityName="window_single_02_break_08"/>
+			<Piece entityName="window_single_02_break_09"/>
+			<Piece entityName="window_single_02_break_10"/>
+			<Piece entityName="window_single_02_break_11"/>
+
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/various/window_double_02.khm" diffuseTex="data/models/environment/various/window_single_02.dds"/>
+	</Entity>
+
+	<Entity name="window_frame_double_brick" type="Window" hideInEditor="true" tooltip="@entity_window" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="true" usableCover="true"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+		<Breakable>
+			<Piece entityName="window_single_02_break_01"/>
+			<Piece entityName="window_single_02_break_02"/>
+			<Piece entityName="window_single_02_break_03"/>
+			<Piece entityName="window_single_02_break_04"/>
+			<Piece entityName="window_single_02_break_05"/>
+			<Piece entityName="window_single_02_break_06"/>
+			<Piece entityName="window_single_02_break_07"/>
+			<Piece entityName="window_single_02_break_08"/>
+			<Piece entityName="window_single_02_break_09"/>
+			<Piece entityName="window_single_02_break_10"/>
+			<Piece entityName="window_single_02_break_11"/>
+
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/various/window_double_02.khm" diffuseTex="data/models/environment/various/window_double_brick.dds"/>
+	</Entity>
+
+	<Entity name="window_frame_double_white" type="Window" hideInEditor="true" tooltip="@entity_window" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="true" usableCover="true"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+		<Breakable>
+			<Piece entityName="window_single_02_break_01"/>
+			<Piece entityName="window_single_02_break_02"/>
+			<Piece entityName="window_single_02_break_03"/>
+			<Piece entityName="window_single_02_break_04"/>
+			<Piece entityName="window_single_02_break_05"/>
+			<Piece entityName="window_single_02_break_06"/>
+			<Piece entityName="window_single_02_break_07"/>
+			<Piece entityName="window_single_02_break_08"/>
+			<Piece entityName="window_single_02_break_09"/>
+			<Piece entityName="window_single_02_break_10"/>
+			<Piece entityName="window_single_02_break_11"/>
+
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+			<Piece entityName="wall_debris_04"/>
+
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+			<Piece entityName="wall_debris_05"/>
+
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+			<Piece entityName="wall_debris_06"/>
+		</Breakable>
+		<RenderObject3D model="data/models/environment/various/window_double_02.khm" diffuseTex="data/models/environment/various/window_single_white.dds"/>
+	</Entity>
+
+	<!-- should actually be a BasicEntity, but we don't support custom actions for basic entities yet, and we want the ClearObstacle option to show up
+	<Entity name="wall_glass" type="BasicEntity" hideInEditor="true" editorAutoHeight="false"> -->
+	<Entity name="wall_glass" type="Window" hideInEditor="true" editorAutoHeight="false" tooltip="@entity_glass_wall">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/wall_glass_frame.khm" diffuseTex="data/models/environment/various/wall_glass_frame.dds" reflections="false" skipGOSSAO="true" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/various/glass_100.khm" diffuseTex="data/models/environment/various/door_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" />
+		</RenderObject3D>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+		<Breakable breakOnDamage="bullet" sfx="glass_break">
+			<Piece entityName="window_single_02_glass_break_01"/>
+			<Piece entityName="window_single_02_glass_break_02"/>
+			<Piece entityName="window_single_02_glass_break_03"/>
+			<Piece entityName="window_single_02_glass_break_04"/>
+			<Piece entityName="window_single_02_glass_break_05"/>
+			<Piece entityName="window_single_02_glass_break_06"/>
+			<Piece entityName="window_single_02_glass_break_07"/>
+			<Piece entityName="window_single_02_glass_break_08"/>
+			<Piece entityName="window_single_02_glass_break_09"/>
+			<Piece entityName="window_single_02_glass_break_10"/>
+			<Piece entityName="window_single_02_glass_break_11"/>
+			<Piece entityName="window_single_02_glass_break_12"/>
+			<Piece entityName="window_single_02_glass_break_13"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="window_threshold" type="BasicEntity" hideInEditor="true" >
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/wall_glass_threshold.khm" diffuseTex="data/models/environment/various/wall_glass_frame.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+
+	<!-- should actually be a BasicEntity, but we don't support custom actions for basic entities yet, and we want the ClearObstacle option to show up
+	<Entity name="wall_glass_wood" type="BasicEntity" hideInEditor="true" editorAutoHeight="false"> -->
+	<Entity name="wall_glass_wood" type="Window" hideInEditor="true" editorAutoHeight="false" tooltip="@entity_glass_wall">
+		<PhysicalParams blocksMovement="true" blocksVision="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/wall_glass_frame.khm" diffuseTex="data/models/environment/various/wall_glass_frame_wood.dds" reflections="false" skipGOSSAO="true" skipSSAO="true"/>
+		<RenderObject3D model="data/models/environment/various/glass_100.khm" diffuseTex="data/models/environment/various/door_glass.dds" blendMode="normal" reflections="true" skipGOSSAO="true" skipSSAO="true">
+			<Specular shininess="64" intensity="5.0" />
+		</RenderObject3D>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="ExplosiveCharge"/>
+		<Breakable breakOnDamage="bullet" sfx="glass_break">
+			<Piece entityName="window_single_02_glass_break_01"/>
+			<Piece entityName="window_single_02_glass_break_02"/>
+			<Piece entityName="window_single_02_glass_break_03"/>
+			<Piece entityName="window_single_02_glass_break_04"/>
+			<Piece entityName="window_single_02_glass_break_05"/>
+			<Piece entityName="window_single_02_glass_break_06"/>
+			<Piece entityName="window_single_02_glass_break_07"/>
+			<Piece entityName="window_single_02_glass_break_08"/>
+			<Piece entityName="window_single_02_glass_break_09"/>
+			<Piece entityName="window_single_02_glass_break_10"/>
+			<Piece entityName="window_single_02_glass_break_11"/>
+			<Piece entityName="window_single_02_glass_break_12"/>
+			<Piece entityName="window_single_02_glass_break_13"/>
+		</Breakable>
+	</Entity>
+
+	<Entity name="window_threshold_wood" type="BasicEntity" hideInEditor="true" >
+		<PhysicalParams physicsEnabled="false" solid="false"/>
+		<RenderObject3D model="data/models/environment/various/wall_glass_threshold.khm" diffuseTex="data/models/environment/various/wall_glass_frame_wood.dds" skipGOSSAO="true" skipSSAO="true" skipCastShadows="true"/>
+	</Entity>
+	
+	<Entity name="fence_stone_01" type="Wall" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="true"/>
+		<Breakable breakOnDamage="explosive"/>
+		<RenderObject3D diffuseTex="data/textures/misc/wall_exterior_01.dds"/>
+		<RenderObject3D diffuseTex="data/textures/misc/wall_exterior_top_01.dds" skipSSAO="true" skipGOSSAO="false" skipCastShadows="false" disableLighting="true"/>
+		<RenderObject2D texture="data/textures/misc/wall_exterior_01.dds" sizeX="0.75" sizeY="0.75" hideInGame="true" disableDepthTest="true"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="Breaching Charge"/>
+		<Wall widthMeters="0.5" heightMeters="1.6" collisionHeight="1.9" breakTemplate="WallBrokenEdgeExt_01" debrisDensityPerM="1" groundDebrisTemplate="wall_exterior_remnant_01" groundDebrisSpacing="0.9">
+			<Piece entityName="wall_debris_01" size="0.3"/>
+			<Piece entityName="wall_debris_02" size="0.3"/>
+			<Piece entityName="wall_debris_03" size="0.2"/>
+			<Piece entityName="wall_debris_04" size="0.1"/>
+			<Piece entityName="wall_debris_05" size="0.1"/>
+			<Piece entityName="wall_debris_06" size="0.1"/>
+		</Wall>
+	</Entity>
+
+	<Entity name="fence_low_stone_01" type="Wall" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<Breakable breakOnDamage="explosive"/>
+		<RenderObject3D diffuseTex="data/textures/misc/wall_exterior_01.dds"/>
+		<RenderObject3D diffuseTex="data/textures/misc/wall_exterior_top_01.dds"/>
+		<RenderObject2D texture="data/textures/misc/wall_exterior_01.dds" sizeX="0.75" sizeY="0.75" hideInGame="true" disableDepthTest="true"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="Breaching Charge"/>
+		<Wall widthMeters="0.5" heightMeters="0.875" collisionHeight="1.2" breakTemplate="WallBrokenEdgeExtLow_01" debrisDensityPerM="1" groundDebrisTemplate="wall_exterior_remnant_01" groundDebrisSpacing="0.9">
+			<Piece entityName="wall_debris_01" size="0.3"/>
+			<Piece entityName="wall_debris_02" size="0.3"/>
+			<Piece entityName="wall_debris_03" size="0.2"/>
+			<Piece entityName="wall_debris_04" size="0.1"/>
+			<Piece entityName="wall_debris_05" size="0.1"/>
+			<Piece entityName="wall_debris_06" size="0.1"/>
+		</Wall>
+	</Entity>
+
+	<Entity name="fence_stone_02" type="Wall" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="true"/>
+		<Breakable breakOnDamage="explosive"/>
+		<RenderObject3D diffuseTex="data/textures/misc/wall_exterior_02.dds"/>
+		<RenderObject3D diffuseTex="data/textures/misc/wall_exterior_top_02.dds" skipSSAO="true" skipGOSSAO="false" skipCastShadows="false" disableLighting="true"/>
+		<RenderObject2D texture="data/textures/misc/wall_exterior_02.dds" sizeX="0.75" sizeY="0.75" hideInGame="true" disableDepthTest="true"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="Breaching Charge"/>
+		<Wall widthMeters="0.5" heightMeters="1.6" collisionHeight="1.9" breakTemplate="WallBrokenEdgeExt_02" debrisDensityPerM="1" groundDebrisTemplate="wall_exterior_remnant_02" groundDebrisSpacing="0.9">
+			<Piece entityName="wall_debris_07" size="0.3"/>
+			<Piece entityName="wall_debris_08" size="0.3"/>
+			<Piece entityName="wall_debris_09" size="0.2"/>
+			<Piece entityName="wall_debris_10" size="0.1"/>
+			<Piece entityName="wall_debris_11" size="0.1"/>
+			<Piece entityName="wall_debris_12" size="0.1"/>
+		</Wall>
+	</Entity>
+
+	<Entity name="fence_low_stone_02" type="Wall" editorAutoHeight="false">
+		<PhysicalParams blocksMovement="true" blocksVision="false" usableCover="true" />
+		<Breakable breakOnDamage="explosive"/>
+		<RenderObject3D diffuseTex="data/textures/misc/wall_exterior_02.dds"/>
+		<RenderObject3D diffuseTex="data/textures/misc/wall_exterior_top_02.dds"/>
+		<RenderObject2D texture="data/textures/misc/wall_exterior_02.dds" sizeX="0.75" sizeY="0.75" hideInGame="true" disableDepthTest="true"/>
+		<CanUseEquipment name="Grenade"/>
+		<CanUseEquipment name="Breaching Charge"/>
+		<Wall widthMeters="0.5" heightMeters="0.875" collisionHeight="1.9" breakTemplate="WallBrokenEdgeExt_02" debrisDensityPerM="1" groundDebrisTemplate="wall_exterior_remnant_02" groundDebrisSpacing="0.9">
+			<Piece entityName="wall_debris_07" size="0.3"/>
+			<Piece entityName="wall_debris_08" size="0.3"/>
+			<Piece entityName="wall_debris_09" size="0.2"/>
+			<Piece entityName="wall_debris_10" size="0.1"/>
+			<Piece entityName="wall_debris_11" size="0.1"/>
+			<Piece entityName="wall_debris_12" size="0.1"/>
+		</Wall>
+	</Entity>
+
+
+
+	<Entity name="curtain_01_01" type="Drapes" tooltip="@entity_drapes" editorAutoHeight="false" editorTags="deco int">
+		<PhysicalParams solid="true" blocksMovement="false" blocksVision="true"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/interior/curtain_01.khm" diffuseTex="data/models/environment/interior/curtain_01_01.dds" windAnimated="1" />
+		<CanUseEquipment name="ExplosiveCharge"/>
+	</Entity>
+
+	<Entity name="curtain_01_02" type="Drapes" tooltip="@entity_drapes" editorAutoHeight="false" editorTags="deco int">
+		<PhysicalParams solid="true" blocksMovement="false" blocksVision="true"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/interior/curtain_01.khm" diffuseTex="data/models/environment/interior/curtain_01_02.dds" windAnimated="1" />
+		<CanUseEquipment name="ExplosiveCharge"/>
+	</Entity>
+
+
+	<Entity name="curtain_02_01" type="Drapes" tooltip="@entity_drapes" editorAutoHeight="false" editorTags="deco int">
+		<PhysicalParams solid="true" blocksMovement="false" blocksVision="true"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/interior/curtain_02.khm" diffuseTex="data/models/environment/interior/curtain_02_01.dds" windAnimated="1" />
+		<CanUseEquipment name="ExplosiveCharge"/>
+	</Entity>
+
+	<Entity name="curtain_03_01" type="Drapes" tooltip="@entity_drapes" editorAutoHeight="false" editorTags="deco int">
+		<PhysicalParams solid="true" blocksMovement="false" blocksVision="true"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/interior/curtain_03.khm" diffuseTex="data/models/environment/interior/curtain_03_01.dds" windAnimated="1" />
+		<CanUseEquipment name="ExplosiveCharge"/>
+	</Entity>
+
+	<Entity name="curtain_04_01" type="Drapes" tooltip="@entity_drapes" editorAutoHeight="false" editorTags="deco int">
+		<PhysicalParams solid="true" blocksMovement="false" blocksVision="true"/>
+		<Breakable template="Breakable_Curtain" breakOnDamage="bullet"/>
+		<RenderObject3D model="data/models/environment/interior/curtain_04.khm" diffuseTex="data/models/environment/interior/curtain_04_01.dds" windAnimated="1" />
+		<CanUseEquipment name="ExplosiveCharge"/>
+	</Entity>
+
+
+</Entities>

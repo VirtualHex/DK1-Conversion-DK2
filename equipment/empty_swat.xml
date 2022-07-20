@@ -1,0 +1,13 @@
+<!-- Binding everything like this is easy as fuck -->
+<Equipment>
+  <Bind to="SWAT">
+    <eqp name="EmptyUtility"/>
+    <eqp name="EmptyPrimary"/>
+    <eqp name="EmptySecondary"/>
+    <eqp name="EmptyHelmetNVG"/>
+    <eqp name="EmptyArmor"/>
+    <eqp name="EmptySupportGear"/>
+    <eqp name="EmptyPrimaryMuzzle"/>
+    <eqp name="EmptySecondaryMuzzle"/>
+  </Bind>
+</Equipment>

@@ -1,0 +1,16 @@
+<!--
+		For help, please refer to "help_entities.txt" in this directory.
+-->
+<Entities>
+
+	<Entity name="glowstick_ground" type="BasicEntity" editorAutoHeight="false" initialHeight="0.04" editorTags="fx">
+		<PhysicalParams solid="false"/>
+		<RenderObject3D model="data/models/equipment/frag_grenade.khm" skipGOSSAO="true" diffuseTex="data/models/equipment/frag_grenade.dds"  sizeX="1" sizeY="1"/>
+	</Entity>
+
+	<Entity name="glowstick_glow" type="Light" editorAutoHeight="false" initialHeight="1.8" editorTags="fx">
+		<PhysicalParams solid="false"/>
+        <RenderObject2D texture="data/textures/editor/light_point.tga" sizeX="0.5" sizeY="0.5" hideInGame="true" disableDepthTest="true"/>
+        <Light type="Point" colorMultiplier="4" color="FF0000FF" radiusMeters="2" animation="pulse" animRate="2" animAmount="1.5" animRandomStart="true"/>
+    </Entity>
+</Entities>
