@@ -48,7 +48,7 @@
 		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
 	</OnClose>
 
-	<OnKeyDown key0="27">
+	<OnKeyDown key0="27" key1="32">
 		<Action type="Hide" target="howtoplay_main"/>
 		<Action type="Hide" target="howtoplay_ingame"/>
 		<Action type="Hide" target="howtoplay_singlemap"/>
@@ -76,12 +76,11 @@
 
 	<Item name="howtoplay_multipage_stuff">
 		<StaticImage origin="0 0">
-			<RenderObject2D texture="data/textures/gui/wallpaper_16x9.dds"/>
+			<RenderObject2D texture="data/textures/gui/DK1_Main_Menu_BG.dds" sizeX="7680" color="f0e3cc26" sizeY="1920" texRepeatX="2" texRepeatY="1"/>
 		</StaticImage>
 
-		<Movie hidden="false" sizeX="2700" sizeY="1500" file="data/movies/DK1BackgroundTest1.mp4" loop="true"/>
 		<StaticImage name="ScreenBg" origin="0 0">
-			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
+			<!-- <RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/> -->
 			<StaticImage align="l" origin="-128 0">
 				<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
 			</StaticImage>
@@ -93,7 +92,7 @@
 		<Button origin="-760 0">
 			<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="293F4CB3" flipX="true"/>
 			<OnHover>
-				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="93F4C" flipX="true"/>
+				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc" flipX="true"/>
 			</OnHover>
 			<OnClick>
 				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="293F4CB3" flipX="true"/>
@@ -104,19 +103,13 @@
 		<Button origin="760 0">
 			<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="293F4CB3" flipX="false"/>
 			<OnHover>
-				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="93F4C" flipX="false"/>
+				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="f0e3cc" flipX="false"/>
 			</OnHover>
 			<OnClick>
 				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="293F4CB3" flipX="false"/>
 				<Action type="TriggerEvent" target="GUI_GAME_TUTORIALS_NEXT"/>
 			</OnClick>
 		</Button>
-
-		<StaticImage align="t" name="ScreenFooter top" origin="0 720">
-				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303CC"/>
-				<StaticText origin="-20 0" text="HOW TO PLAY" font="header_2" textColor="5279a5" align="c"/>
-		</StaticImage>
-
 
 		<Item align="sv" origin="0 -688">
 			<StaticImage name="ScreenFooter" align="b" origin="0 -32">
@@ -142,7 +135,7 @@
 	<Item name="howtoplay_tut_list">
 		<Item name="howtoplay_pathing" sizeX="1366" sizeY="840">
 			<StaticImage align="t">
-				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/> 
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
 				<StaticText text="@menu_htp_basic" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
 			</StaticImage>
 			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_pathing.ogv" loop="true"/>

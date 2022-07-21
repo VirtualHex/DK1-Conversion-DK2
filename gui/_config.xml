@@ -1,1 +1,66 @@
-<GUI width="2560" height="1440" tooltipsTimeMsec="300" tooltipsTextColor="7D9FBB" tooltipsBckdColor="000000f5"/>
+<!--
+Global GUI config file.
+
+-All items have coordinates relative to the GUI width/height defined below
+-Sub-items coordinates are relative to their parent (origin="5 0" means an offset of 5 pixels added to that of their parent)
+-When alignment is defined, they are relative to the screen or their parent. If defined, the "origin" parameter represents an offset to the alignment.
+	'align' is a combination of either l/r/t/b/sh/sv (where sh/sv are exclusive and mean screen_vertical and screen_horizontal - used for variable aspect ratios)
+	e.g. align="lb" , align="br", align="sh"
+	note: center is default/implied, but can also be specified as align="c"
+-Colors are given in RGBA format, where A is optional (Photoshop-friendly, you can just c/p here).
+
+Special XML characters:
+&#xA;   - new line
+&amp;   - the & character
+-->
+<GUI width="2560" height="1440" tooltipsTimeMsec="300" tooltipsTextColor="7D9FBB" tooltipsBckdColor="000000f5">
+	<Item name="#tooltip" hidden="true">
+		<StaticImage name="#background" align="lb">
+			<RenderObject2D texture="data/textures/gui/tooltip/hud_label_stretch.tga"/>
+
+			<StaticImage origin="-4 0" align="l">
+				<RenderObject2D texture="data/textures/gui/tooltip/hud_label_terminator.tga"/>
+			</StaticImage>
+			<StaticImage origin="4 0" align="r">
+				<RenderObject2D texture="data/textures/gui/tooltip/hud_label_terminator.tga" flipX="true"/>
+			</StaticImage>
+
+			<StaticText name="#text" origin="0 0" text="Pintea Haiducul" align="c" font="paragraph_2" textColor="efe2ca"/>
+		</StaticImage>
+	</Item>
+</GUI>
+
+
+
+<!--
+Help on GUI .xml scripts:
+
+<Action type=""> types:
+
+Hide
+Show
+Click
+SetForeground
+AddChild
+RemoveChild
+    - target is Item name
+
+TriggerEvent
+    - target is event Id, like GUI_GAME_QUIT_GAME
+
+Check
+Check_WithoutActions
+Uncheck
+Uncheck_WithoutActions
+    - checkboxes only
+
+OpenURL - target is URL
+
+ScrollListForward
+ScrollListBackward
+    - scroll lists only
+
+PlaySound
+    - target="SFX_..."
+
+-->

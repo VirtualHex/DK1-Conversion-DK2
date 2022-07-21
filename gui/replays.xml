@@ -17,25 +17,23 @@
 	</OnKeyDown>
 
 	<StaticImage origin="0 0">
-		<RenderObject2D texture="data/textures/gui/wallpaper_16x9.dds"/>
+		<RenderObject2D texture="data/textures/gui/DK1_Loading_Screen.dds" scaleY="1" scaleX="0.9"/>
 	</StaticImage>
 
-	<Movie hidden="false" sizeX="2700" sizeY="1500" file="data/movies/DK1BackgroundTest1.mp4" loop="true"/>
-
 	<StaticImage name="ScreenBg" origin="0 0">
-		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="9999" color="0c0b0bbf"/>
 		<OnScrollDown>
 			<Action type="ScrollListForward" target="#Replays_ItemList"/>
 		</OnScrollDown>
 		<OnScrollUp>
 			<Action type="ScrollListBackward" target="#Replays_ItemList"/>
 		</OnScrollUp>
-		<StaticImage align="l" origin="-128 0">
+		<!-- <StaticImage align="l" origin="-128 0">
 			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
 		</StaticImage>
 		<StaticImage align="r" origin="128 0">
 			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipY="true" />
-		</StaticImage>
+		</StaticImage> -->
 	</StaticImage>
 
 	<!-- for mocking up the scroll list area -->
@@ -103,6 +101,15 @@
 			</StaticImage>
 			<StaticImage name="#ScenarioImg_RaidOnStronghold" hidden="true">
 				<RenderObject2D texture="data/textures/gui/missions/mission_stronghold.dds"/>
+			</StaticImage>
+			<StaticImage name="#ScenarioImg_QRF_Survivors" hidden="true">
+				<RenderObject2D texture="data/textures/gui/missions/mission_qrf.dds"/>
+			</StaticImage>
+			<StaticImage name="#ScenarioImg_QRF_Sabotage" hidden="true">
+				<RenderObject2D texture="data/textures/gui/missions/mission_qrf.dds"/>
+			</StaticImage>
+			<StaticImage name="#ScenarioImg_QRF_Survivors_Sabotage" hidden="true">
+				<RenderObject2D texture="data/textures/gui/missions/mission_qrf.dds"/>
 			</StaticImage>
 		</Item>
 
@@ -186,14 +193,14 @@
 		<Item name="#ReplayFileName" tooltip="replay file name" hidden="true"/>
 
 		<StaticImage origin="34 134" align="lb">
-			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="200" sizeY="30" color="40392b"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="220" sizeY="30" color="40392b"/>
+			<StaticText name="#ReplayDate" origin="0 0" align="c" text="01/12/2021" font="paragraph_3" textColor="9caec6"/>
 		</StaticImage>
-		<StaticText name="#ReplayDate" origin="47 135" align="lb" text="01/12/2021" font="paragraph_3" textColor="293F4C"/>
-		
+
 		<StaticImage origin="-38 134" align="rb">
 			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="80" sizeY="30" color="40392b"/>
+			<StaticText name="#ReplayTime" origin="0 0" align="c" text="HH:MM:SS" font="paragraph_3" textColor="9caec6"/>
 		</StaticImage>
-		<StaticText name="#ReplayTime" origin="-56 135" align="rb" text="HH:MM:SS" font="paragraph_3" textColor="293F4C"/>
 
 		<StaticImage name="#ReplayIncompatible" origin="0 50" hidden="true" ignoreFocus="true">
 			<RenderObject2D texture="data/textures/gui/replay_incompatible.dds" color="ff5a5a7f"/>
@@ -203,6 +210,12 @@
 		</StaticImage>
 	</Button>
 
+	<Item name="MissionListBg" origin="-1180 660" align="l" sizeX="2560" hidden="false">
+		<StaticText align="l" text="@menu_replays_replays_upper" font="header_3" textColor="9caec6"/>
+		<StaticImage origin="0 -40" align="l">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="732" sizeY="4" color="9caec6"/>
+		</StaticImage>
+	</Item>
 
 	<ItemList name="#Replays_ItemList" origin="0 7" sizeX="2450" sizeY="1138" direction="y" clipChildren="true">
 		<ButtonGraphics align="r" origin="32 0">
@@ -236,11 +249,6 @@
 		<RenderObject2D texture="data/textures/gui/thumbleweed_anim_mb.dds" blendMode="add" scaleX="1.8" scaleY="1.8">
 			<TextureAnimation frameWidth="256" frameHeight="256" startFrame="0" endFrame="11" animationTimeMS="1000" numLoops="-1"/>
 		</RenderObject2D>
-	</StaticImage>
-
-	<StaticImage align="t" name="ScreenFooter top" origin="0 720">
-				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303CC"/>
-				<StaticText origin="-20 0" text="@menu_replays_replays_upper" font="header_2" textColor="5279a5" align="c"/>
 	</StaticImage>
 
 	<Item align="sv" origin="0 -688">
