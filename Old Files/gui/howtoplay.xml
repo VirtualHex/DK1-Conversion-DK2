@@ -1,0 +1,249 @@
+<GUIItems>
+
+<Item name="howtoplay_main" hidden="true">
+	<OnOpen>
+		<Action type="Hide" target="Menu_Main"/>
+		<Action type="Show" target="howtoplay"/>
+		<Action type="Hide" target="howtoplay_singlepage_stuff"/>
+		<Action type="Show" target="howtoplay_multipage_stuff"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="Hide" target="howtoplay"/>
+		<Action type="Show" target="Menu_Main"/>
+	</OnClose>
+</Item>
+
+<Item name="howtoplay_ingame" hidden="true">
+	<OnOpen>
+		<Action type="Hide" target="Menu_Ingame"/>
+		<Action type="Show" target="howtoplay"/>
+		<Action type="Hide" target="howtoplay_singlepage_stuff"/>
+		<Action type="Show" target="howtoplay_multipage_stuff"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="Hide" target="howtoplay"/>
+		<Action type="Show" target="Menu_Ingame"/>
+	</OnClose>
+</Item>
+
+<Item name="howtoplay_singlemap" hidden="true">
+	<OnOpen>
+		<Action type="Show" target="howtoplay"/>
+		<Action type="Show" target="howtoplay_singlepage_stuff"/>
+		<Action type="Hide" target="howtoplay_multipage_stuff"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="Hide" target="howtoplay"/>
+	</OnClose>
+</Item>
+
+<Item name="howtoplay" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+	</OnOpen>
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+
+	<OnKeyDown key0="27" key1="32">
+		<Action type="Hide" target="howtoplay_main"/>
+		<Action type="Hide" target="howtoplay_ingame"/>
+		<Action type="Hide" target="howtoplay_singlemap"/>
+	</OnKeyDown>
+
+	<Item name="howtoplay_singlepage_stuff" hidden="true">
+		<StaticImage>
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="9999" color="211e1dB3"/>
+		</StaticImage>
+
+		<Button origin="-473 -473">
+			<ButtonText origin="10 0" text="@menu_generic_roger" align="l" font="header_3" textColor="f0e3cc"/>
+			<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40382b" />
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" flipX="false" color="f0e3cc" />
+				<ButtonText origin="10 0" text="@menu_generic_roger" align="l" font="header_3" textColor="40382b"/>
+			</OnHover>
+			<OnClick>
+				<ButtonText origin="10 0" text="@menu_generic_roger" align="l" font="header_3" textColor="f6e9d2"/>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40382b" />
+				<Action type="Hide" target="howtoplay_singlemap"/>
+			</OnClick>
+		</Button>
+	</Item>
+
+	<Item name="howtoplay_multipage_stuff">
+		<StaticImage origin="0 0">
+			<RenderObject2D texture="data/textures/gui/wallpaper_16x9.dds"/>
+		</StaticImage>
+
+		<Movie hidden="false" sizeX="2700" sizeY="1500" file="data/movies/DK1BackgroundTest1.mp4" loop="true"/>
+		<StaticImage name="ScreenBg" origin="0 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
+			<StaticImage align="l" origin="-128 0">
+				<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
+			</StaticImage>
+			<StaticImage align="r" origin="128 0">
+				<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipY="true" />
+			</StaticImage>
+		</StaticImage>
+
+		<Button origin="-760 0">
+			<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="293F4CB3" flipX="true"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="93F4C" flipX="true"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="293F4CB3" flipX="true"/>
+				<Action type="TriggerEvent" target="GUI_GAME_TUTORIALS_PREV"/>
+			</OnClick>
+		</Button>
+
+		<Button origin="760 0">
+			<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="293F4CB3" flipX="false"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="93F4C" flipX="false"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/menu_arrow.dds" color="293F4CB3" flipX="false"/>
+				<Action type="TriggerEvent" target="GUI_GAME_TUTORIALS_NEXT"/>
+			</OnClick>
+		</Button>
+
+		<StaticImage align="t" name="ScreenFooter top" origin="0 720">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303CC"/>
+				<StaticText origin="-20 0" text="HOW TO PLAY" font="header_2" textColor="5279a5" align="c"/>
+		</StaticImage>
+
+
+		<Item align="sv" origin="0 -688">
+			<StaticImage name="ScreenFooter" align="b" origin="0 -32">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303"/>
+			</StaticImage>
+
+			<!-- back button -->
+			<Button align="lb" origin="-1200 -4">
+				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="5279a5"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="d1d1d1" flipX="false"/>
+					<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="000000"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="293F4C85" flipX="false"/>
+					<Action type="Hide" target="howtoplay_main"/>
+					<Action type="Hide" target="howtoplay_ingame"/>
+				</OnClick>
+			</Button>
+		</Item>
+	</Item>
+
+	<Item name="howtoplay_tut_list">
+		<Item name="howtoplay_pathing" sizeX="1366" sizeY="840">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_basic" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_pathing.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_doors" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_doors" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_doors.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_gocodes" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_gocodes" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_gocodes.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_windows" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_windows" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_windows.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_sniper" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_snipers" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_sniper.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_cover" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_cover" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_cover.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_rescue" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_rescue" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_rescue.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_pathedit" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_path" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_pathedit.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_crouch" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_crouch" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/tutorial_crouching.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_cia_concealment" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_concealment" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/cia_concealment.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_cia_dangerzones" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_danger_zones" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/cia_dangerzone.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_cia_undercover" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_undercover" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/cia_undercover.ogv" loop="true"/>
+		</Item>
+
+		<Item name="howtoplay_fuseboxes" sizeX="1366" sizeY="840" hidden="true">
+			<StaticImage align="t">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1366" sizeY="72" color="293F4CB3"/>
+				<StaticText text="@menu_htp_turningofflights" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+			</StaticImage>
+			<Movie align="b" hidden="false" sizeX="1366" sizeY="768" file="data/movies/fusebox.ogv" loop="true"/>
+		</Item>
+	</Item>
+</Item>
+
+</GUIItems>

@@ -1,0 +1,304 @@
+<Equipment>
+	<!--Mac 10-->
+	<!--
+	<Firearm name="Mac10" inventoryBinding="PrimaryWeapon" category="rifle" unlockCost="6"
+			tooltip="Mac-10"
+
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/mini_uzi.khm" attachSlot="prop_back_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/mini_uzi.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="32"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="1900"
+			reloadEmptyTime="1900"
+			changeInTime="500"
+			changeOutTime="500"
+			readyTime="300"
+			guardTime="200"
+
+			accuracyStart="70"
+			accuracyEnd="50"
+			accuracyStartDist="0"
+			accuracyEndDist="50"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="5.0"
+			ai_rangeMax="25.0"
+		/>
+
+		<AmmoTypes>
+			<Ammo name="9x19FMJ_MiniUzi"/>
+		</AmmoTypes>
+
+		<ScopeTypes/>
+
+		<AttackTypes>
+			<AttackType name="AKWildFireShort" rangeMeters="5"/>
+			<AttackType name="AKWildFirePro" rangeMeters="10"/>
+			<AttackType name="AKWildBurstPro" rangeMeters="15"/>
+			<AttackType name="AKWildBurstLong" rangeMeters="25"/>
+			<AttackType name="AKWildBurstLongXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds>
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="uzi_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!--Revolver-->
+
+  <Firearm name="Revolver" inventoryBinding="SecondaryWeapon" category="pistol" unlockCost="5"
+			tooltip=".38 Special Revolver"
+
+			animationSet="pistol"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+		<RenderObject3D model="data/models/weapons/tt_33.khm" attachSlot="prop_sidearm" diffuseTex="data/models/weapons/tt_33.dds" skipGOSSAO="true"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="8"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="2000"
+			reloadEmptyTime="3000"
+			changeInTime="1000"
+			changeOutTime="1200"
+			readyTime="150"
+			guardTime="100"
+
+			accuracyStart="75"
+			accuracyEnd="10"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_45acp_name"
+			operationInfoText="@firearm_operation_semiauto_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="pm63_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="4.0"
+			ai_rangeMax="15.0"
+		/>
+
+		<AmmoTypes>
+			<Ammo name="762x25FMJ_TT 33 Pistol"/>
+		</AmmoTypes>
+
+		<ScopeTypes/>
+
+		<AttackTypes>
+			<AttackType name="Enemy_GruntPistolClose" rangeMeters="3"/>
+			<AttackType name="Enemy_GruntPistolMed" rangeMeters="8"/>
+			<AttackType name="Enemy_GruntPistolLong" rangeMeters="15"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightSmall" tracerTemplate="Tracer_Pistol">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds>
+			<Equip name="pistol_eqp"/>
+			<Unequip name="pistol_neqp"/>
+			<Reload name="pistol_reld"/>
+			<ReloadEmpty name="pistol_reldempt"/>
+			<Fire name="tt33_fire"/>
+			<ShellDrop name="pistol_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!--MP5K For Grenadier Glenns-->
+
+  <Firearm name="MP5K_PDW_Glenn" inventoryBinding="PrimaryWeapon" category="rifle" unlockCost="5"
+			tooltip="@firearm_mp5kpdw_name"
+			description="@firearm_mp5kpdw_desc"
+			img="data/models/weapons/mp5k_pdw_ui.dds"
+
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="-2"/>
+		<RenderObject3D model="data/models/weapons/mp5k_pdw.khm" attachSlot="prop_front_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/mp5k_pdw.dds"/>
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="30"
+			closedBolt="0"
+
+			cyclicReload="0"
+			reloadTime="2400"
+			reloadEmptyTime="2400"
+			changeInTime="0"
+			changeOutTime="0"
+			readyTime="325"
+			guardTime="150"
+
+			accuracyStart="170"
+			accuracyEnd="60"
+			accuracyStartDist="15"
+			accuracyEndDist="70"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_9x19_name"
+			operationInfoText="@firearm_operation_semifull_name"
+			ejectingShellEntity="BulletCasingSmall"
+			magazineEntity="mp5_mag"
+			suppressedSwitch="MP5KPDW Sup CIA BOps"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="7.0"
+			ai_rangeMax="20.0"
+			ai_stopWhenShooting="false"
+		/>
+
+		<AmmoTypes>
+			<Ammo name="919FMJM882_Mp5ASMG"/>
+			<Ammo name="919FMJM1152_Mp5ASMG"/>
+			<Ammo name="919JHPM1153_Mp5ASMG"/>
+			<Ammo name="919FMJ108GRHP_Mp5ASMG"/>
+		</AmmoTypes>
+
+		<ScopeTypes>
+			<Scope name="IronSights"/>
+			<Scope name="M68CCO"/>
+			<Scope name="Holosight"/>
+			<Scope name="M150RCO"/>
+		</ScopeTypes>
+
+		<AttackTypes>
+			<AttackType name="AKWildFireShort" rangeMeters="5"/>
+			<AttackType name="AKWildFirePro" rangeMeters="10"/>
+			<AttackType name="AKWildBurstPro" rangeMeters="15"/>
+			<AttackType name="AKWildBurstLong" rangeMeters="25"/>
+			<AttackType name="AKWildBurstLongXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_01" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_02" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_03" />
+			<Flare particles="FX_MUZZLE_FLASH_PISTOL_04" />
+		</MuzzleFlash>
+
+		<Sounds>
+			<Equip name="smg_eqp"/>
+			<Unequip name="smg_neqp"/>
+			<Reload name="smg_reld"/>
+			<ReloadEmpty name="smg_reldempt"/>
+			<Fire name="mp5a_fire"/>
+			<ShellDrop name="smg_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+
+	<!--Side note: This needs to be balanced,
+	make some attacktypes and change the ammo to be fair for players-->
+	<Firearm name="M4_C_BadGuy" inventoryBinding="PrimaryWeapon" category="rifle"
+			tooltip="@firearm_m4tango_name"
+			description="@firearm_m4_carabine_desc"
+			img="data/models/weapons/m4_ui.dds"
+
+			animationSet="rifle"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-3" turnSpeedModifierPercent="-2"/>
+		<RenderObject3D model="data/models/weapons/m4.khm" attachSlot="prop_front_rifle" skipGOSSAO="true" diffuseTex="data/models/weapons/m4.dds"/>
+
+
+
+		<ModifiableParams
+			numPellets="1"
+			roundsPerMagazine="30"
+			closedBolt="1"
+
+			cyclicReload="0"
+			reloadTime="1800"
+			reloadEmptyTime="2500"
+			changeInTime="0"
+			changeOutTime="0"
+			readyTime="350"
+			guardTime="180"
+
+			accuracyStart="230"
+			accuracyEnd="200"
+			accuracyStartDist="0"
+			accuracyEndDist="100"
+		/>
+
+		<Params
+			caliberInfoText="@firearm_caliber_556x45_name"
+			operationInfoText="@firearm_operation_semifull_name"
+			ejectingShellEntity="BulletCasingLarge"
+			magazineEntity="m4_mag"
+			ai_rangeMin="1.0"
+			ai_rangeOptimal="40.0"
+			ai_rangeMax="50.0"
+			ai_stopWhenShooting="false"
+			hasLaser="true"
+		/>
+
+		<AmmoTypes>
+			<Ammo name="556FMJM855_M4"/>
+		</AmmoTypes>
+
+		<ScopeTypes>
+			<Scope name="IronSights"/>
+		</ScopeTypes>
+
+		<AttackTypes>
+			<AttackType name="Rangers_CarbineAutoFire" rangeMeters="4"/>
+			<AttackType name="Rangers_RapidFireMed" rangeMeters="15"/>
+			<AttackType name="Rangers_CarbineAimedFire" rangeMeters="40"/>
+			<AttackType name="Rangers_CarbineAimedFireXX" rangeMeters="9999"/>
+		</AttackTypes>
+
+		<MuzzleFlash lightTemplate="ShotLightLarge" tracerTemplate="Tracer_Rifle">
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_01" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_02" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_03" />
+			<Flare particles="FX_MUZZLE_FLASH_RIFLE_04" />
+		</MuzzleFlash>
+
+		<Sounds>
+			<Equip name="rifle_eqp"/>
+			<Unequip name="rifle_neqp"/>
+			<Reload name="rifle_reld"/>
+			<ReloadEmpty name="rifle_reldempt"/>
+			<Fire name="m4_fire"/>
+			<ShellDrop name="rifle_shell_drop"/>
+			<Empty name="gen_empty"/>
+		</Sounds>
+	</Firearm>
+	-->
+</Equipment>

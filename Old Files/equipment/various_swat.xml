@@ -1,0 +1,204 @@
+<Equipment>
+	<!--============================================-->
+	<!--               Custom Equipment 			-->
+	<!--============================================-->
+
+	<Grenade name="SWAT_Chem Light" inventoryBinding="UtilityPouch"
+			quantity="11"
+
+			tooltip="Chem Light WIP"
+			description="Chem Light test"
+			img="data/models/equipment/frag_grenade_ui.dds"
+			img_tooltip="data/models/equipment/frag_grenade_ui_ttip.tga"
+			movie="data/movies/frag.ogv"
+
+			animationSet="grenade"
+			soundUse="grenade_use"
+		>
+		<RenderObject3D model="data/models/equipment/frag_grenade.khm" skipGOSSAO="true" diffuseTex="data/models/equipment/frag_grenade.dds"/>
+		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
+
+		<ModifiableParams
+			changeInTime="0"
+			changeOutTime="0"
+			throwTime="800"
+			throwTimeCorner="1200"
+		/>
+
+		<Projectile
+			bodyTemplate="FragGrenade"
+			pathIconTexture="data/textures/gui/contextual/pathicon_stinger_active.tga"
+
+			soundExplosion=""
+			soundHitFloor="grenade_hit_floor"
+			soundVoiceOnLaunch="VOX_TRPR_GEAR_FRAG"
+
+			friendlyFire="true"
+			triggerOnImpact="false"
+			triggerTimeAfterTargetHitMsec="800"
+
+			audibleLaunchSoundRadius="0"
+			audibleDetonationSoundRadius="0">
+
+			<!-- spawn these when exploding -->
+			<FX
+				entity1="glowstick_glow"
+				entity2="glowstick_ground"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="1.5">
+				<StunEffect chancePercent="0" innerRangeTimeMSec="700" outerRangeTimeMSec="700"/>
+				<SuppressEffect amount="0"/>>
+			</EffectRange>
+		</Projectile>
+	</Grenade>
+
+	<Grenade name="SWAT_CS Gas Grenade" inventoryBinding="UtilityPouch"
+			quantity="2"
+
+			tooltip="2x CS Gas Grenade"
+			description="CS Gas Grenade WIP"
+			img="data/models/equipment/smoke_grenade_ui.dds"
+			movie=""
+
+			animationSet="grenade"
+			soundUse="grenade_use"
+		>
+		<RenderObject3D model="data/models/equipment/smoke_grenade.khm" skipGOSSAO="true" diffuseTex="data/models/equipment/smoke_grenade.dds"/>
+		<ConcealmentModifier add="-1"/>
+		<MobilityModifiers moveSpeedModifierPercent="-1" turnSpeedModifierPercent="0"/>
+
+		<!--
+		- throwTime is the full time required to throw it, it is split in half between when the hand starts moving and the grenade launches and the recovery
+		- the effectRange Radius contains the previous one, but the effects do not concatenate
+		- explosion time is adjusted automatically depending on the distance to target, but have a minimum explosion time
+		-->
+		<ModifiableParams
+			changeInTime="0"
+			changeOutTime="0"
+			throwTime="1000"
+			throwTimeCorner="1400"
+		/>
+
+		<!-- NOTE: Explosion particle is tweaked to last about as long as duration -->
+		<Projectile
+			bodyTemplate="SmokeGrenade"
+			trailParticles="SmokeGrenadeTrail"
+			pathIconTexture="data/textures/gui/contextual/pathicon_flashbang_active.tga"
+
+			soundExplosion=""
+			soundOnSpawn="smoke_throw"
+			soundFollow="smoke_loop"
+			soundHitFloor="grenade_hit_floor"
+			soundVoiceOnLaunch="VOX_TRPR_GEAR_SMOKE"
+
+			friendlyFire="true"
+			triggerOnImpact="false"
+			triggerTimeAfterTargetHitMsec="1500"
+
+			physicsDetonationForce="0"
+			audibleLaunchSoundRadius="0"
+			audibleDetonationSoundRadius="10">
+
+			<FX
+				particles=""
+				anim2D="">
+				<!-- entity1="FX_dust_small" -->
+			</FX>
+
+			<EffectRange radiusMeters="3">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="2800" outerRangeTimeMSec="2000"/>
+				<SuppressEffect amount="150"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="5">
+				<ScatterEffect chancePercent="100"/>
+				<SuppressEffect amount="80"/>
+			</EffectRange>
+		</Projectile>
+	</Grenade>
+
+	<Grenade name="SWAT_9Bang" inventoryBinding="UtilityPouch"
+			quantity="2"
+
+			tooltip="2x 9-Bang"
+			description="@grenade_flashbang_desc"
+			img="data/models/equipment/flashbang_ui.dds"
+			img_tooltip="data/models/equipment/flashbang_ui_ttip.tga"
+			movie="data/movies/flashbang.ogv"
+
+			animationSet="grenade"
+			soundUse="grenade_use"
+		>
+		<RenderObject3D model="data/models/equipment/flashbang.khm" skipGOSSAO="true" diffuseTex="data/models/equipment/flashbang.dds"/>
+		<ConcealmentModifier add="-1"/>
+		<MobilityModifiers moveSpeedModifierPercent="-0.5" turnSpeedModifierPercent="0"/>
+
+		<ModifiableParams
+			changeInTime="0"
+			changeOutTime="0"
+			throwTime="1000"
+			throwTimeCorner="1400"
+		/>
+
+		<Projectile
+			bodyTemplate="FlashbangGrenade"
+			pathIconTexture="data/textures/gui/contextual/pathicon_flashbang_active.tga"
+
+			soundExplosion="flash_expl"
+			soundHitFloor="grenade_hit_floor"
+			soundVoiceOnLaunch="VOX_TRPR_GEAR_FLASH"
+
+			friendlyFire="false"
+			triggerOnImpact="false"
+			triggerTimeAfterTargetHitMsec="200"
+
+			physicsDetonationForce="30"
+			audibleLaunchSoundRadius="0"
+			audibleDetonationSoundRadius="25">
+
+			<FX
+				particles="Flashbang"
+				entity1="ExplosionLight"
+				entity2="explosion_mark"
+				randRotation2="true"
+				entity3="FX_dust_small"
+				anim2D="">
+			</FX>
+
+			<EffectRange radiusMeters="2">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="3500" outerRangeTimeMSec="3500"/>
+				<DamageEffect chancePercent="100" damage="1" damageType="1"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+
+			<EffectRange radiusMeters="3.5">
+				<StunEffect chancePercent="100" innerRangeTimeMSec="3500" outerRangeTimeMSec="1750"/>
+				<SuppressEffect amount="20"/>
+			</EffectRange>
+		</Projectile>
+	</Grenade>
+
+	<!--============================================-->
+	<!--               Vanilla Equipment			-->
+	<!--============================================-->
+
+	<Bind to="SWAT">
+		<eqp name="Smoke Grenade"/>
+		<eqp name="Smoke Grenade Kit"/>
+		<eqp name="Flashbang"/>
+		<eqp name="Flashbang Kit"/>
+		<eqp name="Slap Charge"/>
+		<eqp name="Slap Charge Kit"/>
+		<eqp name="Stinger"/>
+		<eqp name="Dynamic Hammer"/>
+		<eqp name="Spy Camera"/>
+		<eqp name="TEC Torch"/>
+
+		<eqp name="SWAT_9Bang"/>
+		<eqp name="SWAT_Chem Light"/>
+		<eqp name="SWAT_CS Gas Grenade"/>
+	</Bind>
+
+</Equipment>

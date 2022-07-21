@@ -1,0 +1,54 @@
+<Equipment>
+	<Bind to="SWAT">
+		<eqp name="SWAT_PoliceCap"/>
+		<eqp name="SWAT_HelmetACH"/>
+		<eqp name="SWAT_HelmetFAST"/>
+	</Bind>
+
+	<Helmet name="SWAT_PoliceCap" inventoryBinding="Helmet" unlockCost="0"
+			tooltip="PoliceCap"
+			description=""
+			img="data/models/humans/attachments/cia_cap_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="3" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="0" />
+		<RenderObject3D model="data/models/humans/attachments/cia_cap.khm" diffuseTex="data/models/humans/attachments/police_cap.dds" attachSlot="Bip001 Head"/>
+
+		<Params protectionInfoText="@equipment_protect2" allowNVG="false">
+			<ProtectionArc degrees="360" coveragePercent="0" piercingProtectionLevel="0"/>
+		</Params>
+	</Helmet>
+
+	<Helmet name="SWAT_HelmetACH" inventoryBinding="Helmet" unlockCost="0"
+			tooltip="@helmet_rangers_ach_name"
+			description=""
+			img="data/models/humans/attachments/ach_helmet_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="-2" turnSpeedModifierPercent="-2"/>
+		<ConcealmentModifier add="0" />
+		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+
+		<Params protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="360" coveragePercent="15" piercingProtectionLevel="4"/>
+		</Params>
+	</Helmet>
+
+	<Helmet name="SWAT_HelmetFAST" inventoryBinding="Helmet" unlockCost="4"
+			tooltip="@helmet_rangers_fast_name"
+			description=""
+			img="data/models/humans/attachments/ranger_helmet_ui.dds"
+		>
+		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+		<ConcealmentModifier add="0" />
+		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_helmet.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_helmet.dds" attachSlot="Bip001 Head">
+			<Specular shininess="8" intensity="1.3"/>
+		</RenderObject3D>
+
+		<Params protectionInfoText="@equipment_protect2">
+			<ProtectionArc degrees="360" coveragePercent="10" piercingProtectionLevel="3"/>
+		</Params>
+	</Helmet>
+
+</Equipment>
