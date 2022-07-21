@@ -25,6 +25,18 @@
 	</OnClose>
 </Item>
 
+<Item name="Menu_Options_IngameReplay" hidden="true">
+	<OnOpen>
+		<Action type="Hide" target="Menu_Ingame_Replay"/>
+		<Action type="Show" target="Menu_Options"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="Hide" target="Menu_Options"/>
+		<Action type="Show" target="Menu_Ingame_Replay"/>
+	</OnClose>
+</Item>
+
 <Item name="Menu_Credits_Main" hidden="true">
 	<OnOpen>
 		<Action type="Show" target="Menu_Credits"/>
@@ -51,25 +63,12 @@
 	</OnClose>
 
 	<StaticImage origin="0 0">
-		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="99999" sizeY="99999" color="0c0b0b"/>
+		<RenderObject2D texture="data/textures/gui/DK1_Loading_Screen.dds"/>
 	</StaticImage>
-	
-	<StaticImage origin="0 0">
-		<RenderObject2D texture="data/textures/gui/wallpaper_16x9.dds"/>
-	</StaticImage>
-
 
 	<StaticImage name="ScreenBg" origin="0 0">
-		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
-		<StaticImage align="l" origin="-128 0">
-			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
-		</StaticImage>
-		<StaticImage align="r" origin="128 0">
-			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipY="true" />
-		</StaticImage>
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="9999" color="0c0b0bbf"/>
 	</StaticImage>
-	
-	<Movie origin="0 0" hidden="false" sizeX="2700" sizeY="1500" file="data/movies/DK1BackgroundTest1.mp4" loop="true"/>
 
 	<Item align="sv" origin="0 -688">
 		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
@@ -88,7 +87,6 @@
 				<Action type="Hide" target="Menu_Credits_Main"/>
 			</OnClick>
 		</Button>
-		
 		<Item name="Socials" origin="1200 28" align="rb">
 			<Button name="Facebook" align="r" origin="0 0" >
 				<RenderObject2D texture="data/textures/gui/social_facebook.dds" color="293F4CB3"/>
@@ -126,15 +124,19 @@
 
 	<Item sizeX="2000" sizeY="1270" origin="0 50">
 
-			<StaticImage align="t" name="TitleBg" origin="0 35">
-				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303CC"/>
+			<StaticImage align="t" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2020" sizeY="100" color="030303CC"/>
+			</StaticImage>
+			<StaticImage align="t" name="TitleBg" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2020" sizeY="100" color="293F4C85"/>
 				<StaticText origin="-20 0" text="CREDITS" font="header_2" textColor="5279a5" align="c"/>
 			</StaticImage>
 
-			<Item align="t" sizeX="1000" sizeY="340" origin="-510 -105">
+
+			<Item align="t" sizeX="1000" sizeY="340" origin="-510 -120">
 
 				<StaticImage align="t" origin="0 0">
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1000" sizeY="1150" color="211e1dB3"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1000" sizeY="1150" color="030303CC"/>
 				</StaticImage>
 
 				<Item align="t" origin="-480 -35">
@@ -149,13 +151,13 @@
 					<StaticText origin="0 0" text="KillHouse Games" align="l" font="header_3" textColor="5279a5"/>
 					<StaticText origin="0 -70" text="Adrian Cruceanu" align="l" font="header_3" textColor="7D9FBB"/>
 					<StaticText origin="0 -140" text="Adrian Maraloiu" align="l" font="header_3" textColor="7D9FBB"/>
-					<StaticText origin="0 -210" text="Andreea Medvedovici-Per" align="l" font="header_3" textColor="7D9FBB"/>
-					<StaticText origin="0 -280" text="Dan Dimitrescu" align="l" font="header_3" textColor="7D9FBB"/>
-					<StaticText origin="0 -350" text="Iulia Tivig" align="l" font="header_3" textColor="7D9FBB"/>
-					<StaticText origin="0 -420" text="Mihai Gosa <3" align="l" font="header_3" textColor="7D9FBB"/>
-					<StaticText origin="0 -490" text="Serban Nicolescu" align="l" font="header_3" textColor="7D9FBB"/>
+					<StaticText origin="0 -210" text="Dan Dimitrescu" align="l" font="header_3" textColor="7D9FBB"/>
+					<StaticText origin="0 -280" text="Iulia Tivig" align="l" font="header_3" textColor="7D9FBB"/>
+					<StaticText origin="0 -350" text="Mihai Gosa" align="l" font="header_3" textColor="7D9FBB"/>
+					<StaticText origin="0 -420" text="Serban Nicolescu" align="l" font="header_3" textColor="7D9FBB"/>
 					<StaticText origin="0 -560" text="Additional Credits" align="l" font="header_3" textColor="5279a5"/>
 					<StaticText origin="0 -600" text="Cosmin Mirza
+						Jakub Wójcik
 						Mihai Popescu
 						Catalin Saitan
 						Oskar Nordquist
@@ -164,10 +166,12 @@
 						George Cercheaza
 						Luter Ionov
 						FatFox Animation
-						Mihai Daranga" align="lt" font="header_4" textColor="7D9FBB"/>
+						Mihai Daranga
+						Reuben Yu" align="lt" font="header_4" textColor="7D9FBB"/>
 
 
-					<StaticText origin="260 -600" text="Music
+					<StaticText origin="260 -600" text="Music / Sound FX
+						Level Design, Dev QA
 						Sound FX
 						Programming
 						Programming
@@ -176,14 +180,15 @@
 						Environment Art
 						Environment Art
 						Animation
-						Animation" align="lt" font="header_4" textColor="7D9FBB"/>
+						Animation
+						Blender KHM exporter" align="lt" font="header_4" textColor="7D9FBB"/>
 
 				</Item>
 			</Item>
-			<Item align="t" sizeX="1000" sizeY="340" origin="510 -105">
+			<Item align="t" sizeX="1000" sizeY="340" origin="510 -120">
 
 				<StaticImage align="t" origin="0 0">
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1000" sizeY="1150" color="211e1dB3"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1000" sizeY="1150" color="030303CC"/>
 				</StaticImage>
 
 				<Item align="t" origin="-480 -35">
@@ -224,7 +229,6 @@
 	</Item>
 </Item>
 
-
 <Item name="Menu_Options" origin="0 0" hidden="true">
 	<OnKeyDown key0="27">
 		<Action type="Click" target="Menu_Options_Back"/>
@@ -239,46 +243,22 @@
 		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
 		<Action type="Hide" target="Menu_Options_Main"/>
 		<Action type="Hide" target="Menu_Options_Ingame"/>
+		<Action type="Hide" target="Menu_Options_IngameReplay"/>
 	</OnClose>
 
+	<!-- This is the Background for Options Screen -->
 	<StaticImage origin="0 0">
-		<RenderObject2D texture="data/textures/gui/wallpaper_16x9.dds"/>
+		<RenderObject2D texture="data/textures/gui/DK1_Loading_Screen.dds" scaleX="0.9" scaleY="0.9"/>
 	</StaticImage>
-
 
 	<StaticImage name="ScreenBg" origin="0 0">
-		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
-		<StaticImage align="l" origin="-128 0">
-			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
-		</StaticImage>
-		<StaticImage align="r" origin="128 0">
-			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipY="true" />
-		</StaticImage>
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="9999" color="0c0b0bbf"/>
 	</StaticImage>
-	
-	<Movie origin="0 0" hidden="false" sizeX="2700" sizeY="1500" file="data/movies/DK1BackgroundTest1.mp4" loop="true"/>
-
-	<Item align="sv" origin="0 90">
-		<StaticImage align="t" name="TitleBg" origin="0 630">
-				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303CC"/>
-				<!-- <StaticText origin="-20 0" text="@menu_options_options" font="header_2" textColor="201f1b" align="c"/> -->
-				<Button origin="-20 0" align="c">
-					<ButtonText text="@menu_options_options" font="header_2" textColor="5279a5" align="c"/>
-					<OnClick>
-						<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_ENABLE_DEV"/>
-					</OnClick>
-				</Button>
-
-				<StaticText name="#DevHint" hidden="false" origin="0 0" align="r" text="DEV" font="header_2" textColor="5279a5"/>
-		</StaticImage>
-	</Item>
-
 
 	<Item align="sv" origin="0 -688">
 		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
 			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303CC"/>
 		</StaticImage>
-
 
 		<!-- back button -->
 		<Button name="Menu_Options_Back" align="lb" origin="-1200 -4">
@@ -321,13 +301,25 @@
 		</Button>
 	</Item>
 
-	<Item sizeX="2000" sizeY="1200" origin="0 100">
+	<Item sizeX="2000" sizeY="1200" origin="0 90">
+
+			<StaticImage align="t" name="TitleBg" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1900" sizeY="100" color="f97b03"/>
+				<Button origin="-20 0" align="c">
+					<ButtonText text="@menu_options_options" font="header_2" textColor="201f1b" align="c"/>
+					<OnClick>
+						<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_ENABLE_DEV"/>
+					</OnClick>
+				</Button>
+
+				<StaticText name="#DevHint" hidden="true" origin="-20 0" align="r" text="DEV" font="header_2" textColor="201f1b"/>
+			</StaticImage>
 
 			<!-- Game Options -->
 			<Item align="t" sizeX="936" sizeY="400" origin="-482 -120">
 
 				<StaticImage align="t" origin="0 0">
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="570" color="211e1dB3"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="510" color="211e1dB3"/> <!-- #B3211e1d -->
 					<StaticImage align="t" origin="0 0">
 						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="293F4C85"/>
 						<StaticText text="@menu_options_game" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
@@ -347,14 +339,13 @@
 					<StaticImage origin="448 -360">
 						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
 					</StaticImage>
-					<StaticText origin="0 0" text="@menu_options_language" align="l" font="paragraph_2" textColor="7f7f7f"/>
+					<StaticText origin="0 0" text="@menu_options_language" align="l" font="paragraph_2" textColor="7D9FBB"/>
 					<StaticText origin="0 -60" text="@menu_options_gore_slider" align="l" font="paragraph_2" textColor="7D9FBB"/>
 					<StaticText origin="0 -120" text="@menu_options_scroll_speed" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -180" text="@menu_options_keepplan" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -240" text="@menu_options_colored_plans" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -300" text="@menu_options_reset_game_progress" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -360" text="@menu_options_enablergb" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -420" text="@menu_options_lockmouse_to_screen" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="0 -180" text="@menu_options_colored_plans" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="0 -240" text="@menu_options_reset_game_progress" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="0 -300" text="@menu_options_enablergb" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="0 -360" text="@menu_options_send_analytics" align="l" font="paragraph_2" textColor="7D9FBB"/>
 				</Item>
 
 				<Item align="t" origin="265 -120">
@@ -365,7 +356,7 @@
 							<StaticText name="Options_Language" text="Engrish" font="paragraph_2" textColor="7f7f7f"/>
 
 							<Button origin="0 0" align="l" acceptInput="false">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color=""/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
 								<OnHover>
 									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true"/>
 								</OnHover>
@@ -406,7 +397,7 @@
 					</Slider>
 
 					<!-- Scroll Speed -->
-					<Slider name="Options_ScrollSpeed" stealFocus="true" origin="0 -120" sliderType="linear" startValue="0.1" endValue="0.9" integerValues="false" tooltip="@menu_options_scroll_speed_ttip">
+					<Slider name="Options_ScrollSpeed" stealFocus="true" origin="0 -120" sliderType="linear" startValue="0.1" endValue="0.7" integerValues="false" tooltip="@menu_options_scroll_speed_ttip">
 						<BackgroundGraphics>
 							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga"/>
 						</BackgroundGraphics>
@@ -421,25 +412,8 @@
 						</ButtonGraphics>
 					</Slider>
 
-					<!-- save plan -->
-					<Checkbox name="Options_KeepPlans" origin="0 -180" stealFocus="true" defaultState="CheckedState" tooltip="@menu_options_keepplan_ttip">
-						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
-							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
-							</OnHover>
-						</UncheckedState>
-
-						<CheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
-							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
-							</OnHover>
-						</CheckedState>
-					</Checkbox>
-
 					<!-- colored plans -->
-					<Item origin="0 -240">
+					<Item origin="0 -180">
 						<StaticImage>
 							<RenderObject2D texture="data/textures/gui/menu_class_background.tga" />
 							<StaticText name="Options_ColoredPlans" text="No" font="paragraph_2" textColor="f0e3cc"/>
@@ -469,7 +443,7 @@
 					</Item>
 
 					<!-- reset game progress -->
-					<Button origin="0 -300" tooltip="@menu_options_reset_game_progress_ttip">
+					<Button origin="0 -240" tooltip="@menu_options_reset_game_progress_ttip">
 						<RenderObject2D texture="data/textures/gui/menu_resetprogress_normal.tga" color="ffffff"/>
 						<OnHover>
 							<RenderObject2D texture="data/textures/gui/menu_resetprogress_hover.tga"/>
@@ -481,9 +455,9 @@
 					</Button>
 
 					<!-- disable RGB -->
-					<Checkbox name="Options_EnableRGB" origin="0 -360" stealFocus="true" defaultState="UncheckedState" tooltip="@menu_options_enablergb_ttip">
+					<Checkbox name="Options_EnableRGB" origin="0 -300" stealFocus="true" defaultState="UncheckedState" tooltip="@menu_options_enablergb_ttip">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>>>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
 							<OnHover>
 								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
 							</OnHover>
@@ -497,9 +471,9 @@
 						</CheckedState>
 					</Checkbox>
 
-					<Checkbox name="Options_LockMouseToScreenInBorderless" origin="0 -420" stealFocus="true" defaultState="UncheckedState">
+					<Checkbox name="Options_SendAnalytics" origin="0 -360" stealFocus="true" defaultState="UncheckedState" tooltip="@menu_options_send_analytics_ttip">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>>>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
 							<OnHover>
 								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
 							</OnHover>
@@ -512,247 +486,13 @@
 							</OnHover>
 						</CheckedState>
 					</Checkbox>
-				</Item>
-			</Item>
-
-			<!-- Sound Options -->
-			<Item align="t" sizeX="936" sizeY="340" origin="482 -120" >
-				<StaticImage align="t" origin="0 0">
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="390" color="211e1dB3"/>
-					<StaticImage align="t" origin="0 0">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="293F4CB3"/>
-						<StaticText text="@menu_options_sound" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
-					</StaticImage>
-				</StaticImage>
-
-				<Item align="t" origin="-448 -120">
-					<StaticImage origin="447 0">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
-					</StaticImage>
-					<StaticImage origin="447 -120">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
-					</StaticImage>
-					<StaticImage origin="447 -240">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
-					</StaticImage>
-					<StaticText origin="0 0" text="@menu_options_master_slider" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -60" text="@menu_options_music_slider" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -120" text="@menu_options_game_slider" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -180" text="@menu_options_dynreverb" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -240" text="@menu_options_mute_in_background" align="l" font="paragraph_2" textColor="7D9FBB"/>
-				</Item>
-
-				<Item align="t" origin="260 -120">
-					<!-- Master Volume -->
-					<Slider name="Options_Master_Volume" stealFocus="true" origin="0 0" sliderType="linear" startValue="0" endValue="1" integerValues="false">
-						<BackgroundGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga"/>
-						</BackgroundGraphics>
-						<ButtonGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga"/>
-							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
-							</OnHover>
-							<OnClick>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
-							</OnClick>
-						</ButtonGraphics>
-					</Slider>
-
-					<!-- Music volume -->
-					<Slider name="Options_Music_Volume" origin="0 -60" stealFocus="true" sliderType="linear" startValue="0" endValue="1" integerValues="false">
-						<BackgroundGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga"/>
-						</BackgroundGraphics>
-						<ButtonGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga"/>
-							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
-							</OnHover>
-							<OnClick>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
-							</OnClick>
-						</ButtonGraphics>
-					</Slider>
-
-					<!-- Game Volume -->
-					<Slider name="Options_Game_Volume" origin="0 -120" stealFocus="true" sliderType="linear" startValue="0" endValue="1" integerValues="false">
-						<BackgroundGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga"/>
-						</BackgroundGraphics>
-						<ButtonGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga"/>
-							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
-							</OnHover>
-							<OnClick>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
-							</OnClick>
-						</ButtonGraphics>
-					</Slider>
-
-					<!-- Reverb -->
-					<Checkbox name="Options_DynamicReverb" origin="0 -180" stealFocus="true" defaultState="CheckedState">
-						<UncheckedState tooltip="@menu_options_dynreverb_ttip">
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>>>
-							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
-							</OnHover>
-						</UncheckedState>
-
-						<CheckedState tooltip="@menu_options_dynreverb_ttip">
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
-							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
-							</OnHover>
-						</CheckedState>
-					</Checkbox>
-
-					<Checkbox name="Options_MuteInBackground" origin="0 -240" stealFocus="true" defaultState="CheckedState">
-						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>>>
-							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
-							</OnHover>
-						</UncheckedState>
-
-						<CheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
-							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
-							</OnHover>
-						</CheckedState>
-					</Checkbox>
-				</Item>
-			</Item>
-
-			<!-- Keybindings -->
-			<Item align="t" sizeX="936" sizeY="900" origin="482 -520">
-
-				<StaticImage align="t" origin="0 0">
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="753" color="211e1dB3"/>
-					<StaticImage align="t" origin="0 0">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="293F4CB3"/>
-						<StaticText text="@menu_options_keybindings" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
-					</StaticImage>
-				</StaticImage>
-
-				<StaticText text="Templates:" align="lt" origin="670 -14" font="header_4" textColor="d4d4d4" />
-				<Checkbox name="Options_KeyTemplate1" align="t" origin="375 -12" stealFocus="true" defaultState="UncheckedState">
-					<UncheckedState>
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="40392bbf"/>
-						<ButtonText text="1" font="header_4" textColor="f0e3cc"/>
-						<OnHover>
-							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="f0e3cc"/>
-							<ButtonText text="1" font="header_4" textColor="d4d4d4"/>							
-						</OnHover>
-						<OnClick>
-							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="44" sizeY="44" color="f0e3cc"/>
-							<ButtonText text="1" font="header_4" textColor="d4d4d4"/>							
-							<Action type="Uncheck" target="Options_KeyTemplate2"/>
-						</OnClick>
-					</UncheckedState>
-
-					<CheckedState acceptInput="false">
-						<OnOpen>
-							<Action type="Show" target="keymap_template1"/>
-							<Action type="Hide" target="keymap_template2"/>
-						</OnOpen>
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="60" color="211e1de6"/>
-						<ButtonText origin="0 6" text="1" font="header_4" textColor="f0e3cc"/>
-					</CheckedState>
-				</Checkbox>
-
-				<Checkbox name="Options_KeyTemplate2" align="t" origin="430 -12" stealFocus="true" defaultState="UncheckedState">
-					<UncheckedState>
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="40392bbf"/>
-						<ButtonText text="2" font="header_4" textColor="f0e3cc"/>
-						<OnHover>
-							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="f0e3cc"/>
-							<ButtonText text="2" font="header_4" textColor="40392b"/>						
-						</OnHover>
-						<OnClick>
-							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="44" sizeY="44" color="f0e3cc"/>
-							<ButtonText text="2" font="header_4" textColor="40392b"/>							
-							<Action type="Uncheck" target="Options_KeyTemplate1"/>
-						</OnClick>
-					</UncheckedState>
-
-					<CheckedState acceptInput="false">
-						<OnOpen>
-							<Action type="Show" target="keymap_template2"/>
-							<Action type="Hide" target="keymap_template1"/>
-						</OnOpen>
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="60" color="211e1de6"/>
-						<ButtonText origin="0 6" text="2" font="header_4" textColor="f0e3cc"/>
-					</CheckedState>
-				</Checkbox>
-
-				<Item align="t" origin="0 -120">
-					<StaticImage origin="0 0">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
-					</StaticImage>
-					<StaticImage origin="0 -120">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
-					</StaticImage>
-					<StaticImage origin="0 -240">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
-					</StaticImage>
-					<StaticImage origin="0 -360">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
-					</StaticImage>
-					<StaticImage origin="0 -480">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
-					</StaticImage>
-					<StaticImage origin="0 -600">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
-					</StaticImage>
-					<StaticText origin="-448 0" text="@menu_options_pauseunpause" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -60" text="@menu_options_actionmenu" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -120" text="@menu_options_gocodes" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -180" text="@menu_options_panning" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -240" text="@menu_options_tilt" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -300" text="@menu_options_zoomin" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -360" text="@menu_options_sniperfire" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -420" text="@menu_options_cycleselection" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -480" text="@menu_options_silent_toggle" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -540" text="@menu_options_stopinplace" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -600" text="@menu_options_slowmotion" align="l" font="paragraph_2" textColor="7D9FBB"/>
-
-				</Item>
-
-				<Item  name="keymap_template1" align="t" origin="265 -120" hidden="false">
-					<StaticText origin="0 0" text="Space" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -60" text="Right Click (on path / trooper)" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -120" text="A / B / C / D or 1 / 2 / 3 / 4" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -180" text="Middle Click / Arrow Keys" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -240" text="Home / End" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -300" text="Mouse Scroll / Q / E" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -360" text="S / X" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -420" text="TAB" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -480" text="SHIFT + F" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -540" text="SHIFT + Click (on path / trooper)" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -600" text="L" align="c" font="paragraph_2" textColor="7D9FBB"/>
-				</Item>
-				<Item  name="keymap_template2" align="t" origin="265 -120" hidden="true">
-					<StaticText origin="0 0" text="Space" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -60" text="Right Click (on path / trooper)" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -120" text="1 / 2 / 3 / 4" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -180" text="Middle Click / WASD" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -240" text="Home / End" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -300" text="Mouse Scroll / Q / E" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -360" text="Z / X" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -420" text="TAB" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -480" text="SHIFT + F" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -540" text="SHIFT + Click (on path / trooper)" align="c" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="0 -600" text="L" align="c" font="paragraph_2" textColor="7D9FBB"/>
 				</Item>
 			</Item>
 
 			<!-- Video Options -->
-			<Item align="t" sizeX="936" sizeY="900" origin="-482 -700">
+			<Item align="t" sizeX="936" sizeY="900" origin="-482 -640">
 				<StaticImage align="t" origin="0 0">
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="573" color="211e1dB3"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="633" color="211e1dB3"/>
 					<StaticImage align="t" origin="0 0">
 						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="293F4CB3"/>
 						<StaticText text="@menu_options_video" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
@@ -772,14 +512,18 @@
 					<StaticImage origin="0 -360">
 						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
 					</StaticImage>
+					<StaticImage origin="0 -480">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
+					</StaticImage>
 					<StaticText origin="-448 0" text="@menu_options_displaymode" align="l" font="paragraph_2" textColor="7D9FBB"/>
 					<StaticText origin="-448 -60" text="@menu_options_res" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -120" text="@menu_options_vsync" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -180" text="@menu_options_aa" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -240" text="@menu_options_texturequality" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -300" text="@menu_options_ssao" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -360" text="@menu_options_shadowsquality" align="l" font="paragraph_2" textColor="7D9FBB"/>
-					<StaticText origin="-448 -420" text="@menu_options_vfxquality" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="-448 -120" text="@menu_options_lockmouse_to_screen" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="-448 -180" text="@menu_options_vsync" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="-448 -240" text="@menu_options_aa" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="-448 -300" text="@menu_options_texturequality" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="-448 -360" text="@menu_options_ssao" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="-448 -420" text="@menu_options_shadowsquality" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="-448 -480" text="@menu_options_vfxquality" align="l" font="paragraph_2" textColor="7D9FBB"/>
 				</Item>
 
 				<Item align="t" origin="265 -120">
@@ -843,10 +587,26 @@
 						</StaticImage>
 					</Item>
 
-					<!-- vsync mode -->
-					<Checkbox name="Options_VSync" origin="0 -120" stealFocus="true" defaultState="CheckedState">
+					<Checkbox name="Options_LockMouseToScreenInBorderless" origin="0 -120" stealFocus="true" defaultState="UncheckedState">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>>>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga"/>
+							</OnHover>
+						</UncheckedState>
+
+						<CheckedState>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+							</OnHover>
+						</CheckedState>
+					</Checkbox>
+
+					<!-- vsync mode -->
+					<Checkbox name="Options_VSync" origin="0 -180" stealFocus="true" defaultState="CheckedState">
+						<UncheckedState>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
 							<OnHover>
 								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
 							</OnHover>
@@ -861,7 +621,7 @@
 					</Checkbox>
 
 					<!-- antialiasing -->
-					<Item origin="0 -180">
+					<Item origin="0 -240">
 						<StaticImage>
 							<RenderObject2D texture="data/textures/gui/menu_class_background.tga" />
 							<StaticText name="Options_Antialiasing" text="None" font="paragraph_2" textColor="f0e3cc"/>
@@ -890,9 +650,9 @@
 						</StaticImage>
 					</Item>
 
-					<Checkbox name="Options_TextureQuality" origin="0 -240" defaultState="CheckedState" hidden="false">
+					<Checkbox name="Options_TextureQuality" origin="0 -300" defaultState="CheckedState" hidden="false">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>>>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
 							<OnHover>
 								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
 							</OnHover>
@@ -906,7 +666,7 @@
 					</Checkbox>
 
 					<!-- ssao -->
-					<Item origin="0 -300">
+					<Item origin="0 -360">
 						<StaticImage tooltip="@menu_options_ssao_ttip">
 							<RenderObject2D texture="data/textures/gui/menu_class_background.tga" />
 							<StaticText name="Options_SSAO" text="None" font="paragraph_2" textColor="f0e3cc"/>
@@ -935,9 +695,9 @@
 						</StaticImage>
 					</Item>
 
-					<Checkbox name="Options_ShadowsQuality" origin="0 -360" defaultState="CheckedState" hidden="false">
+					<Checkbox name="Options_ShadowsQuality" origin="0 -420" defaultState="CheckedState" hidden="false">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>>>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
 							<OnHover>
 								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
 							</OnHover>
@@ -950,9 +710,9 @@
 						</CheckedState>
 					</Checkbox>
 
-					<Checkbox name="Options_VFXQuality" origin="0 -420" defaultState="CheckedState" hidden="false" tooltip="@menu_options_vfxquality_ttip">
+					<Checkbox name="Options_VFXQuality" origin="0 -480" defaultState="CheckedState" hidden="false" tooltip="@menu_options_vfxquality_ttip">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>>>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
 							<OnHover>
 								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
 							</OnHover>
@@ -966,8 +726,354 @@
 					</Checkbox>
 				</Item>
 			</Item>
+
+			<!-- Sound Options -->
+			<Item align="t" sizeX="936" sizeY="340" origin="482 -120" >
+				<StaticImage align="t" origin="0 0">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="390" color="211e1dB3"/>
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="f97b03"/>
+						<StaticText text="@menu_options_sound" align="lt" origin="20 0" font="header_3" textColor="201f1b" />
+					</StaticImage>
+				</StaticImage>
+
+				<Item align="t" origin="-448 -120">
+					<StaticImage origin="447 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
+					</StaticImage>
+					<StaticImage origin="447 -120">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
+					</StaticImage>
+					<StaticImage origin="447 -240">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
+					</StaticImage>
+					<StaticText origin="0 0" text="@menu_options_master_slider" align="l" font="paragraph_2" textColor="f0e3cc"/>
+					<StaticText origin="0 -60" text="@menu_options_music_slider" align="l" font="paragraph_2" textColor="f0e3cc"/>
+					<StaticText origin="0 -120" text="@menu_options_game_slider" align="l" font="paragraph_2" textColor="f0e3cc"/>
+					<StaticText origin="0 -180" text="@menu_options_dynreverb" align="l" font="paragraph_2" textColor="f0e3cc"/>
+					<StaticText origin="0 -240" text="@menu_options_mute_in_background" align="l" font="paragraph_2" textColor="f0e3cc"/>
+				</Item>
+
+				<Item align="t" origin="260 -120">
+					<!-- Master Volume -->
+					<Slider name="Options_Master_Volume" stealFocus="true" origin="0 0" sliderType="linear" startValue="0" endValue="1" integerValues="false">
+						<BackgroundGraphics>
+							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga"/>
+						</BackgroundGraphics>
+						<ButtonGraphics>
+							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+							</OnHover>
+							<OnClick>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+							</OnClick>
+						</ButtonGraphics>
+					</Slider>
+
+					<!-- Music volume -->
+					<Slider name="Options_Music_Volume" origin="0 -60" stealFocus="true" sliderType="linear" startValue="0" endValue="1" integerValues="false">
+						<BackgroundGraphics>
+							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga"/>
+						</BackgroundGraphics>
+						<ButtonGraphics>
+							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+							</OnHover>
+							<OnClick>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+							</OnClick>
+						</ButtonGraphics>
+					</Slider>
+
+					<!-- Game Volume -->
+					<Slider name="Options_Game_Volume" origin="0 -120" stealFocus="true" sliderType="linear" startValue="0" endValue="1" integerValues="false">
+						<BackgroundGraphics>
+							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga"/>
+						</BackgroundGraphics>
+						<ButtonGraphics>
+							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+							</OnHover>
+							<OnClick>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+							</OnClick>
+						</ButtonGraphics>
+					</Slider>
+
+					<!-- Reverb -->
+					<Checkbox name="Options_DynamicReverb" origin="0 -180" stealFocus="true" defaultState="CheckedState">
+						<UncheckedState tooltip="@menu_options_dynreverb_ttip">
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga"/>
+							</OnHover>
+						</UncheckedState>
+
+						<CheckedState tooltip="@menu_options_dynreverb_ttip">
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+							</OnHover>
+						</CheckedState>
+					</Checkbox>
+
+					<Checkbox name="Options_MuteInBackground" origin="0 -240" stealFocus="true" defaultState="CheckedState">
+						<UncheckedState>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga"/>
+							</OnHover>
+						</UncheckedState>
+
+						<CheckedState>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+							</OnHover>
+						</CheckedState>
+					</Checkbox>
+				</Item>
+			</Item>
+
+			<!-- Keybindings -->
+			<Item align="t" sizeX="936" sizeY="900" origin="482 -520">
+
+				<!-- header -->
+				<StaticImage align="t" origin="0 0">
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="753" color="211e1dB3"/>
+					<StaticImage align="t" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="f97b03"/>
+						<StaticText text="@menu_options_keybindings" align="lt" origin="20 0" font="header_3" textColor="201f1b" />
+
+						<Button align="r" origin="-4 0">
+							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="128" sizeY="64" color="201f1b"/>
+							<ButtonText text="@keybind_menu_change" origin="0 0" font="header_4" textColor="f0e3cc" />
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/square.tga" sizeX="128" sizeY="64" color="f0e3cc"/>
+								<ButtonText text="@keybind_menu_change" origin="0 0" font="header_4" textColor="201f1b" />
+							</OnHover>
+							<OnClick>
+								<RenderObject2D texture="data/textures/gui/square.tga" sizeX="128" sizeY="64" color="f0e3cc"/>
+								<ButtonText text="@keybind_menu_change" origin="0 0" font="header_4" textColor="201f1b" />
+
+								<Action type="Show" target="#KeyBindingDialog"/>
+							</OnClick>
+						</Button>
+					</StaticImage>
+				</StaticImage>
+
+				<Item name="#Keybinds_ItemTemplate" origin="0 0" sizeX="936" sizeY="60" hidden="true">
+					<StaticImage name="#bg" origin="0 0" align="l" >
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
+					</StaticImage>
+
+					<StaticText name="#event" origin="16 0" align="lc" text="@keybind_toggle_play"  font="paragraph_2" textColor="f0e3cc"/>
+
+					<StaticText name="#bind" origin="250 0" align="" text="@keybind_toggle_play"  font="paragraph_2" textColor="f0e3cc"/>
+				</Item>
+
+				<ItemList name="#Keybinds_List" hidden="false" align="t" origin="0 -90" sizeX="936" sizeY="660" direction="y" clipChildren="true">
+					<ButtonGraphics align="r" origin="0 0">
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+						</OnHover>
+						<OnClick>
+							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+						</OnClick>
+					</ButtonGraphics>
+				</ItemList>
+
+			</Item>
 		</Item>
 </Item>
 
+
+<StaticImage name="#KeyBindingDialog" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+		<Action type="SetForeground" target="#KeyBindingDialog"/>
+		<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_KEYBINDS_OPEN"/>
+	</OnOpen>
+
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+
+	<OnKeyDown key0="27">
+		<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_KEYBINDS_CANCEL"/>
+	</OnKeyDown>
+
+	<RenderObject2D texture="data/textures/gui/menu_pause_black.tga" color="fffffff9" sizeX="9999" sizeY="9999"/>
+
+	<StaticImage origin="0 12">
+		<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b80" sizeX="1122" sizeY="690"/>
+	</StaticImage>
+
+	<OnScrollDown>
+		<Action type="ScrollListForward" target="#InputMap_List"/>
+	</OnScrollDown>
+	<OnScrollUp>
+		<Action type="ScrollListBackward" target="#InputMap_List"/>
+	</OnScrollUp>
+
+	<Item origin="0 0" sizeX="1300" sizeY="1382">
+		<StaticImage origin="0 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="40392b" sizeX="1300" sizeY="1382"/>
+		</StaticImage>
+
+		<!-- header -->
+		<StaticImage origin="0 0" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1300" sizeY="88" color="f97b03"/>
+
+			<!-- title -->
+			<StaticText origin="0 0" text="@keybind_menu_title" font="header_2" textColor="211e1d"/>
+
+			<!-- defaults -->
+			<StaticText text="@keybind_menu_default" align="br" origin="-100 3" font="header_4" textColor="201f1b" />
+			<Button origin="-50 0" align="br" stealFocus="true" tooltip="@keybind_menu_default1">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="40392bbf"/>
+				<ButtonText text="1" font="header_4" textColor="f0e3cc"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="f0e3cc"/>
+					<ButtonText text="1" font="header_4" textColor="40392b"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="211e1de6"/>
+					<ButtonText text="1" font="header_4" textColor="f0e3cc"/>
+					<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_KEYBINDS_DEFAULT" iParam="1" />
+				</OnClick>
+			</Button>
+
+			<Button origin="0 0" align="br" stealFocus="true" tooltip="@keybind_menu_default2">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="40392bbf"/>
+				<ButtonText text="2" font="header_4" textColor="f0e3cc"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="f0e3cc"/>
+					<ButtonText text="2" font="header_4" textColor="40392b"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="211e1de6"/>
+					<ButtonText text="2" font="header_4" textColor="f0e3cc"/>
+					<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_KEYBINDS_DEFAULT" iParam="2" />
+				</OnClick>
+			</Button>
+		</StaticImage>
+
+		<!-- close button -->
+		<StaticImage origin="0 0" align="b">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1300" sizeY="88" color="0c0b0bcc"/>
+			<Button origin="0 0" align="c" >
+				<ButtonText align="c" origin="0 0" text="@menu_generic_close" font="header_2" textColor="f0e3cc"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/menu_select.dds" color="f0e3cc" flipX="false"/>
+					<ButtonText align="c" origin="0 0" text="@menu_generic_close" font="header_2" textColor="40392b"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/menu_select.dds" color="0c0b0b80" flipX="false"/>
+					<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_KEYBINDS_CANCEL"/>
+				</OnClick>
+			</Button>
+		</StaticImage>
+
+		<!-- header -->
+		<StaticImage origin="0 -88" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1300" sizeY="66" color="0c0b0bcc"/>
+			<Item origin="264 0" align="l">
+				<StaticText text="@keybind_menu_code"  font="paragraph_2" textColor="f0e3cc"/>
+			</Item>
+			<Item origin="-604 0" align="r">
+				<StaticText text="@keybind_menu_bind1"  font="paragraph_2" textColor="f0e3cc"/>
+			</Item>
+			<Item origin="-210 0" align="r">
+				<StaticText text="@keybind_menu_bind2"  font="paragraph_2" textColor="f0e3cc"/>
+			</Item>
+		</StaticImage>
+
+		<!-- keys list  -->
+		<Item name="#InputMap_ItemTemplate" origin="0 0" sizeX="1268" sizeY="60" align="l" hidden="true">
+			<StaticImage origin="0 0" align="l" name="#bg" >
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1268" sizeY="60" color="0c0b0bcc"/>
+			</StaticImage>
+			<Item origin="264 0" align="l">
+				<StaticText name="#event" origin="0 0" align="c" text="@keybind_toggle_play" font="paragraph_2" textColor="f0e3cc"/>
+			</Item>
+
+			<Item origin="0 0" align="r" sizeX="768" sizeY="60">
+				<Button name="#bind1" origin="16 0" align="l">
+					<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="a08f80"/>
+					<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="aaaaaaff"/>
+					<OnHover>
+						<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="f0e3cc"/>
+						<RenderObject2D texture="data/textures/gui/menu_class_background.tga" />
+					</OnHover>
+					<OnClick>
+						<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="f0e3cc" />
+						<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="000000ff"/>
+						<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_KEYBINDS_FOCUS"/>
+					</OnClick>
+					<OnScrollDown>
+						<Action type="ScrollListForward" target="#InputMap_List"/>
+					</OnScrollDown>
+					<OnScrollUp>
+						<Action type="ScrollListBackward" target="#InputMap_List"/>
+					</OnScrollUp>
+				</Button>
+
+				<Button name="#bind2" origin="-6 0" align="r">
+					<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="a08f80"/>
+					<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="aaaaaaff"/>
+					<OnHover>
+						<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="f0e3cc"/>
+						<RenderObject2D texture="data/textures/gui/menu_class_background.tga" />
+					</OnHover>
+					<OnClick>
+						<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="f0e3cc" />
+						<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="000000ff"/>
+						<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_KEYBINDS_FOCUS"/>
+					</OnClick>
+					<OnScrollDown>
+						<Action type="ScrollListForward" target="#InputMap_List"/>
+					</OnScrollDown>
+					<OnScrollUp>
+						<Action type="ScrollListBackward" target="#InputMap_List"/>
+					</OnScrollUp>
+				</Button>
+			</Item>
+
+
+			<!-- this here for when scrolling on the empty space between the buttons -->
+			<OnScrollDown>
+				<Action type="ScrollListForward" target="#InputMap_List"/>
+			</OnScrollDown>
+			<OnScrollUp>
+				<Action type="ScrollListBackward" target="#InputMap_List"/>
+			</OnScrollUp>
+		</Item>
+
+		<ItemList name="#InputMap_List" hidden="false" align="t" origin="0 -156" sizeX="1300" sizeY="1140" direction="y" clipChildren="true">
+			<ButtonGraphics align="r" origin="0 0">
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+				</OnClick>
+			</ButtonGraphics>
+		</ItemList>
+
+		<!-- info card -->
+		<StaticImage name="#KeybindInfo" origin="0 0" align="" hidden="true">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="800" sizeY="76" color="000000EE"/>
+
+			<StaticText origin="0 -6" align="t" text="@keybind_menu_bind_tips" font="paragraph_2" textColor="f0e3cc"/>
+			<StaticText origin="0 -38" align="t" name="#error" text="@keybind_menu_bind_tips" font="paragraph_2" textColor="f0a377" hidden="true"/>
+		</StaticImage>
+	</Item>
+</StaticImage>
 
 </GUIItems>
