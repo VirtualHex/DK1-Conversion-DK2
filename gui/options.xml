@@ -730,10 +730,10 @@
 			<!-- Sound Options -->
 			<Item align="t" sizeX="936" sizeY="340" origin="482 -120" >
 				<StaticImage align="t" origin="0 0">
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="390" color="211e1dB3"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="390" color="000000CC"/> <!-- #CC000000 -->
 					<StaticImage align="t" origin="0 0">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="f97b03"/>
-						<StaticText text="@menu_options_sound" align="lt" origin="20 0" font="header_3" textColor="201f1b" />
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="293F4C85"/> <!-- #85293F4C -->
+						<StaticText text="@menu_options_sound" align="lt" origin="20 0" font="header_3" textColor="5279a5"/> <!-- #5279a5 -->
 					</StaticImage>
 				</StaticImage>
 
@@ -747,11 +747,11 @@
 					<StaticImage origin="447 -240">
 						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
 					</StaticImage>
-					<StaticText origin="0 0" text="@menu_options_master_slider" align="l" font="paragraph_2" textColor="f0e3cc"/>
-					<StaticText origin="0 -60" text="@menu_options_music_slider" align="l" font="paragraph_2" textColor="f0e3cc"/>
-					<StaticText origin="0 -120" text="@menu_options_game_slider" align="l" font="paragraph_2" textColor="f0e3cc"/>
-					<StaticText origin="0 -180" text="@menu_options_dynreverb" align="l" font="paragraph_2" textColor="f0e3cc"/>
-					<StaticText origin="0 -240" text="@menu_options_mute_in_background" align="l" font="paragraph_2" textColor="f0e3cc"/>
+					<StaticText origin="0 0" text="@menu_options_master_slider" align="l" font="paragraph_2" textColor="7D9FBB"/> <!-- #7D9FBB -->
+					<StaticText origin="0 -60" text="@menu_options_music_slider" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="0 -120" text="@menu_options_game_slider" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="0 -180" text="@menu_options_dynreverb" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="0 -240" text="@menu_options_mute_in_background" align="l" font="paragraph_2" textColor="7D9FBB"/>
 				</Item>
 
 				<Item align="t" origin="260 -120">
@@ -806,32 +806,32 @@
 					<!-- Reverb -->
 					<Checkbox name="Options_DynamicReverb" origin="0 -180" stealFocus="true" defaultState="CheckedState">
 						<UncheckedState tooltip="@menu_options_dynreverb_ttip">
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</UncheckedState>
 
 						<CheckedState tooltip="@menu_options_dynreverb_ttip">
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</CheckedState>
 					</Checkbox>
 
 					<Checkbox name="Options_MuteInBackground" origin="0 -240" stealFocus="true" defaultState="CheckedState">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</UncheckedState>
 
 						<CheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</CheckedState>
 					</Checkbox>
