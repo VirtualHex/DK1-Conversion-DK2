@@ -125,7 +125,7 @@
 	<Item sizeX="2000" sizeY="1270" origin="0 50">
 
 			<StaticImage align="t" origin="0 0">
-				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2020" sizeY="100" color="030303CC"/>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2020" sizeY="100" color="030303CC"/> <!-- #CC030303 -->
 			</StaticImage>
 			<StaticImage align="t" name="TitleBg" origin="0 0">
 				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2020" sizeY="100" color="293F4C85"/>
@@ -257,7 +257,7 @@
 
 	<Item align="sv" origin="0 -688">
 		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
-			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303CC"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303CC"/> <!-- #CC030303 -->
 		</StaticImage>
 
 		<!-- back button -->
@@ -289,13 +289,13 @@
 
 		<!-- Credits button -->
 		<Button origin="0 -4" align="cb" acceptInput="true" hidden="false">
-			<ButtonText origin="0 0" text="@menu_options_credits" align="c" font="header_2" textColor="5279a5"/>
+			<ButtonText origin="0 0" text="@menu_options_credits" align="c" font="header_2" textColor="5279a5"/> <!-- #5279a5 -->
 			<OnHover>
-				<RenderObject2D texture="data/textures/gui/menu_select.dds" color="d1d1d1" />
-				<ButtonText origin="0 0" text="@menu_options_credits" align="c" font="header_2" textColor="000000"/>
+				<RenderObject2D texture="data/textures/gui/menu_select.dds" color="d1d1d1"/> <!-- #d1d1d1 -->
+				<ButtonText origin="0 0" text="@menu_options_credits" align="c" font="header_2" textColor="000000"/> <!-- #000000 -->
 			</OnHover>
 			<OnClick>
-				<RenderObject2D texture="data/textures/gui/menu_select.dds" color="293F4C85" />
+				<RenderObject2D texture="data/textures/gui/menu_select.dds" color="293F4C85"/> <!-- #85293F4C -->
 				<Action type="Show" target="Menu_Credits_Main"/>
 			</OnClick>
 		</Button>
@@ -304,31 +304,31 @@
 	<Item sizeX="2000" sizeY="1200" origin="0 90">
 
 			<StaticImage align="t" name="TitleBg" origin="0 0">
-				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1900" sizeY="100" color="f97b03"/>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1900" sizeY="100" color="293F4C85"/> <!-- #85293F4C -->
 				<Button origin="-20 0" align="c">
-					<ButtonText text="@menu_options_options" font="header_2" textColor="201f1b" align="c"/>
+					<ButtonText text="@menu_options_options" font="header_2" textColor="5279a5" align="c"/> <!-- #5279a5 -->
 					<OnClick>
 						<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_ENABLE_DEV"/>
 					</OnClick>
 				</Button>
 
-				<StaticText name="#DevHint" hidden="true" origin="-20 0" align="r" text="DEV" font="header_2" textColor="201f1b"/>
+				<StaticText name="#DevHint" hidden="true" origin="-20 0" align="r" text="DEV" font="header_2" textColor="5279a5"/> <!-- #5279a5 -->
 			</StaticImage>
 
 			<!-- Game Options -->
 			<Item align="t" sizeX="936" sizeY="400" origin="-482 -120">
 
 				<StaticImage align="t" origin="0 0">
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="510" color="211e1dB3"/> <!-- #B3211e1d -->
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="510" color="000000CC"/> <!-- #CC000000 -->
 					<StaticImage align="t" origin="0 0">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="293F4C85"/>
-						<StaticText text="@menu_options_game" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="293F4C85"/> <!-- #85293F4C -->
+						<StaticText text="@menu_options_game" align="lt" origin="20 0" font="header_3" textColor="5279a5" /> <!-- #5279a5 -->
 					</StaticImage>
 				</StaticImage>
 
 				<Item align="t" origin="-448 -120">
 					<StaticImage origin="448 0">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/> <!-- #50000000 -->
 					</StaticImage>
 					<StaticImage origin="448 -120">
 						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
@@ -339,7 +339,7 @@
 					<StaticImage origin="448 -360">
 						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
 					</StaticImage>
-					<StaticText origin="0 0" text="@menu_options_language" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="0 0" text="@menu_options_language" align="l" font="paragraph_2" textColor="7D9FBB"/> <!-- #7D9FBB -->
 					<StaticText origin="0 -60" text="@menu_options_gore_slider" align="l" font="paragraph_2" textColor="7D9FBB"/>
 					<StaticText origin="0 -120" text="@menu_options_scroll_speed" align="l" font="paragraph_2" textColor="7D9FBB"/>
 					<StaticText origin="0 -180" text="@menu_options_colored_plans" align="l" font="paragraph_2" textColor="7D9FBB"/>
@@ -352,27 +352,27 @@
 					<!-- language -->
 					<Item origin="0 0">
 						<StaticImage origin="0 0" hidden="false">
-							<RenderObject2D texture="data/textures/gui/menu_class_background.tga"/>
-							<StaticText name="Options_Language" text="Engrish" font="paragraph_2" textColor="7f7f7f"/>
+							<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="5279a5"/> <!-- #5279a5 -->
+							<StaticText name="Options_Language" text="Engrish" font="paragraph_2" textColor="7D9FBB"/> <!-- #7D9FBB -->
 
 							<Button origin="0 0" align="l" acceptInput="false">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color="5279a5"/> <!-- #5279a5 -->
 								<OnHover>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true" color="7D9FBB"/> <!-- #7D9FBB -->
 								</OnHover>
 								<OnClick>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color="7D9FBB"/> <!-- #7D9FBB -->
 									<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_PREV_LANGUAGE"/>
 								</OnClick>
 							</Button>
 
 							<Button origin="0 0" align="r" acceptInput="false">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" color="5279a5"/> <!-- #5279a5 -->
 								<OnHover>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 								</OnHover>
 								<OnClick>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 									<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_NEXT_LANGUAGE"/>
 								</OnClick>
 							</Button>
@@ -382,16 +382,16 @@
 					<!-- gore -->
 					<Slider name="Options_Gore" origin="0 -60" stealFocus="true" sliderType="linear" startValue="0" endValue="2" integerValues="true" tooltip="@menu_options_gore_slider_ttip">
 						<BackgroundGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderbar_normal.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_sliderbar_normal.tga" color="5279a5"/> <!-- #5279a5 -->
 						</BackgroundGraphics>
 
 						<ButtonGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 							<OnClick>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnClick>
 						</ButtonGraphics>
 					</Slider>
@@ -399,15 +399,15 @@
 					<!-- Scroll Speed -->
 					<Slider name="Options_ScrollSpeed" stealFocus="true" origin="0 -120" sliderType="linear" startValue="0.1" endValue="0.7" integerValues="false" tooltip="@menu_options_scroll_speed_ttip">
 						<BackgroundGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga" color="5279a5"/> <!-- #5279a5 -->
 						</BackgroundGraphics>
 						<ButtonGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 							<OnClick>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnClick>
 						</ButtonGraphics>
 					</Slider>
@@ -415,27 +415,27 @@
 					<!-- colored plans -->
 					<Item origin="0 -180">
 						<StaticImage>
-							<RenderObject2D texture="data/textures/gui/menu_class_background.tga" />
-							<StaticText name="Options_ColoredPlans" text="No" font="paragraph_2" textColor="f0e3cc"/>
+							<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="5279a5"/> <!-- #5279a5 -->
+							<StaticText name="Options_ColoredPlans" text="No" font="paragraph_2" textColor="7D9FBB"/> <!-- #7D9FBB -->
 
 							<Button origin="0 0" align="l" stealFocus="true">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color="5279a5"/> <!-- #5279a5 -->
 								<OnHover>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true" color="7D9FBB"/> <!-- #7D9FBB -->
 								</OnHover>
 								<OnClick>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color="7D9FBB"/> <!-- #7D9FBB -->
 									<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_PREV_COLORED_PLANS"/>
 								</OnClick>
 							</Button>
 
 							<Button origin="0 0" align="r" stealFocus="true">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" color="5279a5"/> <!-- #5279a5 -->
 								<OnHover>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 								</OnHover>
 								<OnClick>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 									<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_NEXT_COLORED_PLANS"/>
 								</OnClick>
 							</Button>
@@ -444,12 +444,12 @@
 
 					<!-- reset game progress -->
 					<Button origin="0 -240" tooltip="@menu_options_reset_game_progress_ttip">
-						<RenderObject2D texture="data/textures/gui/menu_resetprogress_normal.tga" color="ffffff"/>
+						<RenderObject2D texture="data/textures/gui/menu_resetprogress_normal.tga" color="5279a5"/> <!-- #5279a5 -->
 						<OnHover>
-							<RenderObject2D texture="data/textures/gui/menu_resetprogress_hover.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_resetprogress_hover.tga" color="5279a5"/> <!-- #5279a5 -->
 						</OnHover>
 						<OnClick>
-							<RenderObject2D texture="data/textures/gui/menu_resetprogress_hover.tga" color="ffffff8c"/>
+							<RenderObject2D texture="data/textures/gui/menu_resetprogress_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_RESET_PROGRESS"/>
 						</OnClick>
 					</Button>
@@ -457,32 +457,32 @@
 					<!-- disable RGB -->
 					<Checkbox name="Options_EnableRGB" origin="0 -300" stealFocus="true" defaultState="UncheckedState" tooltip="@menu_options_enablergb_ttip">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</UncheckedState>
 
 						<CheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</CheckedState>
 					</Checkbox>
 
 					<Checkbox name="Options_SendAnalytics" origin="0 -360" stealFocus="true" defaultState="UncheckedState" tooltip="@menu_options_send_analytics_ttip">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->/>
 							</OnHover>
 						</UncheckedState>
 
 						<CheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga" color="5279a5"/> <!-- #5279a5 -->/>
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->/>
 							</OnHover>
 						</CheckedState>
 					</Checkbox>
@@ -492,10 +492,10 @@
 			<!-- Video Options -->
 			<Item align="t" sizeX="936" sizeY="900" origin="-482 -640">
 				<StaticImage align="t" origin="0 0">
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="633" color="211e1dB3"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="633" color="000000CC"/> <!-- #CC000000 -->
 					<StaticImage align="t" origin="0 0">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="293F4CB3"/>
-						<StaticText text="@menu_options_video" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="293F4C85"/> <!-- #B3293F4C --> <!-- #85293F4C -->
+						<StaticText text="@menu_options_video" align="lt" origin="20 0" font="header_3" textColor="5279a5"/> <!-- #5279a5 -->
 					</StaticImage>
 				</StaticImage>
 
@@ -515,7 +515,7 @@
 					<StaticImage origin="0 -480">
 						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
 					</StaticImage>
-					<StaticText origin="-448 0" text="@menu_options_displaymode" align="l" font="paragraph_2" textColor="7D9FBB"/>
+					<StaticText origin="-448 0" text="@menu_options_displaymode" align="l" font="paragraph_2" textColor="7D9FBB"/> <!-- #7D9FBB -->
 					<StaticText origin="-448 -60" text="@menu_options_res" align="l" font="paragraph_2" textColor="7D9FBB"/>
 					<StaticText origin="-448 -120" text="@menu_options_lockmouse_to_screen" align="l" font="paragraph_2" textColor="7D9FBB"/>
 					<StaticText origin="-448 -180" text="@menu_options_vsync" align="l" font="paragraph_2" textColor="7D9FBB"/>
@@ -530,27 +530,27 @@
 					<!-- display mode -->
 					<Item origin="0 0">
 						<StaticImage origin="0 0" hidden="false">
-							<RenderObject2D texture="data/textures/gui/menu_class_background.tga"/>
-							<StaticText name="Options_DisplayMode" text="@menu_options_fullwindowed" font="paragraph_2" textColor="f0e3cc"/>
+							<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="5279a5"/> <!-- #5279a5 -->
+							<StaticText name="Options_DisplayMode" text="@menu_options_fullwindowed" font="paragraph_2" textColor="7D9FBB"/> <!-- #7D9FBB -->
 
 							<Button origin="0 0" align="l" stealFocus="true">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color="5279a5"/> <!-- #5279a5 -->
 								<OnHover>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true" color="7D9FBB"/> <!-- #7D9FBB -->
 								</OnHover>
 								<OnClick>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color="7D9FBB"/> <!-- #7D9FBB -->
 									<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_PREV_DISPLAY_MODE"/>
 								</OnClick>
 							</Button>
 
 							<Button origin="0 0" align="r" stealFocus="true">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" color="5279a5"/> <!-- #5279a5 -->
 								<OnHover>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 								</OnHover>
 								<OnClick>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 									<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_NEXT_DISPLAY_MODE"/>
 								</OnClick>
 							</Button>
@@ -560,27 +560,27 @@
 					<!-- resolution -->
 					<Item origin="0 -60">
 						<StaticImage origin="0 0" hidden="false">
-							<RenderObject2D texture="data/textures/gui/menu_class_background.tga"/>
-							<StaticText name="Options_Resolution" text="1920x1080" font="paragraph_2" textColor="f0e3cc"/>
+							<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="5279a5"/> <!-- #5279a5 -->
+							<StaticText name="Options_Resolution" text="1920x1080" font="paragraph_2" textColor="7D9FBB"/> <!-- #7D9FBB -->
 
 							<Button name="Options_ResBut1" origin="0 0" align="l" stealFocus="true">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color="5279a5"/> <!-- #5279a5 -->
 								<OnHover>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true" color="7D9FBB"/> <!-- #7D9FBB -->
 								</OnHover>
 								<OnClick>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color="7D9FBB"/> <!-- #7D9FBB -->
 									<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_PREV_RESOLUTION"/>
 								</OnClick>
 							</Button>
 
 							<Button name="Options_ResBut2" origin="0 0" align="r" stealFocus="true">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" color="5279a5"/> <!-- #5279a5 -->
 								<OnHover>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 								</OnHover>
 								<OnClick>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 									<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_NEXT_RESOLUTION"/>
 								</OnClick>
 							</Button>
@@ -589,16 +589,16 @@
 
 					<Checkbox name="Options_LockMouseToScreenInBorderless" origin="0 -120" stealFocus="true" defaultState="UncheckedState">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</UncheckedState>
 
 						<CheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</CheckedState>
 					</Checkbox>
@@ -606,16 +606,16 @@
 					<!-- vsync mode -->
 					<Checkbox name="Options_VSync" origin="0 -180" stealFocus="true" defaultState="CheckedState">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</UncheckedState>
 
 						<CheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</CheckedState>
 					</Checkbox>
@@ -623,27 +623,27 @@
 					<!-- antialiasing -->
 					<Item origin="0 -240">
 						<StaticImage>
-							<RenderObject2D texture="data/textures/gui/menu_class_background.tga" />
-							<StaticText name="Options_Antialiasing" text="None" font="paragraph_2" textColor="f0e3cc"/>
+							<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="5279a5"/> <!-- #5279a5 -->
+							<StaticText name="Options_Antialiasing" text="None" font="paragraph_2" textColor="7D9FBB"/> <!-- #7D9FBB -->
 
 							<Button origin="0 0" align="l" stealFocus="true">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color="5279a5"/> <!-- #5279a5 -->
 								<OnHover>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true" color="7D9FBB"/> <!-- #7D9FBB -->
 								</OnHover>
 								<OnClick>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color="7D9FBB"/> <!-- #7D9FBB -->
 									<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_PREV_ANTIALIASING"/>
 								</OnClick>
 							</Button>
 
 							<Button origin="0 0" align="r" stealFocus="true">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" color="5279a5"/> <!-- #5279a5 -->
 								<OnHover>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 								</OnHover>
 								<OnClick>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 									<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_NEXT_ANTIALIASING"/>
 								</OnClick>
 							</Button>
@@ -652,15 +652,15 @@
 
 					<Checkbox name="Options_TextureQuality" origin="0 -300" defaultState="CheckedState" hidden="false">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</UncheckedState>
 						<CheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</CheckedState>
 					</Checkbox>
@@ -668,27 +668,27 @@
 					<!-- ssao -->
 					<Item origin="0 -360">
 						<StaticImage tooltip="@menu_options_ssao_ttip">
-							<RenderObject2D texture="data/textures/gui/menu_class_background.tga" />
-							<StaticText name="Options_SSAO" text="None" font="paragraph_2" textColor="f0e3cc"/>
+							<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="5279a5"/> <!-- #5279a5 -->
+							<StaticText name="Options_SSAO" text="None" font="paragraph_2" textColor="7D9FBB"/> <!-- #7D9FBB -->
 
 							<Button origin="0 0" align="l" stealFocus="true">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color="5279a5"/> <!-- #5279a5 -->
 								<OnHover>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true" color="7D9FBB"/> <!-- #7D9FBB -->
 								</OnHover>
 								<OnClick>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true" color="7D9FBB"/> <!-- #7D9FBB -->
 									<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_PREV_SSAO"/>
 								</OnClick>
 							</Button>
 
 							<Button origin="0 0" align="r" stealFocus="true">
-								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" color="5279a5"/> <!-- #5279a5 -->
 								<OnHover>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 								</OnHover>
 								<OnClick>
-									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+									<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 									<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_NEXT_SSAO"/>
 								</OnClick>
 							</Button>
@@ -697,30 +697,30 @@
 
 					<Checkbox name="Options_ShadowsQuality" origin="0 -420" defaultState="CheckedState" hidden="false">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</UncheckedState>
 						<CheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</CheckedState>
 					</Checkbox>
 
 					<Checkbox name="Options_VFXQuality" origin="0 -480" defaultState="CheckedState" hidden="false" tooltip="@menu_options_vfxquality_ttip">
 						<UncheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="23466eE0"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="23466e"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_empty_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</UncheckedState>
 						<CheckedState>
-							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 						</CheckedState>
 					</Checkbox>
