@@ -1,0 +1,458 @@
+<GUIItems>
+
+<!-- if you change this name, make sure to also change it in code -->
+<Item name="Menu_Coop_Quick_Search" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="Hide" target="Menu_Main"/>	
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+	</OnOpen>
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+	<OnKeyDown key0="27">
+		<Action type="Click" target="Menu_Coop_Quick_Search_Back"/>
+	</OnKeyDown>
+
+	<StaticImage origin="0 0">
+		<RenderObject2D texture="data/textures/gui/wallpaper_16x9.dds"/>
+	</StaticImage>
+
+	<Movie hidden="false" sizeX="2700" sizeY="1500" file="data/movies/DK1BackgroundTest1.mp4" loop="true"/>
+
+	<StaticText name="#menu_coop_client_waiting_txt" origin="0 250" text="@menu_m_coop_search" font="header_2" textColor="5279a5">
+		<Movie align="b" origin="0 -425" sizeX="1216" sizeY="456" autoPlay="true" file="data/movies/mpack_your_creations.ogv" loop="true"/>
+	</StaticText>
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303"/>
+		</StaticImage>
+
+		<StaticImage name="ScreenFooter top" align="b" origin="0 1289">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303CC"/>
+			<StaticText origin="0 0" text="@menu_m_coop_quickmission" font="header_2" textColor="5279a5" align="c"/>
+		</StaticImage>
+
+		<!-- back button -->
+		<Button name="Menu_Coop_Quick_Search_Back" align="lb" origin="-1200 -4">
+			<ButtonText align="l" origin="0 0" text="@menu_generic_back" font="header_2" textColor="5279a5"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="d1d1d1" flipX="false"/>
+				<ButtonText align="l" origin="0 0" text="@menu_generic_back" font="header_2" textColor="000000"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="293F4C85" flipX="false"/>
+				<Action type="Hide" target="Menu_Coop_Quick_Search"/>
+				<Action type="Show" target="Menu_Main"/>
+				<Action type="TriggerEvent" target="GUI_GAME_COOP_QUIT_SEARCHING"/>
+			</OnClick>
+		</Button>
+	</Item>
+</Item>
+
+<Item name="Menu_Coop_Host_Search" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+	</OnOpen>
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+	<OnKeyDown key0="27">
+		<Action type="Click" target="Menu_Coop_Host_Search_Back"/>
+	</OnKeyDown>
+
+	<StaticImage origin="0 0">
+		<RenderObject2D texture="data/textures/gui/wallpaper_16x9.dds"/>
+	</StaticImage>
+
+	<Movie hidden="false" sizeX="2700" sizeY="1500" file="data/movies/DK1BackgroundTest1.mp4" loop="true"/>
+
+	<StaticImage name="ScreenBg" origin="0 0">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
+		<StaticImage align="l" origin="-128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
+		</StaticImage>
+		<StaticImage align="r" origin="128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipY="true" />
+		</StaticImage>
+	</StaticImage>
+
+	<StaticText name="#waiting" origin="0 250" text="@menu_m_coop_host_wait" font="header_2" textColor="5279a5">
+		<Movie align="b" origin="0 -425" sizeX="1216" sizeY="456" autoPlay="true" file="data/movies/mpack_your_creations.ogv" loop="true"/>
+	</StaticText>
+
+	<Button origin="410 -330">
+		<ButtonText align="r" origin="-20 0" text="@menu_m_coop_invite" font="header_3" textColor="5279a5"/>
+		<OnHover>
+			<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="d1d1d1" flipX="true"/>
+			<ButtonText align="r" origin="-20 0" text="@menu_m_coop_invite" font="header_3" textColor="000000"/>
+		</OnHover>
+		<OnClick>
+			<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="293F4C85" flipX="true"/>
+			<Action type="TriggerEvent" target="GUI_GAME_COOP_INVITE_FRIEND"/>
+		</OnClick>
+	</Button>
+
+	<StaticImage name="ScreenFooter top" align="b" origin="0 600">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303CC"/>
+			<StaticText origin="0 0" text="@menu_m_coop_host" font="header_2" textColor="5279a5" align="c"/>
+	</StaticImage>
+
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303CC"/>
+		</StaticImage>
+
+		<Button name="Menu_Coop_Host_Search_Back" align="lb" origin="-1200 -4">
+			<ButtonText align="l" origin="0 0" text="@menu_generic_back" font="header_2" textColor="5279a5"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="d1d1d1" flipX="false"/>
+				<ButtonText align="l" origin="0 0" text="@menu_generic_back" font="header_2" textColor="000000"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="293F4C85" flipX="false"/>
+				<Action type="Hide" target="Menu_Coop_Host_Search"/>
+				<Action type="TriggerEvent" target="GUI_GAME_COOP_QUIT_SEARCHING"/>
+				<Action type="Show" target="Menu_Coop_Host"/>
+			</OnClick>
+		</Button>
+
+		<Button align="rb" origin="1200 -4">
+			<ButtonText align="r" origin="-20 0" text="@menu_generic_start" font="header_2" textColor="5279a5"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="d1d1d1" flipX="true"/>
+				<ButtonText align="r" origin="-20 0" text="@menu_generic_start" font="header_2" textColor="000000"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="293F4C85" flipX="true"/>
+				<Action type="TriggerEvent" target="GUI_GAME_COOP_START_ANYWAYS"/>
+			</OnClick>
+		</Button>
+	</Item>
+</Item>
+
+<Item name="Menu_Coop_Host" origin="0 0" hidden="true">
+	<OnOpen>
+		<Action type="TriggerEvent" target="GUI_CAPTURE_INPUT"/>
+		<Action type="TriggerEvent" target="GUI_GAME_COOP_HOST_MENU_OPENED"/>
+	</OnOpen>
+	<OnClose>
+		<Action type="TriggerEvent" target="GUI_RELEASE_INPUT"/>
+	</OnClose>
+	<OnKeyDown key0="27">
+		<Action type="Click" target="Menu_Coop_Host_Back"/>
+	</OnKeyDown>
+
+	<StaticImage origin="0 0">
+		<RenderObject2D texture="data/textures/gui/wallpaper_16x9.dds"/>
+	</StaticImage>
+
+	<Movie hidden="false" sizeX="2700" sizeY="1500" file="data/movies/DK1BackgroundTest1.mp4" loop="true"/>
+
+	<StaticImage name="ScreenBg" origin="0 0">
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="2560" sizeY="9999" color="0c0b0bbf"/>
+		<StaticImage align="l" origin="-128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipX="true" />
+		</StaticImage>
+		<StaticImage align="r" origin="128 0">
+			<RenderObject2D texture="data/textures/gui/bg_edge.tga" flipY="true" />
+		</StaticImage>
+	</StaticImage>
+
+	<Item sizeX="1540" sizeY="560">
+		<StaticImage align="l">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="860" sizeY="560" color="211e1dB3"/>
+
+			<Item align="lt" origin="20 -130" sizeX="860">
+				<StaticText align="l" text="@menu_m_coop_players" font="paragraph_1" textColor="7D9FBB"/>
+				<Item align="r" origin="-210 0">
+					<StaticImage origin="0 0" hidden="false">
+						<RenderObject2D texture="data/textures/gui/menu_class_background.tga"/>
+						<StaticText name="#numplayers" text="2" font="paragraph_1" textColor="7D9FBB"/>
+
+						<Button origin="0 0" align="l" stealFocus="true">
+							<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true"/>
+							</OnHover>
+							<OnClick>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+								<Action type="TriggerEvent" target="GUI_GAME_COOP_PREV_NUMPLAYERS"/>
+							</OnClick>
+						</Button>
+
+						<Button origin="0 0" align="r"stealFocus="true">
+							<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga"/>
+							</OnHover>
+							<OnClick>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+								<Action type="TriggerEvent" target="GUI_GAME_COOP_NEXT_NUMPLAYERS"/>
+							</OnClick>
+						</Button>
+
+					</StaticImage>
+				</Item>
+			</Item>
+
+			<Item align="lt" origin="20 -200" sizeX="860">
+				<StaticText align="l" text="@menu_m_coop_friendsonly" font="paragraph_1" textColor="7D9FBB"/>
+				<Checkbox name="#friendsonly" align="r" origin="-185 0" stealFocus="true" defaultState="CheckedState" acceptInput="false">
+					<UncheckedState>
+						<RenderObject2D texture="data/textures/gui/menu_checkbox_empty.tga"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga"/>
+						</OnHover>
+					</UncheckedState>
+
+					<CheckedState>
+						<RenderObject2D texture="data/textures/gui/menu_checkbox_checked.tga" color="646464ff"/>
+						<OnHover>
+							<RenderObject2D texture="data/textures/gui/menu_checkbox_checked_hover.tga"/>
+						</OnHover>
+					</CheckedState>
+				</Checkbox>
+			</Item>
+
+			<Item align="lt" origin="20 -270" sizeX="860">
+				<StaticText align="l" text="@menu_m_coop_pausetype" font="paragraph_1" textColor="7D9FBB"/>
+				<Item align="r" origin="-210 0">
+					<StaticImage origin="0 0" hidden="false" tooltip="@menu_m_coop_pause_realtime_ttip">
+						<RenderObject2D texture="data/textures/gui/menu_class_background.tga"/>
+						<StaticText name="#pausetype" text="@menu_m_coop_pause_realtime" font="paragraph_1" textColor="7D9FBB"/>
+
+						<Button origin="0 0" align="l" stealFocus="true">
+							<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga" flipX="true"/>
+							</OnHover>
+							<OnClick>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga" flipX="true"/>
+								<Action type="TriggerEvent" target="GUI_GAME_COOP_PREV_PAUSETYPE"/>
+							</OnClick>
+						</Button>
+
+						<Button origin="0 0" align="r" stealFocus="true">
+							<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+							<OnHover>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_hover.tga"/>
+							</OnHover>
+							<OnClick>
+								<RenderObject2D texture="data/textures/gui/menu_arrowright_normal.tga"/>
+								<Action type="TriggerEvent" target="GUI_GAME_COOP_NEXT_PAUSETYPE"/>
+							</OnClick>
+						</Button>
+					</StaticImage>
+				</Item>
+			</Item>
+		</StaticImage>
+
+		<!-- Note/Warning: all named elements here must also be found in the menus.xml buttontemplate -->
+		<StaticImage align="r">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="680" sizeY="560" color="211e1dE6"/>
+
+			<Button name="#mission" acceptInput="false" align="t" origin="0 -80">
+				<RenderObject2D texture="data/textures/gui/missions/mission_bg.tga" color="ffffffc8" scaleX="1" scaleY="1"/>
+				<StaticImage origin="0 54">
+					<StaticImage name="#MapThumbnail">
+						<RenderObject2D sizeX="421" sizeY="230" blendMode="add" color="fff2da"/>
+					</StaticImage>
+				</StaticImage>
+
+				<Item origin="-239 146" name="#ScenarioTooltip" tooltip="changed by the game" sizeX="90" sizeY="90">
+					<!-- mission types need to be named #ScenarioImg_*, where * is one of the string mission types that are also kept in the map.xml file -->
+					<StaticImage name="#ScenarioImg_ClearHostiles" hidden="true">
+						<RenderObject2D texture="data/textures/gui/missions/mission_clear_hostiles.dds"/>
+					</StaticImage>
+					<StaticImage name="#ScenarioImg_HostageRescue" hidden="true">
+						<RenderObject2D texture="data/textures/gui/missions/mission_hostage_rescue.dds"/>
+					</StaticImage>
+					<StaticImage name="#ScenarioImg_BombDefusal" hidden="true">
+						<RenderObject2D texture="data/textures/gui/missions/mission_bomb_defusal.dds"/>
+					</StaticImage>
+					<StaticImage name="#ScenarioImg_Abduction" hidden="true">
+						<RenderObject2D texture="data/textures/gui/missions/mission_abduction.dds"/>
+					</StaticImage>
+					<StaticImage name="#ScenarioImg_StopExecution" hidden="true">
+						<RenderObject2D texture="data/textures/gui/missions/mission_execution.dds"/>
+					</StaticImage>
+					<StaticImage name="#ScenarioImg_ProtectVIP" hidden="true">
+						<RenderObject2D texture="data/textures/gui/missions/mission_vip_protection.dds"/>
+					</StaticImage>
+					<StaticImage name="#ScenarioImg_ExtractVIP" hidden="true">
+						<RenderObject2D texture="data/textures/gui/missions/mission_vip_recovery.dds"/>
+					</StaticImage>
+					<StaticImage name="#ScenarioImg_RaidOnStronghold" hidden="true">
+						<RenderObject2D texture="data/textures/gui/missions/mission_stronghold.dds"/>
+					</StaticImage>
+				</Item>
+				
+				<StaticImage origin="237 150" tooltip="@menu_m_num_deployable">
+					<RenderObject2D texture="data/textures/gui/missions/mission_troopercount.dds" color="f0e3cc"/>
+
+					<StaticText name="#trooper_count" text="4" align="r" textColor="5279a5" font="paragraph_2" tooltip="@menu_m_num_deployable" origin="-20 -2"/>
+				</StaticImage>
+
+				<StaticText name="#MapName" origin="0 -94" text="Cartel beach party" font="header_4" textColor="7D9FBB"/>
+				<Item align="b" origin="0 53">
+					<StaticImage name="#star0" origin="-53 0">
+						<RenderObject2D texture="data/textures/gui/missions/mission_stars.tga"/>
+					</StaticImage>
+					<StaticImage name="#star1" origin="-3 0">
+						<RenderObject2D texture="data/textures/gui/missions/mission_stars.tga"/>
+					</StaticImage>
+					<StaticImage name="#star2" origin="47 0">
+						<RenderObject2D texture="data/textures/gui/missions/mission_stars.tga"/>
+					</StaticImage>
+				</Item>
+			</Button>
+
+			<Button align="cb" origin="0 20">
+				<ButtonText align="c" origin="0 0" text="@menu_m_selectmis" font="header_3" textColor="5279a5"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/menu_select.dds" color="d1d1d1" />
+					<ButtonText align="c" origin="0 0" text="@menu_m_selectmis" font="header_3" textColor="000000"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/menu_select.dds" color="293F4C85" />
+					<Action type="Show" target="Menu_MissionSelect_Host"/>
+				</OnClick>
+			</Button>
+
+			<!--
+			<Button align="rb" origin="-40 30">
+				<ButtonText align="r" origin="-20 0" text="@menu_m_missiongen_rnd" font="header_3" textColor="f0e3cc"/>
+				<OnHover>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" flipX="true"/>
+					<ButtonText align="r" origin="-20 0" text="@menu_m_missiongen_rnd" font="header_3" textColor="211e1d"/>
+				</OnHover>
+				<OnClick>
+					<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="40392b" flipX="true"/>
+					<Action type="TriggerEvent" target="GUI_GAME_COOP_HOST_RNDMAP"/>
+				</OnClick>
+			</Button>
+			-->
+		</StaticImage>
+
+		<StaticImage align="t" origin="0 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1540" sizeY="72" color="293F4C85"/>
+			<StaticText text="@menu_options_options" align="lt" origin="20 0" font="header_3" textColor="5279a5" />
+		</StaticImage>
+	</Item>
+	
+	<StaticImage name="ScreenFooter top" align="b" origin="0 600">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303CC"/>
+			<StaticText origin="0 0" text="@menu_m_coop_host" font="header_2" textColor="5279a5" align="c"/>
+	</StaticImage>
+
+
+	<Item align="sv" origin="0 -688">
+		<StaticImage name="ScreenFooter" align="b" origin="0 -32">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="120" color="030303"/>
+		</StaticImage>
+
+		<!-- back button -->
+		<Button name="Menu_Coop_Host_Back" align="lb" origin="-1200 -4">
+			<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="5279a5"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="d1d1d1" flipX="false"/>
+				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="293F4C85" flipX="false"/>
+				<Action type="Hide" target="Menu_Coop_Host"/>
+				<Action type="Show" target="Menu_Main"/>
+			</OnClick>
+		</Button>
+
+		<Button align="rb" origin="1200 -4">
+			<ButtonText align="r" origin="-20 0" text="@menu_m_coop_host" font="header_2" textColor="5279a5"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="d1d1d1" flipX="true"/>
+				<ButtonText align="r" origin="-20 0" text="@menu_m_coop_host" font="header_2" textColor="211e1d"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="293F4C85" flipX="true"/>
+				<Action type="Hide" target="Menu_Coop_Host"/>
+				<Action type="Show" target="Menu_Coop_Host_Search"/>
+			</OnClick>
+		</Button>
+	</Item>
+</Item>
+
+<!-- Steam doesn't allow to use our custom one it seems... -->
+<StaticImage name="MessageBox_CoopInvite" origin="-1000 -575" hidden="true">
+	<OnOpen>
+		<Action type="SetForeground" target="MessageBox_CoopInvite"/>
+	</OnOpen>
+
+	<StaticImage origin="0 12">
+		<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b80" sizeX="508" sizeY="245"/>
+	</StaticImage>
+
+	<Item origin="0 0" sizeX="500" sizeY="225">
+		<StaticImage origin="0 0">
+			<RenderObject2D texture="data/textures/gui/square.tga" color="40392b" sizeX="500" sizeY="225"/>
+		</StaticImage>
+
+		<StaticImage align="t" origin="0 -20">
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="500" sizeY="143" color="0c0b0b80"/>
+			<StaticText name="#TextLine" origin="0 0" text="'KillHouse Games' wants you to join his ranks" font="paragraph_2" textColor="f0e3cc"/>
+		</StaticImage>
+
+		<StaticImage origin="0 24" align="t">
+			<RenderObject2D texture="data/textures/gui/square.tga" align="t" sizeX="500" sizeY="44" color="f97b03"/>
+			<StaticText origin="0 0" name="#Caption" text="@menu_m_coop" font="header_4" textColor="5279a5"/>
+		</StaticImage>
+
+		<Button origin="18 16" align="lb" >
+			<ButtonText align="l" origin="20 0" text="@menu_generic_ignore" font="header_4" textColor="5279a5"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="5279a5" scaleX="0.5" scaleY="0.5" flipX="false"/>
+				<ButtonText align="l" origin="20 0" text="@menu_generic_ignore" font="header_4" textColor="40392b"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="0c0b0b80" scaleX="0.5" scaleY="0.5" flipX="false"/>
+				<Action type="Hide" target="MessageBox_CoopInvite"/>
+			</OnClick>
+		</Button>
+
+		<Button origin="-18 16" align="rb">
+			<ButtonText align="r" origin="-20 0" text="@menu_m_coop_join" font="header_4" textColor="f0e3cc"/>
+			<OnHover>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="f0e3cc" scaleX="0.5" scaleY="0.5" flipX="true"/>
+				<ButtonText align="r" origin="-20 0" text="@menu_m_coop_join" font="header_4" textColor="40392b"/>
+			</OnHover>
+			<OnClick>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="0c0b0b80" scaleX="0.5" scaleY="0.5" flipX="true"/>
+				<Action type="Hide" target="MessageBox_CoopInvite"/>
+				<Action type="TriggerEvent" target="GUI_GAME_MESSAGEBOX_YES"/>
+			</OnClick>
+		</Button>
+	</Item>
+</StaticImage>
+
+<Editbox name="Menu_CoopChat_Edit" origin="-10 270" align="lb" acceptNumbers="true" acceptLetters="true" forceUppercase="false" maxCharacters="63" focusedTextColor="ffffffff" hidden="true">
+	<RenderObject2D texture="data/textures/gui/menu_darkbrown_background.tga" color="000000a6" sizeX="768" sizeY="40"/>
+	<TextFormat origin="30 0" text="" font="paragraph_2" align="l" textColor="5279a5"/>
+	<OnKeyDown key0="27">
+		<Action type="Hide" target="Menu_CoopChat_Edit"/>
+	</OnKeyDown>
+	<OnHover>
+		<RenderObject2D texture="data/textures/gui/menu_darkbrown_background.tga" color="000000e6" sizeX="768" sizeY="40"/>
+	</OnHover>
+	<OnClick>
+		<RenderObject2D texture="data/textures/gui/menu_darkbrown_background.tga" color="000000e6" sizeX="768" sizeY="40"/>
+	</OnClick>
+	<Cursor>
+		<RenderObject2D texture="data/textures/gui/editbox_cursor.tga"/>
+	</Cursor>
+
+	<StaticImage align="l" origin="-30 740">
+		<RenderObject2D texture="data/textures/gui/gradient_hor.tga" color="000000ff" sizeX="600" sizeY="1440"/>
+	</StaticImage>
+</Editbox>
+
+</GUIItems>

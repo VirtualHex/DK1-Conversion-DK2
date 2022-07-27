@@ -1,0 +1,322 @@
+<Equipment>
+
+    <Ammo name="12GA00BUCK_KSG"
+      tooltip="@ammo_12GA00BUCK_name"
+      description="@ammo_12GA00BUCK_KSG_desc"
+      img="data/models/weapons/attachments/m257_buckshot_ammo_ui.dds"
+      >
+      <MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+      <!-- defines base ROF and sound of weapon -->
+      <Params roundsPerSecond="1.3"
+        audibleSoundRadius="50"
+        physicsImpactForce="3.0"
+        damageType="0"
+        silenced="0">
+
+        <!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+        <Damage start="15" end="3" startDist="0" endDist="50"/>
+
+        <!-- base value, can be modified by AttackType/Abilities/Doctrine/etc. -->
+        <CriticalChancePercent start="10" end="5" startDist="0" endDist="25"/>
+
+        <!-- i.e. divides distance range in (end - start) discrete intervals for AP -->
+        <ArmorPenetration start="6" end="3" startDist="0" endDist="20"/>
+      </Params>
+    </Ammo>
+
+    <Ammo name="12GA00BUCK_KSGSUP"
+      tooltip="@ammo_12GA00BUCK_name"
+      description=""
+      img="data/models/weapons/attachments/m257_buckshot_ammo_ui.dds"
+      >
+      <MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+      <!-- defines base ROF and sound of weapon -->
+      <Params roundsPerSecond="1.3"
+        audibleSoundRadius="10"
+        physicsImpactForce="2.5"
+        damageType="0"
+        silenced="1">
+
+        <!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+        <Damage start="10" end="3" startDist="0" endDist="50"/>
+
+        <!-- base value, can be modified by AttackType/Abilities/Doctrine/etc. -->
+        <CriticalChancePercent start="10" end="5" startDist="0" endDist="25"/>
+
+        <!-- i.e. divides distance range in (end - start) discrete intervals for AP -->
+        <ArmorPenetration start="6" end="3" startDist="0" endDist="20"/>
+      </Params>
+    </Ammo>
+
+    <Ammo name="300AACBLACKOUT_HB"
+      tooltip=".300 AAC Blackout"
+      description="@SWAT_ammo_AACBO_desc"
+      img="data/models/weapons/attachments/m855_ammo_ui.dds"
+    	>
+    	<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+    	<!-- defines base ROF and sound of weapon -->
+    	<Params roundsPerSecond="12"
+        audibleSoundRadius="10"
+        physicsImpactForce="2.0"
+        damageType="0"
+        silenced="1">
+
+      	<!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+      	<Damage start="23" end="19" startDist="0" endDist="100"/>
+
+      	<!-- base value, can be modified by AttackType/Abilities/Doctrine/etc. -->
+      	<CriticalChancePercent start="30" end="15" startDist="0" endDist="25"/>
+
+      	<!-- i.e. divides distance range in (end - start) discrete intervals for AP -->
+      	<ArmorPenetration start="5" end="5" startDist="0" endDist="100"/>
+    	</Params>
+    </Ammo>
+
+    <Ammo name="919FMJM1152_MPX"
+      tooltip="@ammo_919FMJM882_name"
+      description="@SWAT_ammo_919FMJM882_desc"
+      img="data/models/weapons/attachments/m882_ammo_ui.dds"
+    	>
+    	<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+    	<!-- defines base ROF and sound of weapon -->
+    	<Params roundsPerSecond="14"
+        audibleSoundRadius="50"
+        physicsImpactForce="2.0"
+        damageType="0">
+
+      	<!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+      	<Damage start="23" end="19" startDist="0" endDist="100"/>
+
+      	<!-- base value, can be modified by AttackType/Abilities/Doctrine/etc. -->
+      	<CriticalChancePercent start="30" end="15" startDist="0" endDist="25"/>
+
+      	<!-- i.e. divides distance range in (end - start) discrete intervals for AP -->
+      	<ArmorPenetration start="5" end="5" startDist="0" endDist="100"/>
+    	</Params>
+    </Ammo>
+
+    <Ammo name="556FMJM855_G36C"
+  			tooltip="@ammo_556FMJM855_name"
+  			description="@SWAT_ammo_556FMJM855_desc"
+  			img="data/models/weapons/attachments/m855_ammo_ui.dds"
+  		>
+  		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+  		<Params	roundsPerSecond="12.5"
+  				audibleSoundRadius="100"
+  				physicsImpactForce="2.0"
+  				damageType="0"
+  				silenced="0">
+  			<Damage start="30" end="20" startDist="0" endDist="100"/>
+  			<CriticalChancePercent start="35" end="15" startDist="0" endDist="60"/>
+  			<ArmorPenetration start="5" end="5" startDist="0" endDist="100"/>
+  		</Params>
+  	</Ammo>
+
+    <Ammo name="556FMJM855_MCX.300"
+        tooltip="@ammo_556FMJM855_name"
+        description="@SWAT_ammo_556FMJM855_desc"
+        img="data/models/weapons/attachments/m855_ammo_ui.dds"
+      >
+      <MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+      <Params	roundsPerSecond="13.3"
+          audibleSoundRadius="50"
+          physicsImpactForce="2.0"
+          damageType="0"
+          silenced="0">
+        <Damage start="30" end="20" startDist="0" endDist="100"/>
+        <CriticalChancePercent start="35" end="15" startDist="0" endDist="60"/>
+        <ArmorPenetration start="5" end="5" startDist="0" endDist="100"/>
+      </Params>
+    </Ammo>
+
+    <Ammo name="556FMJM855_P90"
+        tooltip="@ammo_556FMJM855_name"
+        description="@SWAT_ammo_556FMJM855_desc"
+        img="data/models/weapons/attachments/m855_ammo_ui.dds"
+      >
+      <MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+      <Params	roundsPerSecond="17"
+          audibleSoundRadius="50"
+          physicsImpactForce="2.0"
+          damageType="0"
+          silenced="0">
+        <Damage start="30" end="20" startDist="0" endDist="100"/>
+        <CriticalChancePercent start="35" end="15" startDist="0" endDist="60"/>
+        <ArmorPenetration start="5" end="5" startDist="0" endDist="100"/>
+      </Params>
+    </Ammo>
+
+    <Ammo name="12GA00BUCK_S12k"
+      tooltip="@ammo_12GA00BUCK_name"
+      description="@SWAT_ammo_12GA00BUCK_desc"
+      img="data/models/weapons/attachments/m257_buckshot_ammo_ui.dds"
+      >
+      <MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+      <!-- defines base ROF and sound of weapon -->
+      <Params roundsPerSecond="2.8"
+        audibleSoundRadius="50"
+        physicsImpactForce="3.0"
+        damageType="0"
+        silenced="0">
+
+        <!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+        <Damage start="15" end="3" startDist="0" endDist="50"/>
+
+        <!-- base value, can be modified by AttackType/Abilities/Doctrine/etc. -->
+        <CriticalChancePercent start="10" end="5" startDist="0" endDist="25"/>
+
+        <!-- i.e. divides distance range in (end - start) discrete intervals for AP -->
+        <ArmorPenetration start="6" end="3" startDist="0" endDist="20"/>
+      </Params>
+    </Ammo>
+
+    <Ammo name="45FMJM1911_Vector"
+  			tooltip="@ammo_45FMJM1911_name"
+  			description="@SWAT_ammo_45FMJM1911_desc"
+  			img="data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
+  		>
+  		<MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+  		<Params	roundsPerSecond="13"
+  				audibleSoundRadius="45"
+  				physicsImpactForce="2.0"
+  				damageType="0"
+  				silenced="0">
+  			<Damage start="35" end="34" startDist="0" endDist="100"/>
+  			<CriticalChancePercent start="55" end="55" startDist="0" endDist="100"/>
+  			<ArmorPenetration start="2" end="2" startDist="0" endDist="100"/>
+  		</Params>
+  	</Ammo>
+
+
+    <Ammo name="12GA00BUCK_Six12"
+      tooltip="@ammo_12GA00BUCK_name"
+      description="@SWAT_ammo_12GA00BUCK_desc"
+      img="data/models/weapons/attachments/m257_buckshot_ammo_ui.dds"
+      >
+      <MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+      <!-- defines base ROF and sound of weapon -->
+      <Params roundsPerSecond="3.3"
+        audibleSoundRadius="50"
+        physicsImpactForce="3.0"
+        damageType="0"
+        silenced="0">
+
+        <!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+        <Damage start="15" end="3" startDist="0" endDist="50"/>
+
+        <!-- base value, can be modified by AttackType/Abilities/Doctrine/etc. -->
+        <CriticalChancePercent start="10" end="5" startDist="0" endDist="25"/>
+
+        <!-- i.e. divides distance range in (end - start) discrete intervals for AP -->
+        <ArmorPenetration start="6" end="3" startDist="0" endDist="20"/>
+      </Params>
+    </Ammo>
+
+    <Ammo name="12GA00BUCK_Six12SD"
+      tooltip="@ammo_12GA00BUCK_name"
+      description="@SWAT_ammo_12GA00BUCK_desc"
+      img="data/models/weapons/attachments/m257_buckshot_ammo_ui.dds"
+      >
+      <MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+      <!-- defines base ROF and sound of weapon -->
+      <Params roundsPerSecond="3.3"
+        audibleSoundRadius="20"
+        physicsImpactForce="3.0"
+        damageType="0"
+        silenced="1">
+
+        <!-- the damage value is linearly interpolated in the given range, between min/max damage -->
+        <Damage start="15" end="3" startDist="0" endDist="50"/>
+
+        <!-- base value, can be modified by AttackType/Abilities/Doctrine/etc. -->
+        <CriticalChancePercent start="10" end="5" startDist="0" endDist="25"/>
+
+        <!-- i.e. divides distance range in (end - start) discrete intervals for AP -->
+        <ArmorPenetration start="6" end="3" startDist="0" endDist="20"/>
+      </Params>
+    </Ammo>
+
+    <Ammo name="5_7FiveSeven"
+      tooltip="@ammo_556FMJM855_name"
+      description="@SWAT_ammo_556FMJM855_desc"
+      img="data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
+      >
+      <MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+      <Params	roundsPerSecond="6"
+        audibleSoundRadius="50"
+        physicsImpactForce="4.0"
+        damageType="0"
+        silenced="0">
+        <Damage start="23" end="19" startDist="0" endDist="100"/>
+        <CriticalChancePercent start="35" end="29" startDist="0" endDist="100"/>
+        <ArmorPenetration start="2" end="2" startDist="0" endDist="100"/>
+      </Params>
+    </Ammo>
+
+    <Ammo name="5_7Five_SevenSUP"
+      tooltip="@ammo_556FMJM855_name"
+      description="@SWAT_ammo_556FMJM855_desc"
+      img="data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
+      >
+      <MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+      <Params	roundsPerSecond="6"
+        audibleSoundRadius="4"
+        physicsImpactForce="4.0"
+        damageType="0"
+        silenced="1">
+        <Damage start="23" end="19" startDist="0" endDist="100"/>
+        <CriticalChancePercent start="35" end="29" startDist="0" endDist="100"/>
+        <ArmorPenetration start="2" end="2" startDist="0" endDist="100"/>
+      </Params>
+    </Ammo>
+
+    <Ammo name=".357 Magnum_tac357"
+      tooltip=".357 Magnum"
+      description=""
+      img="data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
+      >
+      <MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+      <Params	roundsPerSecond="2"
+        audibleSoundRadius="50"
+        physicsImpactForce="9.0"
+        damageType="0"
+        silenced="0">
+        <Damage start="23" end="19" startDist="0" endDist="100"/>
+        <CriticalChancePercent start="35" end="29" startDist="0" endDist="100"/>
+        <ArmorPenetration start="2" end="2" startDist="0" endDist="100"/>
+      </Params>
+    </Ammo>
+
+    <Ammo name=".44 Magnum_Mag44"
+      tooltip=".44 Magnum"
+      description=""
+      img="data/models/weapons/attachments/m1911fmj_ammo_ui.dds"
+      >
+      <MobilityModifiers moveSpeedModifierPercent="0" turnSpeedModifierPercent="0"/>
+
+      <Params	roundsPerSecond="2"
+        audibleSoundRadius="50"
+        physicsImpactForce="9.0"
+        damageType="0"
+        silenced="0">
+        <Damage start="23" end="19" startDist="0" endDist="100"/>
+        <CriticalChancePercent start="35" end="29" startDist="0" endDist="100"/>
+        <ArmorPenetration start="2" end="2" startDist="0" endDist="100"/>
+      </Params>
+    </Ammo>
+
+</Equipment>

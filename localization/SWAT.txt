@@ -1,0 +1,44 @@
+#
+#DK1_O_For_DK2
+#
+
+#other stuff
+@SWAT_unit_desc=The Special Response Team of the Nowhere City PD is a highly trained and professional unit capable handling high-level tasks
+
+
+#ammo
+
+@swat_ammo_AACBO_desc=NEEDS DEC
+@swat_ammo_919FMJM882_desc=NEEDS DEC
+@SWAT_ammo_556FMJM855_desc=NEEDS DEC
+@SWAT_ammo_12GA00BUCK_desc=NEEDS DEC
+@SWAT_ammo_45FMJM1911_descNEEDS DEC
+
+
+#firearms
+@SWAT_firearm_mp5a3_smg_desc=Very accurate and quick on the target at\nCQB ranges, the classic Mp5 is a favorite\nof SWAT teams all around the world.\n\n9MM burst fire out of a SMG barrel is\nplenty of stopping power, but the reload\ncontrols are somewhat archaic.
+@SWAT_firearm_mp5sd3_smg_desc=The quietest submachinegun at your disposal, the Mp5SD uses barrel ports and an integral suppressor to lower the velocity of the round down to subsonic levels.\n\nYou'll still hear the sound of the bolt\ncycling, but you won't know it's a weapon.\n\nSound Travel Range: 2.5m
+#@SWAT_firearm_mp5a3_sd_smg_desc=Mounting a 7 inch suppressor on your Mp5A3\nmight not be the best way to maintain CQB\nmaneuverability, but will lower shot sound\nlevels by a decent number of decibels.\n\nThe weapon loses some accuracy but in\npractical terms effects are negligible.\n\nSound Travel Range: 10m
+@SWAT_firearm_m4_carabine_desc=Battle proven beyond doubt, the M4 is quick\non the target and accurate at all practical\nranges.\n\nThe 14.5 inch barrel doesn't make for the\nmost maneuverable weapon in CQB spaces, but ensures reliable bullet fragmentation and stopping power.
+@SWAT_firearm_m590_shotgun_desc=The standard and dependable pump-action\nshotgun in Police inventory, the M590 comes with great mag capacity but suffers in CQB spaces due to the long and unwieldy barrel.\n\nAs with all shotguns, keep in mind shot\ndispersion and target background.
+@SWAT_firearm_joint_combat_shotgun_desc=A Semi-Automatic shotgun in the familiar\ntube-fed design, the JCS is fun to shoot and\ngreat for pure short range firepower.\n\nNot the shortest boomstick around, though,\nso you'll need to support the breacher with\nanother trooper. Also, the mag goes empty\nfaster than you'd think.
+@SWAT_firearm_mk17_long_barrel_desc=When long range semi-auto fire is needed,\nthere's nothing quite like the big old 7.62\nto hit them with. When these rounds connect targets go down, but practical rate of fire is limited by the strong recoil.\n\nThe Mk 17 has AR-like controls in operation, but the long barrel hinders short range maneuverability and efficiency.
+@SWAT_firearm_g17_pistol_desc=A high capacity 9mm sidearm, the perfect\ncompanion when you know how to hit the\nsoft spots.\n\nLow in the hand and shooting 'just' 9mm, the G17 offers great recoil control to deliver\nmultiple shots.
+@SWAT_firearm_1911_pistol_desc=Want an increase in stopping power? Look no further than the venerable .45 ACP.\n\nThe trusty, hard hitting 1911 will take down\nmost bad guys in one shot, and provides\nquick followup shots to additional targets.\n\nMind the magazine size, though!
+@SWAT_firearm_hk45_pistol_desc=The powerful .45 ACP and all the modern\ndesign features, whats not to like? The HK\nboasts extreme accuracy and high magazine\ncapacity - for a 45 that is.\n\nNot the best pistol for recoil control and\nfollow-up shots, but a solid performer in\nany situation.
+@SWAT_firearm_hk45sd_pistol_desc=The slow moving .45 slug is the ideal\ncartridge to suppress, and an accurate\npistol doubles its value.\n\nA great conversation starter if there ever\nwas one.\n\nSound Travel Range: 6m
+
+
+@SWAT_firearm_ksg_shotgun_desc=A very avant-garde design for a pump-action\nshotgun, the KSG uses twin tubular magazines to hold a whooping 14 shells.\n\nThe bullpup form maximizes maneuverability and accuracy, at the expense of awkward reloads and access to the ejection port.
+@SWAT_firearm_s12k_tactical_shotgun_desc=Policing the streets of Nowhere City USA\nwhile carrying an AK, that won't be easy to\nsell to the top brass.\n\nStill, the S12 is a dependable, magazine-fed\nshotgun in assault rifle format. Just\nremember that the format in question has\nthe control levers in all the wrong places!
+@SWAT_firearm_six12_shotgun_desc=The Six 12 is really a large, double-action\nrevolver that fires shotgun shells.\n\nSimple and revolutionary at the same time,\nthe design makes for quick reloads as long\nas you can juggle with the cylinders.\n\nCannot use Ejection Port Reload doctrine.
+@SWAT_firearm_six12sd_shotgun_desc=The shorter and suppressed version of the\nSix 12, not really that silent but useful\nto open doors without waking up the entire\ncity block.\n\nSound Travel Range: 10m\n\nCannot use Ejection Port Reload doctrine.
+@SWAT_firearm_honey_badger_desc=A great mix of ballistic performance, small\nsize and excellent sound suppression, the\nHoney Badger might gain a permanent spot in the hands of Tier 1 Special Forces.\n\nArmor penetration is not great though, only\nmarginally better than pistol-caliber SMGs.\n\nSound Travel Range: 3.5m
+@SWAT_firearm_p90_pdw_desc=A compact PDW shooting high velocity intermediate round, the P90 is great for Close Quarters Combat and will pierce straight through level IIIA armor.\n\nThe flat trajectory of the 5.7mm is great\nfor mid-to-long range shots, but stopping\npower potential is less than that of SMGs\nshooting traditional calibers.
+@SWAT_firearm_vector_smg_desc=The avant-garde Vector SMG masters the\npowerful .45 rounds by clever positioning\nof shooter hands and directing the bolt to\nrecoil downards.\n\nResulting recoil is very mild and allows\nimpressive 2 round bursts grouping, but the\nshort barrel makes for less spectacular\nfirst round accuracy.
+@SWAT_firearm_mpx_40_smg_desc=A modern submachinegun with AR15-style\ncontrols, the MPX is fast in operation and\nvery maneuverable in close spaces.\n\nHigh Rate of Fire coupled with decent\nstopping power make this a reliable fight\nstopper until the bad guys start donning\nbody armor.
+@SWAT_firearm_g36c_assault_rifle_desc=A favorite of European SWAT teams, the G36C is short, light and very maneuverable.\n\nThe short barrel comes at the expense of\nstopping power though, as the low muzzle\nvelocity cuts under the reliable frag-\nmentation threshold for 5.56 rounds.
+@SWAT_firearm_mcx300_carbine_desc=Mixing AR-like controls with folding stock\ncompatible internals and designed for the\npowerful 300 Blackout cartridge, the MCX\nhandles right for close quarter ops and\ntakes down targets reliably.\n\nA great performer up to medium range, but\nloses aiming speed as you go farther.
+@SWAT_firearm_fs_ap_pistol_desc=A handgun shooting the same armor piercing rounds as the P90 PDW, the FS will easily defeat level IIIA body armor.\n\nThe low bullet mass makes for controllable,\ntarget-pistol-like recoil but does not\nfavorize stopping power. Factor in the flat\nlong range trajectory and you might have a\ngreat specialist item.
+@SWAT_firearm_tactical_357_revolver_desc=Designed with the needs of Tactical teams\nin mind, the TR allows troopers to safely\nmaneuver and shoot in tight spaces without\nsacrificing magazine capacity, accuracy or\nrecoil control.
+@SWAT_firearm_magnum_44_revolver_desc=There's not much you can carry on duty more powerful than this Magnum 44 - at least if you intend to keep your badge.\n\nSized right for quick shots at close range,\nthe 44 is powerful enough to quickly end\nfights and make a mess of the coroner's\nwork, but will leave you exposed when\nlonger shots are needed.

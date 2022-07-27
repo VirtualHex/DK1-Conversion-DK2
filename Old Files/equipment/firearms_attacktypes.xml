@@ -1,0 +1,153 @@
+<FirearmAttackTypes>
+
+    <!--For the rifles-->
+  <AttackType name="SWAT_RapidFire">
+      <ModifiableParams
+        minAimTime="450"
+        maxAimTime="450"
+        minShots="2"
+        maxShots="-1"
+        resetTime="300"
+        accuracyAdd="-65"
+        followupShotAccuracyAdd="20"
+        critChanceAdd="0"
+        />
+    </AttackType>
+ 
+	<AttackType name="SWAT_RapidFireMed">
+		<ModifiableParams
+			minAimTime="450"
+			maxAimTime="700"
+			roundsPerSecondOverride="9"
+			minShots="2"
+			maxShots="5"
+			resetTime="300"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_CarbineAimedFire">
+		<ModifiableParams
+			minAimTime="700"
+			maxAimTime="900"
+			roundsPerSecondOverride="2.5"
+			minShots="1"
+			maxShots="2"
+			resetTime="200"
+			accuracyAdd="-10"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_CarbineAimedFireXX">
+		<ModifiableParams
+			minAimTime="900"
+			maxAimTime="900"
+			roundsPerSecondOverride="2.5"
+			minShots="1"
+			maxShots="1"
+			resetTime="200"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="20"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+    <!--Pistols -->
+
+  <AttackType name="SWAT_EmergencyFire45">
+    <ModifiableParams
+      minAimTime="200"
+      maxAimTime="200"
+      minShots="1"
+      maxShots="-1"
+      resetTime="200"
+      accuracyAdd="-60"
+      followupShotAccuracyAdd="-5"
+      critChanceAdd="0"
+      />
+  </AttackType>
+
+	<AttackType name="SWAT_DoubleTap45">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="200"
+			minShots="2"
+			maxShots="2"
+			resetTime="300"
+			accuracyAdd="-60"
+			followupShotAccuracyAdd="-5"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireShort45">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="400"
+			accuracyAdd="-60"
+			minShots="1"
+			maxShots="1"
+			resetTime="0"
+			followupShotAccuracyAdd="50"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_ControlledPair45">
+		<ModifiableParams
+			minAimTime="200"
+			maxAimTime="400"
+			roundsPerSecondOverride="4"
+			minShots="2"
+			maxShots="2"
+			resetTime="300"
+			accuracyAdd="-30"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFire45">
+		<ModifiableParams
+			minAimTime="400"
+			maxAimTime="800"
+			roundsPerSecondOverride="2.5"
+			minShots="1"
+			maxShots="2"
+			resetTime="0"
+			accuracyAdd="-20"
+			followupShotAccuracyAdd="50"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireLong45">
+		<ModifiableParams
+			minAimTime="800"
+			maxAimTime="1100"
+			minShots="1"
+			maxShots="1"
+			resetTime="200"
+			accuracyAdd="-70"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+
+	<AttackType name="SWAT_PistolAimedFireLong45XX">
+		<ModifiableParams
+			minAimTime="1100"
+			maxAimTime="1100"
+			minShots="1"
+			maxShots="1"
+			resetTime="200"
+			accuracyAdd="-70"
+			followupShotAccuracyAdd="0"
+			critChanceAdd="0"
+		/>
+	</AttackType>
+</FirearmAttackTypes>
