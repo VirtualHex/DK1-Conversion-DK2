@@ -1,0 +1,45 @@
+<!--
+Channels (affected by their respective volume category)
+"music"
+"game"
+"ambiental"
+
+If preload="true", the sound will be loaded the first time a map is loaded, the others are loaded only when needed.
+-->
+<Sounds>
+
+<!-- MUSIC -->
+	<Sound ID="music_main_menu" channel="music" stream="true">
+		<Path name="data/sounds/music/mainmenu1.ogg"/>
+		<Path name="data/sounds/music/ingame1.ogg"/>
+		<Path name="data/sounds/music/ingame5.ogg"/>
+	</Sound>
+
+	<!-- in case of streamed sounds, 'preload' means that only their headers are parsed, they won't be entirely preloaded -->
+	<Sound ID="music_ingame" channel="music" stream="true" preload="true">
+		<Path name="data/sounds/music/ingame1.ogg"/>
+		<Path name="data/sounds/music/ingame2.ogg"/>
+		<Path name="data/sounds/music/ingame3.ogg"/>
+		<Path name="data/sounds/music/ingame4.ogg"/>
+		<Path name="data/sounds/music/ingame5.ogg"/>
+		<Path name="data/sounds/music/ingame6.ogg"/>
+		<Path name="data/sounds/music/ingame7.ogg"/>
+		<Path name="data/sounds/music/ingame8.ogg"/>
+		<Path name="data/sounds/music/ingame9.ogg"/>
+		<Path name="data/sounds/music/ingame10.ogg"/>
+		<Path name="data/sounds/music/ingame11.ogg"/>
+		<Path name="data/sounds/music/ingame12.ogg"/>
+		<Path name="data/sounds/music/ingame13.ogg"/>
+	</Sound>
+
+	<Sound ID="music_win" channel="music" stream="true">
+		<Path name="data/sounds/music/win1.ogg"/>
+		<Path name="data/sounds/music/win2.ogg"/>
+	</Sound>
+
+	<Sound ID="music_fail" channel="music" stream="true">
+		<Path name="data/sounds/music/lose1.ogg"/>
+		<Path name="data/sounds/music/lose2.ogg"/>
+	</Sound>
+
+</Sounds>

@@ -1,0 +1,17 @@
+<Maps>
+
+	<!-- 
+		Made this Separate for now, since it just blocks the normal maps. 
+		We might need the normal Maps for Testing Weapons/Entities etc.
+	-->
+	
+	<Bundle name="dk1 test1" img="data/movies/mpack_fngs_welcome.ogv">	
+		<Map source="data/maps/pathtosuckless.xml"/>
+	
+	</Bundle>	
+
+	<Bundle name="dk1 test2" img="data/movies/mpack_lead_the_way.ogv">
+			
+	</Bundle>	
+	
+</Maps>
