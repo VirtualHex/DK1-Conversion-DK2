@@ -67,7 +67,7 @@
 	</StaticImage>
 
 	<StaticImage name="ScreenBg" origin="0 0">
-		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="9999" color="0c0b0bbf"/>
+		<RenderObject2D texture="data/textures/gui/square.tga" sizeX="9999" sizeY="9999" color="0c0b0bbf"/> <!-- #bf0c0b0b -->
 	</StaticImage>
 
 	<Item align="sv" origin="0 -688">
@@ -209,19 +209,19 @@
 						OursIsTheFury
 						sniperwhg
 						Spyder638" align="lt" font="header_4" textColor="7D9FBB"/>
-			<!--	<StaticText origin="0 -140" text="OursIsTheFury" align="l" font="header_3" textColor="f0e3cc"/>
-					<StaticText origin="0 -210" text="sniperwhg" align="l" font="header_3" textColor="f0e3cc"/>
-					<StaticText origin="0 -280" text="Spyder638" align="l" font="header_3" textColor="f0e3cc"/>
-					<StaticText origin="0 -350" text="C2" align="l" font="header_3" textColor="f0e3cc"/>
-					<StaticText origin="0 -420" text="ThatKoreanGamer" align="l" font="header_3" textColor="f0e3cc"/>
-					<StaticText origin="0 -490" text="Boneclone" align="l" font="header_3" textColor="f0e3cc"/>
-					<StaticText origin="0 -560" text="OhHeckItsPeck" align="l" font="header_3" textColor="f0e3cc"/>-->
+			<!--	<StaticText origin="0 -140" text="OursIsTheFury" align="l" font="header_3" textColor="7D9FBB"/>
+					<StaticText origin="0 -210" text="sniperwhg" align="l" font="header_3" textColor="7D9FBB"/>
+					<StaticText origin="0 -280" text="Spyder638" align="l" font="header_3" textColor="7D9FBB"/>
+					<StaticText origin="0 -350" text="C2" align="l" font="header_3" textColor="7D9FBB"/>
+					<StaticText origin="0 -420" text="ThatKoreanGamer" align="l" font="header_3" textColor="7D9FBB"/>
+					<StaticText origin="0 -490" text="Boneclone" align="l" font="header_3" textColor="7D9FBB"/>
+					<StaticText origin="0 -560" text="OhHeckItsPeck" align="l" font="header_3" textColor="7D9FBB"/>-->
 					<StaticText origin="0 -990" text="Third Party" align="l" font="header_3" textColor="5279a5"/>
-			<!--	<StaticText origin="0 -710" text="Luter Ionov" align="l" font="header_3" textColor="f0e3cc"/>
-					<StaticText origin="0 -780" text="Ionut Nicolaescu" align="l" font="header_3" textColor="f0e3cc"/>
-					<StaticText origin="0 -850" text="Alex Stanculescu" align="l" font="header_3" textColor="f0e3cc"/>
+			<!--	<StaticText origin="0 -710" text="Luter Ionov" align="l" font="header_3" textColor="7D9FBB"/>
+					<StaticText origin="0 -780" text="Ionut Nicolaescu" align="l" font="header_3" textColor="7D9FBB"/>
+					<StaticText origin="0 -850" text="Alex Stanculescu" align="l" font="header_3" textColor="7D9FBB"/>
 					<StaticText origin="0 -920" text="Level Design" align="l" font="header_3" textColor="f97b03"/>
-					<StaticText origin="0 -990" text="Adrian Maraloiu" align="l" font="header_3" textColor="f0e3cc"/>-->
+					<StaticText origin="0 -990" text="Adrian Maraloiu" align="l" font="header_3" textColor="7D9FBB"/>-->
 					<StaticText origin="0 -1070" text="This software uses OpenAL and FFMPEG under LGPL and Nvidia PhysX under BSD 3 license.
 						See readme.txt for details." align="l" font="header_5" textColor="7D9FBB"/>
 				</Item>
@@ -262,13 +262,13 @@
 
 		<!-- back button -->
 		<Button name="Menu_Options_Back" align="lb" origin="-1200 -4">
-			<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="5279a5"/>
+			<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="5279a5"/> <!-- #5279a5 -->
 			<OnHover>
-				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="d1d1d1" flipX="false"/>
-				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="000000"/>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="d1d1d1" flipX="false"/> <!-- #d1d1d1 -->
+				<ButtonText align="l" origin="20 0" text="@menu_generic_back" font="header_2" textColor="000000"/> <!-- #000000 -->
 			</OnHover>
 			<OnClick>
-				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="293F4C85" flipX="false"/>
+				<RenderObject2D texture="data/textures/gui/button_hover_01.tga" color="293F4C85" flipX="false"/> <!-- #85293F4C -->
 				<Action type="Hide" target="Menu_Options"/>
 			</OnClick>
 		</Button>
@@ -758,15 +758,15 @@
 					<!-- Master Volume -->
 					<Slider name="Options_Master_Volume" stealFocus="true" origin="0 0" sliderType="linear" startValue="0" endValue="1" integerValues="false">
 						<BackgroundGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga" color="5279a5"/> <!-- #5279a5 -->
 						</BackgroundGraphics>
 						<ButtonGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 							<OnClick>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnClick>
 						</ButtonGraphics>
 					</Slider>
@@ -774,15 +774,15 @@
 					<!-- Music volume -->
 					<Slider name="Options_Music_Volume" origin="0 -60" stealFocus="true" sliderType="linear" startValue="0" endValue="1" integerValues="false">
 						<BackgroundGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga" color="5279a5"/> <!-- #5279a5 -->
 						</BackgroundGraphics>
 						<ButtonGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 							<OnClick>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnClick>
 						</ButtonGraphics>
 					</Slider>
@@ -790,15 +790,15 @@
 					<!-- Game Volume -->
 					<Slider name="Options_Game_Volume" origin="0 -120" stealFocus="true" sliderType="linear" startValue="0" endValue="1" integerValues="false">
 						<BackgroundGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_sliderbar_wide.tga" color="5279a5"/> <!-- #5279a5 -->
 						</BackgroundGraphics>
 						<ButtonGraphics>
-							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga"/>
+							<RenderObject2D texture="data/textures/gui/menu_sliderpointer_normal.tga" color="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnHover>
 							<OnClick>
-								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga"/>
+								<RenderObject2D texture="data/textures/gui/menu_sliderpointer_hover.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 							</OnClick>
 						</ButtonGraphics>
 					</Slider>
@@ -843,21 +843,21 @@
 
 				<!-- header -->
 				<StaticImage align="t" origin="0 0">
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="753" color="211e1dB3"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="753" color="000000CC"/> <!-- #CC000000 -->
 					<StaticImage align="t" origin="0 0">
-						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="f97b03"/>
-						<StaticText text="@menu_options_keybindings" align="lt" origin="20 0" font="header_3" textColor="201f1b" />
+						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="72" color="293F4C85"/> <!-- #85293F4C -->
+						<StaticText text="@menu_options_keybindings" align="lt" origin="20 0" font="header_3" textColor="5279a5"/> <!-- #5279a5 -->
 
 						<Button align="r" origin="-4 0">
-							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="128" sizeY="64" color="201f1b"/>
-							<ButtonText text="@keybind_menu_change" origin="0 0" font="header_4" textColor="f0e3cc" />
+							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="128" sizeY="64" color="000000CC"/> <!-- #CC000000 -->
+							<ButtonText text="@keybind_menu_change" origin="0 0" font="header_4" textColor="5279a5"/> <!-- #5279a5 -->
 							<OnHover>
-								<RenderObject2D texture="data/textures/gui/square.tga" sizeX="128" sizeY="64" color="f0e3cc"/>
-								<ButtonText text="@keybind_menu_change" origin="0 0" font="header_4" textColor="201f1b" />
+								<RenderObject2D texture="data/textures/gui/square.tga" sizeX="128" sizeY="64" color="d1d1d1"/> <!-- #d1d1d1 -->
+								<ButtonText text="@keybind_menu_change" origin="0 0" font="header_4" textColor="000000"/> <!-- #000000 -->
 							</OnHover>
 							<OnClick>
-								<RenderObject2D texture="data/textures/gui/square.tga" sizeX="128" sizeY="64" color="f0e3cc"/>
-								<ButtonText text="@keybind_menu_change" origin="0 0" font="header_4" textColor="201f1b" />
+								<RenderObject2D texture="data/textures/gui/square.tga" sizeX="128" sizeY="64" color="000000"/> <!-- #000000 -->
+								<ButtonText text="@keybind_menu_change" origin="0 0" font="header_4" textColor="7D9FBB" /> <!-- #7D9FBB -->
 
 								<Action type="Show" target="#KeyBindingDialog"/>
 							</OnClick>
@@ -870,21 +870,21 @@
 						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="936" sizeY="60" color="00000050"/>
 					</StaticImage>
 
-					<StaticText name="#event" origin="16 0" align="lc" text="@keybind_toggle_play"  font="paragraph_2" textColor="f0e3cc"/>
+					<StaticText name="#event" origin="16 0" align="lc" text="@keybind_toggle_play"  font="paragraph_2" textColor="7D9FBB" /> <!-- #7D9FBB -->
 
-					<StaticText name="#bind" origin="250 0" align="" text="@keybind_toggle_play"  font="paragraph_2" textColor="f0e3cc"/>
+					<StaticText name="#bind" origin="250 0" align="" text="@keybind_toggle_play"  font="paragraph_2" textColor="7D9FBB" /> <!-- #7D9FBB -->
 				</Item>
 
 				<ItemList name="#Keybinds_List" hidden="false" align="t" origin="0 -90" sizeX="936" sizeY="660" direction="y" clipChildren="true">
-					<ButtonGraphics align="r" origin="0 0">
+					<!-- <ButtonGraphics align="r" origin="0 0">
 						<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
 						<OnHover>
-							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="7D9FBB"/>
 						</OnHover>
 						<OnClick>
-							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+							<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="9999" color="7D9FBB"/>
 						</OnClick>
-					</ButtonGraphics>
+					</ButtonGraphics> -->
 				</ItemList>
 
 			</Item>
@@ -910,7 +910,7 @@
 	<RenderObject2D texture="data/textures/gui/menu_pause_black.tga" color="fffffff9" sizeX="9999" sizeY="9999"/>
 
 	<StaticImage origin="0 12">
-		<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b80" sizeX="1122" sizeY="690"/>
+		<RenderObject2D texture="data/textures/gui/square.tga" color="0c0b0b80" sizeX="1122" sizeY="690"/> <!-- #800c0b0b -->
 	</StaticImage>
 
 	<OnScrollDown>
@@ -922,42 +922,42 @@
 
 	<Item origin="0 0" sizeX="1300" sizeY="1382">
 		<StaticImage origin="0 0">
-			<RenderObject2D texture="data/textures/gui/square.tga" color="40392b" sizeX="1300" sizeY="1382"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" color="293F4C85" sizeX="1300" sizeY="1382"/> <!-- #85293F4C -->
 		</StaticImage>
 
 		<!-- header -->
 		<StaticImage origin="0 0" align="t">
-			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1300" sizeY="88" color="f97b03"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1300" sizeY="88" color="000000CC"/>  <!-- #CC000000 -->
 
 			<!-- title -->
-			<StaticText origin="0 0" text="@keybind_menu_title" font="header_2" textColor="211e1d"/>
+			<StaticText origin="0 0" text="@keybind_menu_title" font="header_2" textColor="5279a5"/>  <!-- #5279a5 -->
 
 			<!-- defaults -->
-			<StaticText text="@keybind_menu_default" align="br" origin="-100 3" font="header_4" textColor="201f1b" />
+			<StaticText text="@keybind_menu_default" align="br" origin="-100 3" font="header_4" textColor="5279a5" />  <!-- #5279a5 -->
 			<Button origin="-50 0" align="br" stealFocus="true" tooltip="@keybind_menu_default1">
-				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="40392bbf"/>
-				<ButtonText text="1" font="header_4" textColor="f0e3cc"/>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="293F4C85"/> <!-- #85293F4C -->
+				<ButtonText text="1" font="header_4" textColor="5279a5"/> <!-- #5279a5 -->
 				<OnHover>
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="f0e3cc"/>
-					<ButtonText text="1" font="header_4" textColor="40392b"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="5279a5"/>  <!-- #5279a5 -->
+					<ButtonText text="1" font="header_4" textColor="7D9FBB"/> <!-- #7D9FBB -->
 				</OnHover>
 				<OnClick>
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="211e1de6"/>
-					<ButtonText text="1" font="header_4" textColor="f0e3cc"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="293F4C85"/> <!-- #85293F4C -->
+					<ButtonText text="1" font="header_4" textColor="7D9FBB"/>  <!-- #7D9FBB -->
 					<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_KEYBINDS_DEFAULT" iParam="1" />
 				</OnClick>
 			</Button>
 
 			<Button origin="0 0" align="br" stealFocus="true" tooltip="@keybind_menu_default2">
-				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="40392bbf"/>
-				<ButtonText text="2" font="header_4" textColor="f0e3cc"/>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="293F4C85"/> <!-- #85293F4C -->
+				<ButtonText text="2" font="header_4" textColor="5279a5"/> <!-- #5279a5 -->
 				<OnHover>
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="f0e3cc"/>
-					<ButtonText text="2" font="header_4" textColor="40392b"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="5279a5"/>  <!-- #5279a5 -->
+					<ButtonText text="2" font="header_4" textColor="7D9FBB"/> <!-- #7D9FBB -->
 				</OnHover>
 				<OnClick>
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="211e1de6"/>
-					<ButtonText text="2" font="header_4" textColor="f0e3cc"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="48" sizeY="48" color="293F4C85"/> <!-- #85293F4C -->
+					<ButtonText text="2" font="header_4" textColor="7D9FBB"/>  <!-- #7D9FBB -->
 					<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_KEYBINDS_DEFAULT" iParam="2" />
 				</OnClick>
 			</Button>
@@ -967,13 +967,13 @@
 		<StaticImage origin="0 0" align="b">
 			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1300" sizeY="88" color="0c0b0bcc"/>
 			<Button origin="0 0" align="c" >
-				<ButtonText align="c" origin="0 0" text="@menu_generic_close" font="header_2" textColor="f0e3cc"/>
+				<ButtonText align="c" origin="0 0" text="@menu_generic_close" font="header_2" textColor="5279a5"/> <!-- #5279a5 -->
 				<OnHover>
-					<RenderObject2D texture="data/textures/gui/menu_select.dds" color="f0e3cc" flipX="false"/>
-					<ButtonText align="c" origin="0 0" text="@menu_generic_close" font="header_2" textColor="40392b"/>
+					<RenderObject2D texture="data/textures/gui/menu_select.dds" color="d1d1d1" flipX="false"/>  <!-- #d1d1d1 -->
+					<ButtonText align="c" origin="0 0" text="@menu_generic_close" font="header_2" textColor="000000"/>  <!-- #000000 -->
 				</OnHover>
 				<OnClick>
-					<RenderObject2D texture="data/textures/gui/menu_select.dds" color="0c0b0b80" flipX="false"/>
+					<RenderObject2D texture="data/textures/gui/menu_select.dds" color="293F4C85" flipX="false"/>  <!-- #85293F4C -->
 					<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_KEYBINDS_CANCEL"/>
 				</OnClick>
 			</Button>
@@ -981,15 +981,15 @@
 
 		<!-- header -->
 		<StaticImage origin="0 -88" align="t">
-			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1300" sizeY="66" color="0c0b0bcc"/>
+			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1300" sizeY="66" color="0c0b0bcc"/>  <!-- #cc0c0b0b -->
 			<Item origin="264 0" align="l">
-				<StaticText text="@keybind_menu_code"  font="paragraph_2" textColor="f0e3cc"/>
+				<StaticText text="@keybind_menu_code"  font="paragraph_2" textColor="7D9FBB"/>  <!-- #7D9FBB -->
 			</Item>
 			<Item origin="-604 0" align="r">
-				<StaticText text="@keybind_menu_bind1"  font="paragraph_2" textColor="f0e3cc"/>
+				<StaticText text="@keybind_menu_bind1"  font="paragraph_2" textColor="7D9FBB"/>  <!-- #7D9FBB -->
 			</Item>
 			<Item origin="-210 0" align="r">
-				<StaticText text="@keybind_menu_bind2"  font="paragraph_2" textColor="f0e3cc"/>
+				<StaticText text="@keybind_menu_bind2"  font="paragraph_2" textColor="7D9FBB"/>  <!-- #7D9FBB -->
 			</Item>
 		</StaticImage>
 
@@ -999,19 +999,19 @@
 				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="1268" sizeY="60" color="0c0b0bcc"/>
 			</StaticImage>
 			<Item origin="264 0" align="l">
-				<StaticText name="#event" origin="0 0" align="c" text="@keybind_toggle_play" font="paragraph_2" textColor="f0e3cc"/>
+				<StaticText name="#event" origin="0 0" align="c" text="@keybind_toggle_play" font="paragraph_2" textColor="7D9FBB"/>
 			</Item>
 
 			<Item origin="0 0" align="r" sizeX="768" sizeY="60">
 				<Button name="#bind1" origin="16 0" align="l">
-					<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="a08f80"/>
-					<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="aaaaaaff"/>
+					<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="7D9FBB"/>
+					<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="7D9FBB"/> <!-- #7D9FBB -->
 					<OnHover>
-						<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="f0e3cc"/>
-						<RenderObject2D texture="data/textures/gui/menu_class_background.tga" />
+						<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="5279a5"/>
+						<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="5279a5"/>
 					</OnHover>
 					<OnClick>
-						<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="f0e3cc" />
+						<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="7D9FBB" />
 						<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="000000ff"/>
 						<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_KEYBINDS_FOCUS"/>
 					</OnClick>
@@ -1024,15 +1024,15 @@
 				</Button>
 
 				<Button name="#bind2" origin="-6 0" align="r">
-					<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="a08f80"/>
-					<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="aaaaaaff"/>
+					<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="7D9FBB"/>
+					<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="7D9FBB"/>
 					<OnHover>
-						<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="f0e3cc"/>
-						<RenderObject2D texture="data/textures/gui/menu_class_background.tga" />
+						<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="5279a5"/>
+						<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="5279a5"/>
 					</OnHover>
 					<OnClick>
-						<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="f0e3cc" />
-						<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="000000ff"/>
+						<ButtonText origin="0 0" text="@keybind_toggle_play" align="" font="paragraph_2" textColor="7D9FBB" />
+						<RenderObject2D texture="data/textures/gui/menu_class_background.tga" color="000000ff"/> <!-- #ff000000 -->
 						<Action type="TriggerEvent" target="GUI_GAME_OPTIONS_KEYBINDS_FOCUS"/>
 					</OnClick>
 					<OnScrollDown>
@@ -1056,12 +1056,12 @@
 
 		<ItemList name="#InputMap_List" hidden="false" align="t" origin="0 -156" sizeX="1300" sizeY="1140" direction="y" clipChildren="true">
 			<ButtonGraphics align="r" origin="0 0">
-				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b0340"/>
+				<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="5279a540"/> <!-- #405279a5 -->
 				<OnHover>
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="5279a5ff"/> <!-- #5279a5 -->
 				</OnHover>
 				<OnClick>
-					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="f97b03ff"/>
+					<RenderObject2D texture="data/textures/gui/square.tga" sizeX="32" sizeY="32" color="5279a5ff"/> <!-- #5279a5 -->
 				</OnClick>
 			</ButtonGraphics>
 		</ItemList>
@@ -1070,7 +1070,7 @@
 		<StaticImage name="#KeybindInfo" origin="0 0" align="" hidden="true">
 			<RenderObject2D texture="data/textures/gui/square.tga" sizeX="800" sizeY="76" color="000000EE"/>
 
-			<StaticText origin="0 -6" align="t" text="@keybind_menu_bind_tips" font="paragraph_2" textColor="f0e3cc"/>
+			<StaticText origin="0 -6" align="t" text="@keybind_menu_bind_tips" font="paragraph_2" textColor="7D9FBB"/>
 			<StaticText origin="0 -38" align="t" name="#error" text="@keybind_menu_bind_tips" font="paragraph_2" textColor="f0a377" hidden="true"/>
 		</StaticImage>
 	</Item>
