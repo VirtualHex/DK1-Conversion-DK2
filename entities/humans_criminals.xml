@@ -1,0 +1,148 @@
+<Entities>
+	<Entity name="Junky_Harry" type="Human" editorAutoHeight="false">
+		<RenderObject3D model="data/models/humans/ranger_assaulter.khm" diffuseTex="data/models/humans/SWAT_Test1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_vest.dds"/>
+
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="BadGuy"
+			class="Junky_Harry">
+
+			<Id name="Junky_Harry" portrait="data/textures/portraits/ranger2.dds" gender="0" voicePack="male_very_american"/>
+            <Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+
+			</Equipment>
+		</Human>
+	</Entity>
+
+    <Entity name="Tack_Driver_Tim" type="Human" editorAutoHeight="false">
+		<RenderObject3D model="data/models/humans/ranger_assaulter.khm" diffuseTex="data/models/humans/SWAT_Test1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_assaulter_vest.khm" diffuseTex="data/models/humans/attachments/ranger_assaulter_vest.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="BadGuys"
+			class="Tack_Driver_Tim">
+
+			<Id name="Tack_Driver_Tim" portrait="data/textures/portraits/ranger2.dds" gender="0" voicePack="male_very_american"/>
+            <Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+
+			</Equipment>
+		</Human>
+	</Entity>
+
+    <Entity name="Nameless_Thug" type="Human" editorAutoHeight="false">
+		<RenderObject3D model="data/models/humans/ranger_support.khm" diffuseTex="data/models/humans/SWAT_Test1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_vest.khm" diffuseTex="data/models/humans/attachments/ranger_support_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_right.khm" attachSlot="vest_right" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_left.khm" attachSlot="vest_left" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="BadGuys"
+			class="Nameless_Thug">
+
+			<Id name="Nameless_Thug" portrait="data/textures/portraits/ranger3.dds" gender="0" voicePack="male_very_american"/>
+            <Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+
+			</Equipment>
+		</Human>
+	</Entity>
+
+	<Entity name="Operator_Orville" type="Human" editorAutoHeight="false">
+		<RenderObject3D model="data/models/humans/ranger_support.khm" diffuseTex="data/models/humans/SWAT_Test1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_vest.khm" diffuseTex="data/models/humans/attachments/ranger_support_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_right.khm" attachSlot="vest_right" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_left.khm" attachSlot="vest_left" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
+
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="BadGuys"
+			class="Operator_Orville">
+
+			<Id name="Operator_Orville" portrait="data/textures/portraits/ranger3.dds" gender="0" voicePack="male_very_american"/>
+            <Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+
+			</Equipment>
+		</Human>
+	</Entity>
+
+    <Entity name="Grenadier_Glenn" type="Human" editorAutoHeight="false">
+		<RenderObject3D model="data/models/humans/ranger_support.khm" diffuseTex="data/models/humans/SWAT_Test1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_support_vest.khm" diffuseTex="data/models/humans/attachments/ranger_support_vest.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_right.khm" attachSlot="vest_right" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/ranger_sidepouch_left.khm" attachSlot="vest_left" skipGOSSAO="true" diffuseTex="data/models/humans/attachments/ranger_sidepouch.dds"/>
+
+		<Breakable template="GenericTrooperGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100"/>
+		<Human type="BadGuys"
+			class="Grenadier_Glenn">
+
+			<Id name="Grenadier_Glenn" portrait="data/textures/portraits/ranger3.dds" gender="0" voicePack="male_very_american"/>
+            <Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<FOV degrees="90" distanceMeters="999" eyeRadiusMeters="0.6"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="20.0"/>
+			<Mobility>
+				<MoveSpeed min="1.1" defaultMetersPerSec="2.28" max="10"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+
+			</Equipment>
+		</Human>
+	</Entity>
+</Entities>
+<!-->
+<Entities>	
+	<Entity name="Rabble" type="Human" fogOfWarVisibility="hidden" editorAutoHeight="false" editorTags="enemy">
+		<RenderObject3D model="data/models/humans/enemy_1.khm" diffuseTex="data/models/humans/enemy_base_diffuse1.dds"/>
+		<RenderObject3D model="data/models/humans/attachments/enemy_head_beard.khm" diffuseTex="data/models/humans/attachments/enemy_head.dds"/>
+		<Breakable template="GenericHumanGibs" breakOnDamage="explosive" deleteOnDeath="false"/>
+		<PhysicalParams health="100" />
+		<Human type="BadGuy">
+			<FOV degrees="75" distanceMeters="999" eyeRadiusMeters="1.0"/>
+			<Brain startingBehavior="Normal Guy" defaultBehavior="Normal Guy" combatBehavior="Normal Combat" suppressionRecovery="5.0"/>
+			<Id name="Poor Recruit" portrait="data/textures/portraits/enemy_grunt_pistol.dds" gender="0" voicePack="enemies"/>
+            <Traits chanceToBlindFire="0.0" stopsToShoot="true" />
+			<Mobility>
+				<MoveSpeed min="0.6" defaultMetersPerSec="2.2" max="9"/>
+				<TurnSpeed min="6" defaultMetersPerSec="13" max="20"/>
+			</Mobility>
+
+			<Equipment>
+				<Item name="Type 56 UltraNoob" />
+			</Equipment>
+		</Human>
+	</Entity>
+-->
